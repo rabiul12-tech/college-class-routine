@@ -14,12 +14,36 @@ type ClassCardProps = {
 const normalize = (s: string) =>
   s.normalize("NFKC").replace(/\s+/g, " ").trim();
 
-// "10:30 - 11:10" -> today 10:30 in ms
+// Convert Bangla digits to ASCII (e.g., ১০:৩০ -> 10:30)
+function bnToEnDigits(s: string) {
+  const bn = "০১২৩৪৫৬৭৮৯";
+  const en = "0123456789";
+  return (s || "").replace(/[০-৯]/g, (ch) => {
+    const i = bn.indexOf(ch);
+    return i >= 0 ? en[i] : ch;
+  });
+}
+
+// "10:30 - 11:10" (including Bangla digits/dashes) -> today 10:30 in ms
 function parseStartMs(todayISO: string, timeRange: string) {
-  const [startPart] = timeRange.split("-"); // "10:30 "
-  const [hh, mm] = startPart.trim().split(":").map(Number);
+  // normalize digits and en/em dashes to ASCII hyphen
+  const ascii = bnToEnDigits(timeRange || "").replace(/[–—]/g, "-");
+  const [startPartRaw] = ascii.split("-");
+  const startPart = (startPartRaw || "").trim();
+
+  // extract HH:MM safely
+  const m = startPart.match(/(\d{1,2}):(\d{2})/);
+  let hh = 0,
+    mm = 0;
+  if (m) {
+    const h = parseInt(m[1], 10);
+    const m2 = parseInt(m[2], 10);
+    hh = Number.isFinite(h) ? h : 0;
+    mm = Number.isFinite(m2) ? m2 : 0;
+  }
+
   const d = new Date(todayISO); // "yyyy-mm-dd"
-  d.setHours(hh ?? 0, mm ?? 0, 0, 0);
+  d.setHours(hh, mm, 0, 0);
   return d.getTime();
 }
 
@@ -73,7 +97,8 @@ export default function ClassCard({ time, subject, grade }: ClassCardProps) {
     if (next === "delayed") {
       const now = Date.now();
       const startMs = parseStartMs(classDate, time);
-      delayMinutes = Math.max(0, Math.round((now - startMs) / 60000));
+      const diffMin = Math.round((now - startMs) / 60000);
+      delayMinutes = Math.max(0, Number.isFinite(diffMin) ? diffMin : 0);
     }
 
     addRecord({

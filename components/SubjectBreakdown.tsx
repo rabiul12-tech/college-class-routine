@@ -126,7 +126,11 @@ export default function SubjectBreakdown() {
           <td className="px-3 py-2">{row.grade}</td>
           <td className={`px-3 py-2 font-semibold ${color}`}>{label}</td>{" "}
           <td className="px-3 py-2">
-            {row.status === "delayed" ? row.delayMinutes ?? 0 : "—"}
+            {row.status === "delayed"
+              ? Number.isFinite(row.delayMinutes as number)
+                ? row.delayMinutes
+                : 0
+              : "—"}
           </td>
           <td className="px-3 py-2 text-right">
             <button

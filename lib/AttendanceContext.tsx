@@ -44,7 +44,13 @@ export function AttendanceProvider({
       if (raw) {
         const parsed = JSON.parse(raw);
         if (Array.isArray(parsed)) {
-          setAttendanceLog(parsed);
+          const fixed = parsed.map((r: any) => {
+            if (r?.status === "delayed" && !Number.isFinite(r?.delayMinutes)) {
+              return { ...r, delayMinutes: 0 };
+            }
+            return r;
+          });
+          setAttendanceLog(fixed);
         }
       }
     } catch (err) {
