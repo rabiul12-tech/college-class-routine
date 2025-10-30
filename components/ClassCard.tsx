@@ -107,7 +107,6 @@ export default function ClassCard({ time, subject, grade }: ClassCardProps) {
       grade,
       time,
       status: next,
-
       delayMinutes,
     });
 
