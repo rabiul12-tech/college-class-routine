@@ -11,7 +11,8 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "incremental": true,
+    "baseUrl": ".", // <-- add
+    "paths": { "@/*": ["./*"] }, // <-- add
     "plugins": [{ "name": "next" }]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
