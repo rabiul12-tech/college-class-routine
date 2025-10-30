@@ -107,7 +107,7 @@ export default function ClassCard({ time, subject, grade }: ClassCardProps) {
       grade,
       time,
       status: next,
-      // @ts-expect-error if your type doesn't have it yet; add delayMinutes?: number in store
+
       delayMinutes,
     });
 
