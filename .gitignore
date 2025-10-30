@@ -1,0 +1,98 @@
+# =========================
+# Node / Package managers
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json # keep if you standardize on npm; otherwise remove this line
+# yarn.lock / pnpm-lock.yaml should be committed
+
+# ==========
+# Next.js
+# ==========
+.next/
+out/
+dist/
+build/
+.next-static/
+.vercel/
+
+# Cache & tooling
+.eslintcache
+.stylelintcache
+.turbo/
+.next/cache/
+
+# TypeScript
+*.tsbuildinfo
+
+# =========================
+# Env files (keep example)
+# =========================
+.env
+.env.*        # .env.local, .env.development, etc.
+!.env.example # commit a sample template
+
+# =========================
+# Testing / Coverage
+# =========================
+coverage/
+.nyc_output/
+jest-html-reporters-attach/
+playwright-report/
+test-results/
+
+# =========================
+# Netlify (local/CLI)
+# =========================
+.netlify/
+# keep the config
+!netlify.toml
+
+# =========================
+# Editors / IDEs
+# =========================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.iml
+
+# =========================
+# OS / Misc
+# =========================
+.DS_Store
+Thumbs.db
+Icon?
+.Trashes
+*.orig
+*.rej
+
+# =========================
+# Logs & dumps
+# =========================
+logs/
+*.log
+*.log.*
+*.pid
+*.seed
+*.pid.lock
+dump.rdb
+
+# =========================
+# Images processed caches
+# =========================
+*.orig.jpg
+*.orig.png
+
+# =========================
+# Local dev tools
+# =========================
+.tmp/
+temp/
+.cache/
