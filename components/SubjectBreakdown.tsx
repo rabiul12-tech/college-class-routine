@@ -1,6 +1,7 @@
 "use client";
 
-import React from "react";
+import React, { useMemo, useState } from "react";
+
 import { useAttendanceStore } from "@/lib/useAttendanceStore";
 import { scheduleData } from "@/lib/data";
 
@@ -26,7 +27,7 @@ export default function SubjectBreakdown() {
   const { attendanceLog, removeRecordAt } = useAttendanceStore();
   const [selectedSubject, setSelectedSubject] = React.useState<string>("");
   const [selectedGrade, setSelectedGrade] = React.useState<string>("all");
-  const [resultHtml, setResultHtml] = React.useState<JSX.Element | null>(null);
+  const [resultHtml, setResultHtml] = useState<React.ReactElement | null>(null);
 
   const subjects = React.useMemo(() => collectAllSubjects(), []);
 
