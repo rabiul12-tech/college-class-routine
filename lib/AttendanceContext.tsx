@@ -13,8 +13,11 @@ export type AttendanceRecord = {
   subject: string;
   grade: string;
   time: string;
-  status: "ontime" | "delayed" | "absent";
+  // widened to include "sn" (Student Not present)
+  status: "ontime" | "delayed" | "absent" | "sn";
   delayMinutes?: number;
+  // optional short note for S.N. (or any extra reason)
+  snReason?: string;
 };
 
 const STORAGE_KEY = "attendanceLog_v1";
@@ -37,6 +40,47 @@ export function AttendanceProvider({
   const [loaded, setLoaded] = useState(false);
   // loaded = have we finished restoring from localStorage?
 
+  // helper: validate / normalize a raw object from storage into AttendanceRecord
+  function normalizeRecord(raw: any): AttendanceRecord | null {
+    if (!raw || typeof raw !== "object") return null;
+    const allowed = new Set(["ontime", "delayed", "absent", "sn"]);
+
+    // keep basic fields but guard types
+    const date = typeof raw.date === "string" ? raw.date : "";
+    const subject = typeof raw.subject === "string" ? raw.subject : "";
+    const grade = typeof raw.grade === "string" ? raw.grade : "";
+    const time = typeof raw.time === "string" ? raw.time : "";
+
+    // coerce/normalize status — if it's unknown, default to 'absent'
+    const rawStatus = typeof raw.status === "string" ? raw.status : "absent";
+    const status = allowed.has(rawStatus)
+      ? (rawStatus as AttendanceRecord["status"])
+      : "absent";
+
+    // delayMinutes only valid for delayed
+    let delayMinutes: number | undefined = undefined;
+    if (status === "delayed") {
+      const dm = Number(raw.delayMinutes);
+      delayMinutes = Number.isFinite(dm) ? dm : 0;
+    }
+
+    const snReason =
+      typeof raw.snReason === "string" ? raw.snReason : undefined;
+
+    // minimal validation: require date/time/subject/grade (adjust as you prefer)
+    if (!date || !time || !subject || !grade) return null;
+
+    return {
+      date,
+      subject,
+      grade,
+      time,
+      status,
+      delayMinutes,
+      snReason,
+    };
+  }
+
   // 1. On mount, load from localStorage
   useEffect(() => {
     try {
@@ -44,12 +88,9 @@ export function AttendanceProvider({
       if (raw) {
         const parsed = JSON.parse(raw);
         if (Array.isArray(parsed)) {
-          const fixed = parsed.map((r: any) => {
-            if (r?.status === "delayed" && !Number.isFinite(r?.delayMinutes)) {
-              return { ...r, delayMinutes: 0 };
-            }
-            return r;
-          });
+          const fixed: AttendanceRecord[] = parsed
+            .map((r: any) => normalizeRecord(r))
+            .filter((r): r is AttendanceRecord => r !== null);
           setAttendanceLog(fixed);
         }
       }
