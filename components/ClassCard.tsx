@@ -73,7 +73,7 @@ export default function ClassCard({ time, subject, grade }: ClassCardProps) {
 
   // UI state, hydrate from log if exists
   const [status, setStatus] = React.useState<
-    "" | "ontime" | "delayed" | "absent"
+    "" | "ontime" | "delayed" | "absent" | "sn"
   >("");
 
   React.useEffect(() => {
@@ -87,7 +87,7 @@ export default function ClassCard({ time, subject, grade }: ClassCardProps) {
     if (existing) setStatus(existing.status);
   }, [attendanceLog, classDate, time, grade, subjKey]);
 
-  function handleSetStatus(next: "ontime" | "delayed" | "absent") {
+  function handleSetStatus(next: "ontime" | "delayed" | "absent" | "sn") {
     if (free || isLocked) return;
 
     setStatus(next);
@@ -101,6 +101,7 @@ export default function ClassCard({ time, subject, grade }: ClassCardProps) {
       delayMinutes = Math.max(0, Number.isFinite(diffMin) ? diffMin : 0);
     }
 
+    // For "sn" we treat it like absent from recording perspective (no delay)
     addRecord({
       date: classDate,
       subject: subjKey,
@@ -132,6 +133,7 @@ export default function ClassCard({ time, subject, grade }: ClassCardProps) {
   else if (status === "ontime") cardBg = "bg-green-50";
   else if (status === "delayed") cardBg = "bg-yellow-50";
   else if (status === "absent") cardBg = "bg-red-50";
+  else if (status === "sn") cardBg = "bg-purple-50";
 
   const statusTextDisplay = free
     ? "এই পিরিয়ডে ক্লাস নেই"
@@ -141,7 +143,9 @@ export default function ClassCard({ time, subject, grade }: ClassCardProps) {
     ? "স্ট্যাটাস: On Time"
     : status === "delayed"
     ? "স্ট্যাটাস: Delayed"
-    : "স্ট্যাটাস: Absent";
+    : status === "absent"
+    ? "স্ট্যাটাস: Absent"
+    : "স্ট্যাটাস: Student Not Present (S.N)";
 
   const statusColorClass = free
     ? "text-gray-400"
@@ -151,6 +155,8 @@ export default function ClassCard({ time, subject, grade }: ClassCardProps) {
     ? "text-yellow-700"
     : status === "absent"
     ? "text-red-700"
+    : status === "sn"
+    ? "text-purple-700"
     : "text-gray-500";
 
   return (
@@ -243,6 +249,30 @@ export default function ClassCard({ time, subject, grade }: ClassCardProps) {
                   d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
                   clipRule="evenodd"
                 />
+              </svg>
+            </button>
+
+            {/* New: Student Not Present (S.N) */}
+            <button
+              onClick={() => handleSetStatus("sn")}
+              className="status-btn p-1 rounded-full hover:bg-purple-100 disabled:opacity-50"
+              disabled={isLocked}
+              title={isLocked ? "Locked" : "Student Not Present (S.N)"}
+            >
+              {/* simple person-with-slash icon */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 text-purple-500"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M16 11c1.657 0 3-1.343 3-3S17.657 5 16 5s-3 1.343-3 3 1.343 3 3 3z" />
+                <path d="M6.5 20a6.5 6.5 0 0111 0" />
+                <path d="M3 3l18 18" />
               </svg>
             </button>
           </div>

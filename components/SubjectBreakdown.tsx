@@ -63,11 +63,13 @@ export default function SubjectBreakdown() {
     let ontimeCount = 0;
     let delayedCount = 0;
     let absentCount = 0;
+    let snCount = 0; // NEW: S.N counter
 
     filtered.forEach(({ row }) => {
       if (row.status === "ontime") ontimeCount++;
       else if (row.status === "delayed") delayedCount++;
       else if (row.status === "absent") absentCount++;
+      else if (row.status === "sn") snCount++; // count S.N
     });
 
     const summary = (
@@ -77,7 +79,7 @@ export default function SubjectBreakdown() {
           {selectedGrade !== "all" ? ` • শ্রেণী: ${selectedGrade}` : ""}
         </h4>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 mt-4">
           <div className="bg-green-50 border border-green-200 rounded p-4 text-center">
             <div className="text-sm text-green-600 font-medium">On Time</div>
             <div className="text-2xl font-bold text-green-700">
@@ -96,6 +98,14 @@ export default function SubjectBreakdown() {
             <div className="text-sm text-red-600 font-medium">Absent</div>
             <div className="text-2xl font-bold text-red-700">{absentCount}</div>
           </div>
+
+          {/* NEW: S.N panel */}
+          <div className="bg-purple-50 border border-purple-200 rounded p-4 text-center">
+            <div className="text-sm text-purple-600 font-medium">
+              S.N (Not Present)
+            </div>
+            <div className="text-2xl font-bold text-purple-700">{snCount}</div>
+          </div>
         </div>
       </div>
     );
@@ -112,7 +122,11 @@ export default function SubjectBreakdown() {
       } else if (row.status === "absent") {
         label = "Absent";
         color = "text-red-600";
+      } else if (row.status === "sn") {
+        label = "S.N"; // NEW label
+        color = "text-purple-600"; // NEW color
       }
+
       const onDelete = () => {
         if (!confirm("রেকর্ডটি মুছবেন?")) return;
         removeRecordAt(idx); // remove from store
