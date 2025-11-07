@@ -1,0 +1,151 @@
+// File: pages/qa.js
+import { useEffect, useState } from "react";
+import path from "path";
+import "./qa.css";
+
+export async function getStaticProps() {
+  // dynamic import of fs so bundler doesn't try to include it for client
+  let pairs = [];
+  try {
+    const fs = await import("fs");
+    const jsonPath = path.join(process.cwd(), "public", "data.json");
+    if (fs.existsSync(jsonPath)) {
+      const raw = fs.readFileSync(jsonPath, "utf8");
+      pairs = JSON.parse(raw || "[]");
+    } else {
+      // file not present at build time
+      pairs = [];
+    }
+  } catch (err) {
+    // if any server-side read error, log to console and return empty list
+    // Next build or dev server console will show this
+    // We still allow client-side fetch fallback.
+    // eslint-disable-next-line no-console
+    console.error(
+      "getStaticProps - failed to read data.json:",
+      err && err.message
+    );
+    pairs = [];
+  }
+
+  return {
+    props: { pairs },
+    // short ISR so you can regenerate by running the generator and waiting or re-building
+    revalidate: 10,
+  };
+}
+
+export default function QAViewer({ pairs: initialPairs }) {
+  const [pairs, setPairs] = useState(initialPairs || []);
+  const [source, setSource] = useState(
+    initialPairs && initialPairs.length
+      ? "data.json (server)"
+      : "(no server data)"
+  );
+  const [showAnswers, setShowAnswers] = useState(true);
+
+  useEffect(() => {
+    // 1) prefer window.QA_DATA if present (data.js)
+    if (
+      typeof window !== "undefined" &&
+      Array.isArray(window.QA_DATA) &&
+      window.QA_DATA.length
+    ) {
+      setPairs(window.QA_DATA);
+      setSource("data.js (client)");
+      return;
+    }
+
+    // 2) if server-side didn't provide data, try fetch /data.json
+    if (!initialPairs || initialPairs.length === 0) {
+      fetch("/data.json", { cache: "no-store" })
+        .then((res) => {
+          if (!res.ok) throw new Error("fetch /data.json failed " + res.status);
+          return res.json();
+        })
+        .then((data) => {
+          if (Array.isArray(data) && data.length) {
+            setPairs(data);
+            setSource("data.json (fetched)");
+          }
+        })
+        .catch((err) => {
+          // eslint-disable-next-line no-console
+          console.info("client fetch /data.json failed:", err && err.message);
+        });
+    }
+  }, [initialPairs]);
+
+  return (
+    <div className="qa-container">
+      <div className="qa-header">
+        <h2 className="qa-title">Q → A Viewer</h2>
+        <div className="qa-meta">
+          {source} · Pairs: {pairs.length}
+        </div>
+      </div>
+
+      <div className="qa-grid">
+        <aside className="qa-aside">
+          <div className="qa-subtle">Questions</div>
+
+          {pairs.length === 0 && (
+            <div className="qa-no-data">
+              No data. Generate public/data.json or upload data.js
+            </div>
+          )}
+
+          {pairs.map((p, i) => (
+            <button
+              key={i}
+              className="qa-question"
+              onClick={() => {
+                const el = document.getElementById(`card-${i}`);
+                if (el)
+                  el.scrollIntoView({ behavior: "smooth", block: "center" });
+              }}
+            >
+              <div className="qa-question-title">{p.q}</div>
+              <div className="qa-question-excerpt">
+                {p.a.slice(0, 80)}
+                {p.a.length > 80 ? "…" : ""}
+              </div>
+            </button>
+          ))}
+        </aside>
+
+        <main className="qa-main">
+          <div className="qa-viewer-header">
+            <div className="qa-viewer-title">Viewer</div>
+            <label className="qa-checkbox-label">
+              <input
+                type="checkbox"
+                checked={showAnswers}
+                onChange={(e) => setShowAnswers(e.target.checked)}
+              />
+              <span>Show answers</span>
+            </label>
+          </div>
+
+          <div className="qa-cards-grid">
+            {pairs.map((p, i) => (
+              <article id={`card-${i}`} key={i} className="qa-card">
+                <div className="qa-card-q">{p.q}</div>
+
+                <div
+                  className={`qa-card-a ${showAnswers ? "visible" : "hidden"}`}
+                >
+                  {p.a.split("\n").map((line, idx) => (
+                    <div key={idx} className="qa-card-line">
+                      {line}
+                    </div>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </main>
+      </div>
+    </div>
+  );
+}

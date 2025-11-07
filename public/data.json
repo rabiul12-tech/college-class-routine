@@ -1,0 +1,2538 @@
+[
+  {
+    "q": "Transcript: What's your name?",
+    "a": "M"
+  },
+  {
+    "q": "y name is Ava. What's your name?",
+    "a": "M"
+  },
+  {
+    "q": "y name is Ava. How did you end up here?",
+    "a": "I"
+  },
+  {
+    "q": "was camping and lost my way. How did you end up here?",
+    "a": "I"
+  },
+  {
+    "q": "was camping and lost my way. Are you from this area?",
+    "a": "N"
+  },
+  {
+    "q": "o, I'm from a different town. Are you from this area?",
+    "a": "N"
+  },
+  {
+    "q": "o, I'm from a different town. Do you like camping?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I really enjoy camping. Do you like camping?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I really enjoy camping. Have you ever been lost before?",
+    "a": "N"
+  },
+  {
+    "q": "o, this is the first time. Have you ever been lost before?",
+    "a": "N"
+  },
+  {
+    "q": "o, this is the first time. What do you do for a living?",
+    "a": "I"
+  },
+  {
+    "q": "work as a teacher. What do you do for a living?",
+    "a": "I"
+  },
+  {
+    "q": "work as a teacher. Do you have any brothers or sisters?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have a younger sister. Do you have any brothers or sisters?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have a younger sister. What's your favorite meal?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite meal is pasta. What's your favorite meal?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite meal is pasta. Do you have any hobbies?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love painting. Do you have any hobbies?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love painting. Are you scared of the dark?",
+    "a": "A"
+  },
+  {
+    "q": "little bit. Yes. Are you scared of the dark?",
+    "a": "A"
+  },
+  {
+    "q": "little bit. Yes. Did you tell anyone where you were going?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I told my cousin. Did you tell anyone where you were going?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I told my cousin. Do you have a lantern?",
+    "a": "Y"
+  },
+  {
+    "q": "es, there's one in my bag. Do you have a lantern?",
+    "a": "Y"
+  },
+  {
+    "q": "es, there's one in my bag. Can you help me find a way out?",
+    "a": "L"
+  },
+  {
+    "q": "et's figure it out together. Can you help me find a way out?",
+    "a": "L"
+  },
+  {
+    "q": "et's figure it out together. Do you have any water?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have a bottle of water. Do you have any water?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have a bottle of water. Are you good at using a map?",
+    "a": "N"
+  },
+  {
+    "q": "ot really, but I can try. Are you good at using a map?",
+    "a": "N"
+  },
+  {
+    "q": "ot really, but I can try. Do you know how to use a GPS?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I've used one before. Do you know how to use a GPS?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I've used one before. Should we make a temporary shelter?",
+    "a": "Y"
+  },
+  {
+    "q": "es, we can try to build one. Should we make a temporary shelter?",
+    "a": "Y"
+  },
+  {
+    "q": "es, we can try to build one. Are you feeling cold?",
+    "a": "Y"
+  },
+  {
+    "q": "es, just a little. Are you feeling cold?",
+    "a": "Y"
+  },
+  {
+    "q": "es, just a little. Do you think we can find someone to help us?",
+    "a": "I"
+  },
+  {
+    "q": "hope so. Do you think we can find someone to help us?",
+    "a": "I"
+  },
+  {
+    "q": "hope so. Can you make a fire?",
+    "a": "I"
+  },
+  {
+    "q": "'m not sure, but we can try together. Can you make a fire?",
+    "a": "I"
+  },
+  {
+    "q": "'m not sure, but we can try together. What should we do next?",
+    "a": "L"
+  },
+  {
+    "q": "et's stay close and search for an exit. What should we do next?",
+    "a": "L"
+  },
+  {
+    "q": "et's stay close and search for an exit. Should we call for help?",
+    "a": "Y"
+  },
+  {
+    "q": "es, let's try yelling together. Should we call for help?",
+    "a": "Y"
+  },
+  {
+    "q": "es, let's try yelling together. Can we use your phone?",
+    "a": "T"
+  },
+  {
+    "q": "here's no signal, but we can check again later. Can we use your phone?",
+    "a": "T"
+  },
+  {
+    "q": "here's no signal, but we can check again later. What's your favorite cuisine?",
+    "a": "I"
+  },
+  {
+    "q": "love Italian food. What's your favorite cuisine?",
+    "a": "I"
+  },
+  {
+    "q": "love Italian food. Do you prefer spicy or mild food?",
+    "a": "I"
+  },
+  {
+    "q": "prefer mild food. Do you prefer spicy or mild food?",
+    "a": "I"
+  },
+  {
+    "q": "prefer mild food. What's your go to comfort food?",
+    "a": "M"
+  },
+  {
+    "q": "ac and cheese. What's your go to comfort food?",
+    "a": "M"
+  },
+  {
+    "q": "ac and cheese. Do you like trying new dishes?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love experimenting. Do you like trying new dishes?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love experimenting. Do you prefer cooking at home or eating out?",
+    "a": "C"
+  },
+  {
+    "q": "ooking at home. Do you prefer cooking at home or eating out?",
+    "a": "C"
+  },
+  {
+    "q": "ooking at home. What's your favorite dessert?",
+    "a": "C"
+  },
+  {
+    "q": "hocolate cake. What's your favorite dessert?",
+    "a": "C"
+  },
+  {
+    "q": "hocolate cake. Do you drink coffee every day?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I do. Do you drink coffee every day?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I do. What's your favorite fruit?",
+    "a": "M"
+  },
+  {
+    "q": "ango. What's your favorite fruit?",
+    "a": "M"
+  },
+  {
+    "q": "ango. Do you like fast food?",
+    "a": "O"
+  },
+  {
+    "q": "ccasionally. Do you like fast food?",
+    "a": "O"
+  },
+  {
+    "q": "ccasionally. Have you ever tried a food challenge?",
+    "a": "N"
+  },
+  {
+    "q": "o, but I'd love to. Have you ever tried a food challenge?",
+    "a": "N"
+  },
+  {
+    "q": "o, but I'd love to. Do you enjoy painting?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it's relaxing. Do you enjoy painting?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it's relaxing. What's your favorite hobby?",
+    "a": "P"
+  },
+  {
+    "q": "laying the guitar. What's your favorite hobby?",
+    "a": "P"
+  },
+  {
+    "q": "laying the guitar. Do you collect anything?",
+    "a": "Y"
+  },
+  {
+    "q": "es, postcards. Do you collect anything?",
+    "a": "Y"
+  },
+  {
+    "q": "es, postcards. Do you enjoy gardening?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love plants. Do you enjoy gardening?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love plants. Do you like puzzles?",
+    "a": "Y"
+  },
+  {
+    "q": "es, especially jigsaw puzzles. Do you like puzzles?",
+    "a": "Y"
+  },
+  {
+    "q": "es, especially jigsaw puzzles. Have you ever tried knitting?",
+    "a": "N"
+  },
+  {
+    "q": "o, but I want to. Have you ever tried knitting?",
+    "a": "N"
+  },
+  {
+    "q": "o, but I want to. Do you play any sports?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I play soccer. Do you play any sports?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I play soccer. What's a hobby you'd like to start?",
+    "a": "P"
+  },
+  {
+    "q": "hotography. What's a hobby you'd like to start?",
+    "a": "P"
+  },
+  {
+    "q": "hotography. Do you prefer indoor or outdoor activities?",
+    "a": "O"
+  },
+  {
+    "q": "utdoor activities. Do you prefer indoor or outdoor activities?",
+    "a": "O"
+  },
+  {
+    "q": "utdoor activities. Do you enjoy writing stories?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love storytelling. Do you enjoy writing stories?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love storytelling. Do you have a pet?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have a cat. Do you have a pet?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have a cat. What's your favorite animal?",
+    "a": "D"
+  },
+  {
+    "q": "olphins. What's your favorite animal?",
+    "a": "D"
+  },
+  {
+    "q": "olphins. Have you ever been to a zoo?",
+    "a": "Y"
+  },
+  {
+    "q": "es, many times. Have you ever been to a zoo?",
+    "a": "Y"
+  },
+  {
+    "q": "es, many times. Do you like hiking?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it's refreshing. Do you like hiking?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it's refreshing. Do you prefer mountains or beaches?",
+    "a": "I"
+  },
+  {
+    "q": "prefer beaches. Do you prefer mountains or beaches?",
+    "a": "I"
+  },
+  {
+    "q": "prefer beaches. What's the most beautiful place you visited?",
+    "a": "T"
+  },
+  {
+    "q": "he Grand Canyon. What's the most beautiful place you visited?",
+    "a": "T"
+  },
+  {
+    "q": "he Grand Canyon. Do you like camping?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I enjoy it. Do you like camping?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I enjoy it. Have you ever gone bird watching?",
+    "a": "N"
+  },
+  {
+    "q": "o, but it sounds interesting. Have you ever gone bird watching?",
+    "a": "N"
+  },
+  {
+    "q": "o, but it sounds interesting. Do you like stargazing?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it's magical. Do you like stargazing?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it's magical. What's your favorite flower?",
+    "a": "S"
+  },
+  {
+    "q": "unflower. What's your favorite flower?",
+    "a": "S"
+  },
+  {
+    "q": "unflower. Are you an introvert or an extrovert?",
+    "a": "I"
+  },
+  {
+    "q": "'m an introvert. Are you an introvert or an extrovert?",
+    "a": "I"
+  },
+  {
+    "q": "'m an introvert. Do you like meeting new people?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it's exciting. Do you like meeting new people?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it's exciting. Do you prefer small gatherings or big parties?",
+    "a": "S"
+  },
+  {
+    "q": "mall gatherings. Do you prefer small gatherings or big parties?",
+    "a": "S"
+  },
+  {
+    "q": "mall gatherings. How do you usually spend your weekends?",
+    "a": "R"
+  },
+  {
+    "q": "elaxing with friends. How do you usually spend your weekends?",
+    "a": "R"
+  },
+  {
+    "q": "elaxing with friends. Do you like surprises?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love them. Do you like surprises?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love them. What do you value most in a friendship?",
+    "a": "L"
+  },
+  {
+    "q": "oyalty. What do you value most in a friendship?",
+    "a": "L"
+  },
+  {
+    "q": "oyalty. Have you ever had a pen pal?",
+    "a": "Y"
+  },
+  {
+    "q": "es, when I was younger. Have you ever had a pen pal?",
+    "a": "Y"
+  },
+  {
+    "q": "es, when I was younger. Do you believe in love at first sight?",
+    "a": "N"
+  },
+  {
+    "q": "ot really. Do you believe in love at first sight?",
+    "a": "N"
+  },
+  {
+    "q": "ot really. How do you cheer up a friend?",
+    "a": "B"
+  },
+  {
+    "q": "y listening and making them laugh. How do you cheer up a friend?",
+    "a": "B"
+  },
+  {
+    "q": "y listening and making them laugh. Do you enjoy giving gifts?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it makes me happy. Do you enjoy giving gifts?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it makes me happy. What's your favorite holiday?",
+    "a": "C"
+  },
+  {
+    "q": "hristmas. What's your favorite holiday?",
+    "a": "C"
+  },
+  {
+    "q": "hristmas. Do you like decorating for holidays?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love it. Do you like decorating for holidays?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love it. Have you ever dressed up for Halloween?",
+    "a": "Y"
+  },
+  {
+    "q": "es, many times. Have you ever dressed up for Halloween?",
+    "a": "Y"
+  },
+  {
+    "q": "es, many times. Do you prefer birthdays or anniversaries?",
+    "a": "B"
+  },
+  {
+    "q": "irthdays. Do you prefer birthdays or anniversaries?",
+    "a": "B"
+  },
+  {
+    "q": "irthdays. What's the best gift you've ever received?",
+    "a": "A"
+  },
+  {
+    "q": "handmade scrapbook. What's the best gift you've ever received?",
+    "a": "A"
+  },
+  {
+    "q": "handmade scrapbook. Do you like fireworks?",
+    "a": "Y"
+  },
+  {
+    "q": "es, they are beautiful. Do you like fireworks?",
+    "a": "Y"
+  },
+  {
+    "q": "es, they are beautiful. Have you ever made a New Year's resolution?",
+    "a": "Y"
+  },
+  {
+    "q": "es, every year. Have you ever made a New Year's resolution?",
+    "a": "Y"
+  },
+  {
+    "q": "es, every year. Do you like holiday food?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it's delicious. Do you like holiday food?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it's delicious. What's a holiday tradition you love?",
+    "a": "W"
+  },
+  {
+    "q": "atching movies with family. What's a holiday tradition you love?",
+    "a": "W"
+  },
+  {
+    "q": "atching movies with family. Do you Do you enjoy holiday shopping?",
+    "a": "S"
+  },
+  {
+    "q": "ometimes, but it's stressful. Do you Do you enjoy holiday shopping?",
+    "a": "S"
+  },
+  {
+    "q": "ometimes, but it's stressful. Do you like shopping?",
+    "a": "Y"
+  },
+  {
+    "q": "es, but not too often. Do you like shopping?",
+    "a": "Y"
+  },
+  {
+    "q": "es, but not too often. Are you good at saving money?",
+    "a": "I"
+  },
+  {
+    "q": "try my best. Are you good at saving money?",
+    "a": "I"
+  },
+  {
+    "q": "try my best. Do you prefer online shopping or instore shopping?",
+    "a": "O"
+  },
+  {
+    "q": "nline shopping. Do you prefer online shopping or instore shopping?",
+    "a": "O"
+  },
+  {
+    "q": "nline shopping. Have you ever found a great deal?",
+    "a": "Y"
+  },
+  {
+    "q": "es, on a laptop. Have you ever found a great deal?",
+    "a": "Y"
+  },
+  {
+    "q": "es, on a laptop. Do you say set a budget?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I try to. Do you say set a budget?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I try to. What's something expensive you want to buy?",
+    "a": "A"
+  },
+  {
+    "q": "new camera. What's something expensive you want to buy?",
+    "a": "A"
+  },
+  {
+    "q": "new camera. Do you use coupons?",
+    "a": "S"
+  },
+  {
+    "q": "ometimes. Do you use coupons?",
+    "a": "S"
+  },
+  {
+    "q": "ometimes. Do you like thrift shopping?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it's fun. Do you like thrift shopping?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it's fun. Do you prefer branded items or generic ones?",
+    "a": "I"
+  },
+  {
+    "q": "t depends. Do you prefer branded items or generic ones?",
+    "a": "I"
+  },
+  {
+    "q": "t depends. What's your guilty pleasure purchase?",
+    "a": "F"
+  },
+  {
+    "q": "ancy chocolates. What's your guilty pleasure purchase?",
+    "a": "F"
+  },
+  {
+    "q": "ancy chocolates. Do you think robots will replace humans?",
+    "a": "M"
+  },
+  {
+    "q": "aybe in some jobs. Do you think robots will replace humans?",
+    "a": "M"
+  },
+  {
+    "q": "aybe in some jobs. Would you like to visit space?",
+    "a": "Y"
+  },
+  {
+    "q": "es, if it's safe. Would you like to visit space?",
+    "a": "Y"
+  },
+  {
+    "q": "es, if it's safe. Do you believe in time travel?",
+    "a": "I"
+  },
+  {
+    "q": "t's an interesting idea. Do you believe in time travel?",
+    "a": "I"
+  },
+  {
+    "q": "t's an interesting idea. Would you ever live on Mars?",
+    "a": "N"
+  },
+  {
+    "q": "o, I love Earth. Would you ever live on Mars?",
+    "a": "N"
+  },
+  {
+    "q": "o, I love Earth. Do you trust self-driving cars?",
+    "a": "N"
+  },
+  {
+    "q": "ot completely. Do you trust self-driving cars?",
+    "a": "N"
+  },
+  {
+    "q": "ot completely. Do you use smart home devices?",
+    "a": "Y"
+  },
+  {
+    "q": "es, a few. Do you use smart home devices?",
+    "a": "Y"
+  },
+  {
+    "q": "es, a few. Do you think AI will improve our lives?",
+    "a": "Y"
+  },
+  {
+    "q": "es, if used responsibly. Do you think AI will improve our lives?",
+    "a": "Y"
+  },
+  {
+    "q": "es, if used responsibly. Would you wear smart glasses?",
+    "a": "M"
+  },
+  {
+    "q": "aybe if they are stylish. Would you wear smart glasses?",
+    "a": "M"
+  },
+  {
+    "q": "aybe if they are stylish. Do you think flying cars will exist soon?",
+    "a": "N"
+  },
+  {
+    "q": "ot anytime soon. Do you think flying cars will exist soon?",
+    "a": "N"
+  },
+  {
+    "q": "ot anytime soon. What's one futuristic invention you wish existed?",
+    "a": "T"
+  },
+  {
+    "q": "eleportation. What's one futuristic invention you wish existed?",
+    "a": "T"
+  },
+  {
+    "q": "eleportation. Do you go to the gym?",
+    "a": "Y"
+  },
+  {
+    "q": "es, a few times a week. Do you go to the gym?",
+    "a": "Y"
+  },
+  {
+    "q": "es, a few times a week. Do you like yoga?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it's relaxing. Do you like yoga?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it's relaxing. What's your favorite sport?",
+    "a": "B"
+  },
+  {
+    "q": "asketball. What's your favorite sport?",
+    "a": "B"
+  },
+  {
+    "q": "asketball. Do you prefer working out alone or with friends?",
+    "a": "W"
+  },
+  {
+    "q": "ith friends. Do you prefer working out alone or with friends?",
+    "a": "W"
+  },
+  {
+    "q": "ith friends. Have you ever run a marathon?",
+    "a": "N"
+  },
+  {
+    "q": "o, but I'd love to. Have you ever run a marathon?",
+    "a": "N"
+  },
+  {
+    "q": "o, but I'd love to. Do you like swimming?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it's my favorite activity. Do you like swimming?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it's my favorite activity. Do you prefer team sports or individual sports?",
+    "a": "T"
+  },
+  {
+    "q": "eam sports. Do you prefer team sports or individual sports?",
+    "a": "T"
+  },
+  {
+    "q": "eam sports. Have you ever done rock climbing?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it was thrilling. Have you ever done rock climbing?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it was thrilling. Do you stretch before exercising?",
+    "a": "Y"
+  },
+  {
+    "q": "es, always. Do you stretch before exercising?",
+    "a": "Y"
+  },
+  {
+    "q": "es, always. Do you follow a fitness routine?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I try to. Do you follow a fitness routine?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I try to. Do you remember your dreams sometimes?",
+    "a": "D"
+  },
+  {
+    "q": "o you remember your dreams?",
+    "a": "S"
+  },
+  {
+    "q": "ometimes. Have you ever had a lucid dream?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it was surreal. Have you ever had a lucid dream?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it was surreal. Have you ever had deja vu?",
+    "a": "Y"
+  },
+  {
+    "q": "es, many times. Have you ever had deja vu?",
+    "a": "Y"
+  },
+  {
+    "q": "es, many times. Would you want to time travel?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it would be amazing. Would you want to time travel?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it would be amazing. What is your name?",
+    "a": "M"
+  },
+  {
+    "q": "y name is Sophia. What is your name?",
+    "a": "M"
+  },
+  {
+    "q": "y name is Sophia. How are you today?",
+    "a": "O"
+  },
+  {
+    "q": "h, I am good today. How are you today?",
+    "a": "O"
+  },
+  {
+    "q": "h, I am good today. Where are you from?",
+    "a": "I"
+  },
+  {
+    "q": "am from Florida. Where are you from?",
+    "a": "I"
+  },
+  {
+    "q": "am from Florida. How old are you?",
+    "a": "I"
+  },
+  {
+    "q": "am 29 years old. How old are you?",
+    "a": "I"
+  },
+  {
+    "q": "am 29 years old. What is your job?",
+    "a": "I"
+  },
+  {
+    "q": "work at a spa. What is your job?",
+    "a": "I"
+  },
+  {
+    "q": "work at a spa. Where do you work?",
+    "a": "I"
+  },
+  {
+    "q": "work at a spa in Florida. Where do you work?",
+    "a": "I"
+  },
+  {
+    "q": "work at a spa in Florida. Do you like your job?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like my job. Do you like your job?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like my job. Where do you live?",
+    "a": "I"
+  },
+  {
+    "q": "live in Florida. Where do you live?",
+    "a": "I"
+  },
+  {
+    "q": "live in Florida. Do you live alone?",
+    "a": "N"
+  },
+  {
+    "q": "o, I do not live alone. Do you live alone?",
+    "a": "N"
+  },
+  {
+    "q": "o, I do not live alone. Are you married now?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I am married. Are you married now?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I am married. Do you have children?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have children. Do you have children?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have children. How many children do you have?",
+    "a": "I"
+  },
+  {
+    "q": "have two children. How many children do you have?",
+    "a": "I"
+  },
+  {
+    "q": "have two children. Do you have pet?",
+    "a": "N"
+  },
+  {
+    "q": "o, I do not have pets. Do you have pet?",
+    "a": "N"
+  },
+  {
+    "q": "o, I do not have pets. What is your pet's name?",
+    "a": "S"
+  },
+  {
+    "q": "orry, I do not have any pets. What is your pet's name?",
+    "a": "S"
+  },
+  {
+    "q": "orry, I do not have any pets. What do you like to eat?",
+    "a": "I"
+  },
+  {
+    "q": "like eating pizza. What do you like to eat?",
+    "a": "I"
+  },
+  {
+    "q": "like eating pizza. Do you like spicy food?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like spicy food. Do you like spicy food?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like spicy food. What is your favorite drink?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite drink is iced coffee. What is your favorite drink?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite drink is iced coffee. How often do you drink coffee?",
+    "a": "I"
+  },
+  {
+    "q": "drink coffee every day. How often do you drink coffee?",
+    "a": "I"
+  },
+  {
+    "q": "drink coffee every day. Do you like tea or coffee?",
+    "a": "I"
+  },
+  {
+    "q": "like coffee more than tea. Do you like tea or coffee?",
+    "a": "I"
+  },
+  {
+    "q": "like coffee more than tea. What is your favorite restaurant?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite restaurant is a sushi place. What is your favorite restaurant?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite restaurant is a sushi place. How often do you eat out?",
+    "a": "I"
+  },
+  {
+    "q": "eat out about once a week. How often do you eat out?",
+    "a": "I"
+  },
+  {
+    "q": "eat out about once a week. Do you like cooking?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I enjoy cooking. Do you like cooking?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I enjoy cooking. What is your favorite dish?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite dish is pasta. What is your favorite dish?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite dish is pasta. Can you cook well?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I can cook well. Can you cook well?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I can cook well. What do you usually cook?",
+    "a": "I"
+  },
+  {
+    "q": "usually cook chicken and vegetables. What do you usually cook?",
+    "a": "I"
+  },
+  {
+    "q": "usually cook chicken and vegetables. How often do you cook?",
+    "a": "I"
+  },
+  {
+    "q": "cook about three times a week. How often do you cook?",
+    "a": "I"
+  },
+  {
+    "q": "cook about three times a week. Do you like fast food?",
+    "a": "N"
+  },
+  {
+    "q": "o, I do not like fast food much. Do you like fast food?",
+    "a": "N"
+  },
+  {
+    "q": "o, I do not like fast food much. Where is the best restaurant?",
+    "a": "T"
+  },
+  {
+    "q": "he best restaurant is called Sakura. Where is the best restaurant?",
+    "a": "T"
+  },
+  {
+    "q": "he best restaurant is called Sakura. How often do you visit it?",
+    "a": "I"
+  },
+  {
+    "q": "visit it about once a month. How often do you visit it?",
+    "a": "I"
+  },
+  {
+    "q": "visit it about once a month. What do you like to read?",
+    "a": "I"
+  },
+  {
+    "q": "like to read romance books. What do you like to read?",
+    "a": "I"
+  },
+  {
+    "q": "like to read romance books. What is your favorite book?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite book is Pride and Prejudice. What is your favorite book?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite book is Pride and Prejudice. Do you like reading books?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I enjoy reading books. Do you like reading books?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I enjoy reading books. How often do you read?",
+    "a": "I"
+  },
+  {
+    "q": "read a few times a week. How often do you read?",
+    "a": "I"
+  },
+  {
+    "q": "read a few times a week. What type of books do you like?",
+    "a": "I"
+  },
+  {
+    "q": "like reading romance and mystery books. What type of books do you like?",
+    "a": "I"
+  },
+  {
+    "q": "like reading romance and mystery books. What time do you have dinner?",
+    "a": "I"
+  },
+  {
+    "q": "have dinner around 700 p.m. What time do you have dinner?",
+    "a": "I"
+  },
+  {
+    "q": "have dinner around 700 p.m. What is your favorite dessert?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite dessert is chocolate cake. What is your favorite dessert?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite dessert is chocolate cake. Do you like ice cream?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love ice cream. Do you like ice cream?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love ice cream. Do you prefer chocolate or vanilla?",
+    "a": "I"
+  },
+  {
+    "q": "prefer chocolate over vanilla. Do you prefer chocolate or vanilla?",
+    "a": "I"
+  },
+  {
+    "q": "prefer chocolate over vanilla. Do you drink soda or water?",
+    "a": "I"
+  },
+  {
+    "q": "drink water more than soda. Do you drink soda or water?",
+    "a": "I"
+  },
+  {
+    "q": "drink water more than soda. Do you like healthy food?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like healthy food. Do you like healthy food?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like healthy food. What snacks do you eat?",
+    "a": "I"
+  },
+  {
+    "q": "like eating nuts and fruits as snacks. What snacks do you eat?",
+    "a": "I"
+  },
+  {
+    "q": "like eating nuts and fruits as snacks. Do you like fruit or vegetables?",
+    "a": "I"
+  },
+  {
+    "q": "like both fruit and vegetables. Do you like fruit or vegetables?",
+    "a": "I"
+  },
+  {
+    "q": "like both fruit and vegetables. What is your favorite fruit?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite fruit is strawberries. What is your favorite fruit?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite fruit is strawberries. What is your favorite vegetable?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite vegetable is carrots. What is your favorite vegetable?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite vegetable is carrots. Do you eat meat or vegetarian food?",
+    "a": "I"
+  },
+  {
+    "q": "eat both meat and vegetarian food. Do you eat meat or vegetarian food?",
+    "a": "I"
+  },
+  {
+    "q": "eat both meat and vegetarian food. Do you like cooking at home?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I enjoy cooking at home. Do you like cooking at home?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I enjoy cooking at home. What do you usually have for breakfast?",
+    "a": "F"
+  },
+  {
+    "q": "or breakfast, I usually have oatmeal. What do you usually have for breakfast?",
+    "a": "F"
+  },
+  {
+    "q": "or breakfast, I usually have oatmeal. Do you like bread or rice?",
+    "a": "I"
+  },
+  {
+    "q": "like bread more than rice. Do you like bread or rice?",
+    "a": "I"
+  },
+  {
+    "q": "like bread more than rice. How do you make your coffee?",
+    "a": "I"
+  },
+  {
+    "q": "make my coffee with a coffee machine. How do you make your coffee?",
+    "a": "I"
+  },
+  {
+    "q": "make my coffee with a coffee machine. What time do you finish work?",
+    "a": "I"
+  },
+  {
+    "q": "finish work around 5:00 p.m. What time do you finish work?",
+    "a": "I"
+  },
+  {
+    "q": "finish work around 5:00 p.m. Do you drive to work?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I drive to work. Do you drive to work?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I drive to work. How long is your commute to work?",
+    "a": "M"
+  },
+  {
+    "q": "y commute is about 15 minutes. How long is your commute to work?",
+    "a": "M"
+  },
+  {
+    "q": "y commute is about 15 minutes. Do you take the bus or train?",
+    "a": "N"
+  },
+  {
+    "q": "o, I do not take the bus or train. Do you take the bus or train?",
+    "a": "N"
+  },
+  {
+    "q": "o, I do not take the bus or train. What time do you get home?",
+    "a": "I"
+  },
+  {
+    "q": "get home around 5:30 p.m. What time do you get home?",
+    "a": "I"
+  },
+  {
+    "q": "get home around 5:30 p.m. Do you work from home sometimes?",
+    "a": "N"
+  },
+  {
+    "q": "o, I do not work from home. Do you work from home sometimes?",
+    "a": "N"
+  },
+  {
+    "q": "o, I do not work from home. What do you do in the evening?",
+    "a": "I"
+  },
+  {
+    "q": "n the evening, I relax and watch TV. What do you do in the evening?",
+    "a": "I"
+  },
+  {
+    "q": "n the evening, I relax and watch TV. Do you watch TV after dinner?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I watch TV after dinner. Do you watch TV after dinner?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I watch TV after dinner. What is your favorite TV show?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite TV show is Friends. What is your favorite TV show?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite TV show is Friends. Do you watch TV every night?",
+    "a": "N"
+  },
+  {
+    "q": "o, I do not watch TV every night. Do you watch TV every night?",
+    "a": "N"
+  },
+  {
+    "q": "o, I do not watch TV every night. Do you prefer TV or movies?",
+    "a": "I"
+  },
+  {
+    "q": "prefer TV over movies. Do you prefer TV or movies?",
+    "a": "I"
+  },
+  {
+    "q": "prefer TV over movies. Do you have any hobbies?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have some hobbies. Do you have any hobbies?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have some hobbies. How did you start your hobby?",
+    "a": "I"
+  },
+  {
+    "q": "started my hobby of painting two years ago. How did you start your hobby?",
+    "a": "I"
+  },
+  {
+    "q": "started my hobby of painting two years ago. How often do you practice your hobby?",
+    "a": "I"
+  },
+  {
+    "q": "practice my hobby about once a week. How often do you practice your hobby?",
+    "a": "I"
+  },
+  {
+    "q": "practice my hobby about once a week. Do you like learning new things?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like learning new things. Do you like learning new things?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like learning new things. What new skills are you learning?",
+    "a": "I"
+  },
+  {
+    "q": "am learning how to bake. What new skills are you learning?",
+    "a": "I"
+  },
+  {
+    "q": "am learning how to bake. Do you study English every day?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I study English every day. Do you study English every day?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I study English every day. How long have you studied English?",
+    "a": "I"
+  },
+  {
+    "q": "have studied English for 5 years. How long have you studied English?",
+    "a": "I"
+  },
+  {
+    "q": "have studied English for five years. Do you like studying languages?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I enjoy studying languages. Do you like studying languages?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I enjoy studying languages. What other languages do you speak?",
+    "a": "I"
+  },
+  {
+    "q": "speak English and a little Spanish. What other languages do you speak?",
+    "a": "I"
+  },
+  {
+    "q": "speak English and a little Spanish. Do you practice English at home?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I practice English at home. Do you practice English at home?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I practice English at home. What is the hardest part of English?",
+    "a": "T"
+  },
+  {
+    "q": "he hardest part of English is grammar. What is the hardest part of English?",
+    "a": "T"
+  },
+  {
+    "q": "he hardest part of English is grammar. What do you like about English?",
+    "a": "I"
+  },
+  {
+    "q": "like how English helps me talk to new people. What do you like about English?",
+    "a": "I"
+  },
+  {
+    "q": "like how English helps me talk to new people. What is your goal for learning English?",
+    "a": "M"
+  },
+  {
+    "q": "y goal is to speak English fluently. What is your goal for learning English?",
+    "a": "M"
+  },
+  {
+    "q": "y goal is to speak English fluently. Do you have English-speaking friends?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have English-speaking friends. Do you have English-speaking friends?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have English-speaking friends. How do you practice speaking English?",
+    "a": "I"
+  },
+  {
+    "q": "practice speaking English with my friends. How do you practice speaking English?",
+    "a": "I"
+  },
+  {
+    "q": "practice speaking English with my friends. Do you want to travel to English-speaking countries?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I want to travel to English-speaking countries. Do you want to travel to English-speaking countries?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I want to travel to English-speaking countries. How often do you use English at work?",
+    "a": "I"
+  },
+  {
+    "q": "use English at work almost every day. How often do you use English at work?",
+    "a": "I"
+  },
+  {
+    "q": "use English at work almost every day. Do you like watching English movies?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like watching English movies. Do you like watching English movies?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like watching English movies. What do you find easy in English?",
+    "a": "I"
+  },
+  {
+    "q": "find reading in English easier than speaking. What do you find easy in English?",
+    "a": "I"
+  },
+  {
+    "q": "find reading in English easier than speaking. Do you listen to English podcasts?",
+    "a": "N"
+  },
+  {
+    "q": "o, I do not listen to English podcasts. Do you listen to English podcasts?",
+    "a": "N"
+  },
+  {
+    "q": "o, I do not listen to English podcasts. What do you like most about English?",
+    "a": "I"
+  },
+  {
+    "q": "like how English connects people worldwide. What do you like most about English?",
+    "a": "I"
+  },
+  {
+    "q": "like how English connects people worldwide. How do you improve your English?",
+    "a": "I"
+  },
+  {
+    "q": "improve my English by practicing every day. How do you improve your English?",
+    "a": "I"
+  },
+  {
+    "q": "improve my English by practicing every day. Do you want to live abroad?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I want to live abroad someday. Do you want to live abroad?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I want to live abroad someday. Where would you like to live?",
+    "a": "I"
+  },
+  {
+    "q": "would like to live in London. Where would you like to live?",
+    "a": "I"
+  },
+  {
+    "q": "would like to live in London. Have you ever been to the USA?",
+    "a": "N"
+  },
+  {
+    "q": "o, I have never been to the USA. Have you ever been to the USA?",
+    "a": "N"
+  },
+  {
+    "q": "o, I have never been to the USA. What cities in the USA have you visited?",
+    "a": "I"
+  },
+  {
+    "q": "have not visited any cities in the USA. What cities in the USA have you visited?",
+    "a": "I"
+  },
+  {
+    "q": "have not visited any cities in the USA. Would you like to visit the UK?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I would love to visit the UK. Would you like to visit the UK?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I would love to visit the UK. What do you know about London?",
+    "a": "I"
+  },
+  {
+    "q": "know London is famous for its history and landmarks. What do you know about London?",
+    "a": "I"
+  },
+  {
+    "q": "know London is famous for its history and landmarks. Have you been to Australia?",
+    "a": "N"
+  },
+  {
+    "q": "o, I have never been to Australia. Have you been to Australia?",
+    "a": "N"
+  },
+  {
+    "q": "o, I have never been to Australia. Do you like British or American accents?",
+    "a": "I"
+  },
+  {
+    "q": "like both British and American accents. Do you like British or American accents?",
+    "a": "I"
+  },
+  {
+    "q": "like both British and American accents. Do you have any plans for the future?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have many plans for the future. Do you have any plans for the future?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have many plans for the future. What are your career goals?",
+    "a": "M"
+  },
+  {
+    "q": "y career goal is to open my own spa. What are your career goals?",
+    "a": "M"
+  },
+  {
+    "q": "y career goal is to open my own spa. Do you want to change your job?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I want to change my job in the future. Do you want to change your job?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I want to change my job in the future. Are you happy with your current job?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I am happy with my current job. Are you happy with your current job?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I am happy with my current job. What skills do you want to develop?",
+    "a": "I"
+  },
+  {
+    "q": "want to develop better management skills. What skills do you want to develop?",
+    "a": "I"
+  },
+  {
+    "q": "want to develop better management skills. How do you plan to achieve your goals?",
+    "a": "I"
+  },
+  {
+    "q": "plan to achieve my goals by studying and working hard. How do you plan to achieve your goals?",
+    "a": "I"
+  },
+  {
+    "q": "plan to achieve my goals by studying and working hard. What do you see yourself doing in five years?",
+    "a": "I"
+  },
+  {
+    "q": "n five years, I see myself running my own spa. What do you see yourself doing in five years?",
+    "a": "I"
+  },
+  {
+    "q": "n 5 years, I see myself running my own spa. Do you plan to study more?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I plan to study more. Do you plan to study more?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I plan to study more. What courses are you interested in?",
+    "a": "I"
+  },
+  {
+    "q": "am interested in taking business courses. What courses are you interested in?",
+    "a": "I"
+  },
+  {
+    "q": "am interested in taking business courses. What motivates you to work hard?",
+    "a": "I"
+  },
+  {
+    "q": "am motivated by my dream of owning a spa. What motivates you to work hard?",
+    "a": "I"
+  },
+  {
+    "q": "am motivated by my dream of owning a spa. Do you prefer working alone or in a team?",
+    "a": "I"
+  },
+  {
+    "q": "prefer working in a team. Do you prefer working alone or in a team?",
+    "a": "I"
+  },
+  {
+    "q": "prefer working in a team. What do you like about your job?",
+    "a": "I"
+  },
+  {
+    "q": "like helping people feel relaxed. What do you like about your job?",
+    "a": "I"
+  },
+  {
+    "q": "like helping people feel relaxed. Do you want to start a business?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I want to start a business. Do you want to start a business?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I want to start a business. What type of business would you start?",
+    "a": "I"
+  },
+  {
+    "q": "would start a spa. and wellness center. What type of business would you start?",
+    "a": "I"
+  },
+  {
+    "q": "would start a spa and wellness center. How would you describe yourself?",
+    "a": "I"
+  },
+  {
+    "q": "would describe myself as friendly and hardworking. How would you describe yourself?",
+    "a": "I"
+  },
+  {
+    "q": "would describe myself as friendly and hardworking. What are your strengths?",
+    "a": "M"
+  },
+  {
+    "q": "y strength is my ability to stay calm under pressure. What are your strengths?",
+    "a": "M"
+  },
+  {
+    "q": "y strength is my ability to stay calm under pressure. What are your weaknesses?",
+    "a": "M"
+  },
+  {
+    "q": "y weakness is that I can be a bit shy sometimes. What are your weaknesses?",
+    "a": "M"
+  },
+  {
+    "q": "y weakness is that I can be a bit shy sometimes. Do you like meeting new people?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like meeting new people. Do you like meeting new people?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like meeting new people. What qualities do you value in a friend?",
+    "a": "I"
+  },
+  {
+    "q": "value honesty and kindness in a friend. What qualities do you value in a friend?",
+    "a": "I"
+  },
+  {
+    "q": "value honesty and kindness in a friend. Do you have many close friends?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have many close friends. Do you have many close friends?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have many close friends. How do you stay in touch with friends?",
+    "a": "I"
+  },
+  {
+    "q": "stay in touch with friends by texting and calling. How do you stay in touch with friends?",
+    "a": "I"
+  },
+  {
+    "q": "stay in touch with friends by texting and calling. What do you like doing with friends?",
+    "a": "I"
+  },
+  {
+    "q": "like going out for coffee with friends. What do you like doing with friends?",
+    "a": "I"
+  },
+  {
+    "q": "like going out for coffee with friends. Do you go to school?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I go to school every day. Do you go to school?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I go to school every day. What grade are you in?",
+    "a": "I"
+  },
+  {
+    "q": "am in the 10th grade. What grade are you in?",
+    "a": "I"
+  },
+  {
+    "q": "am in the 10th grade. Do you like your school?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like my school. Do you like your school?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like my school. Who is your favorite teacher?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite teacher is Mr. Smith. Who is your favorite teacher?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite teacher is Mr. Smith. Why do you like Mr. Smith?",
+    "a": "H"
+  },
+  {
+    "q": "e is very kind and funny. Why do you like Mr. Smith?",
+    "a": "H"
+  },
+  {
+    "q": "e is very kind and funny. What is your favorite subject?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite subject is English. What is your favorite subject?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite subject is English. Why do you like English?",
+    "a": "B"
+  },
+  {
+    "q": "ecause I want to travel. Why do you like English?",
+    "a": "B"
+  },
+  {
+    "q": "ecause I want to travel. Do you study at home?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I study for 2 hours every day. Do you study at home?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I study for two hours every day. Do you use a computer for studying?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I use my laptop. Do you use a computer for studying?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I use my laptop. Do you have homework every day?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have a little homework. Do you have homework every day?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have a little homework. Do you use a smartphone?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have a smartphone. Do you use a smartphone?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have a smartphone. What do you use your phone for?",
+    "a": "I"
+  },
+  {
+    "q": "use it to call my friends. What do you use your phone for?",
+    "a": "I"
+  },
+  {
+    "q": "use it to call my friends. Do you use social media?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I use Instagram. Do you use social media?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I use Instagram. Do you like taking pictures?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love taking photos. Do you like taking pictures?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love taking photos. Do you watch videos online?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I watch videos on YouTube. Do you watch videos online?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I watch videos on YouTube. Do you play games on your phone?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I play simple games. Do you play games on your phone?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I play simple games. Do you send a lot of messages?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I text my friends every day. Do you send a lot of messages?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I text my friends every day. Do you read the news online?",
+    "a": "S"
+  },
+  {
+    "q": "ometimes I read the news. Do you read the news online?",
+    "a": "S"
+  },
+  {
+    "q": "ometimes I read the news. Do you use a laptop or a tablet?",
+    "a": "I"
+  },
+  {
+    "q": "use a laptop. Do you use a laptop or a tablet?",
+    "a": "I"
+  },
+  {
+    "q": "use a laptop. Do you think technology is helpful?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it makes life easier. Food and drinks. Do you think technology is helpful?",
+    "a": "Y"
+  },
+  {
+    "q": "es, it makes life easier. Food and drinks. Do you like cooking?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like cooking. Do you like cooking?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like cooking. What is your favorite meal?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite meal is pasta. What is your favorite meal?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite meal is pasta. Do you like fast food?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like burgers. Do you like fast food?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like burgers. Do you eat a lot of vegetables?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I eat vegetables every day. Do you eat a lot of vegetables?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I eat vegetables every day. What is your favorite fruit?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite fruit is mango. What is your favorite fruit?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite fruit is mango. Do you drink soda?",
+    "a": "S"
+  },
+  {
+    "q": "ometimes I drink soda. Do you drink soda?",
+    "a": "S"
+  },
+  {
+    "q": "ometimes I drink soda. Do you like coffee or tea?",
+    "a": "I"
+  },
+  {
+    "q": "like tea more than coffee. Do you like coffee or tea?",
+    "a": "I"
+  },
+  {
+    "q": "like tea more than coffee. Do you eat breakfast every day?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I always eat breakfast. Do you eat breakfast every day?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I always eat breakfast. What do you eat for breakfast?",
+    "a": "I"
+  },
+  {
+    "q": "eat bread and eggs. What do you eat for breakfast?",
+    "a": "I"
+  },
+  {
+    "q": "eat bread and eggs. Do you drink milk?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I drink milk in the morning. Do you drink milk?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I drink milk in the morning. Do you exercise every day?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I exercise in the morning. Do you exercise every day?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I exercise in the morning. What kind of exercise do you do?",
+    "a": "I"
+  },
+  {
+    "q": "go jogging. What kind of exercise do you do?",
+    "a": "I"
+  },
+  {
+    "q": "go jogging. Do you go to the gym?",
+    "a": "N"
+  },
+  {
+    "q": "o, I exercise at home. Do you go to the gym?",
+    "a": "N"
+  },
+  {
+    "q": "o, I exercise at home. Do you like running?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like running. Do you like running?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like running. Do you play any sports?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I play basketball. Do you play any sports?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I play basketball. How often do you play basketball?",
+    "a": "I"
+  },
+  {
+    "q": "play twice a week. How often do you play basketball?",
+    "a": "I"
+  },
+  {
+    "q": "play twice a week. Do you drink a lot of water?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I drink eight glasses a day. Do you drink a lot of water?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I drink eight glasses a day. Do you get sick often?",
+    "a": "N"
+  },
+  {
+    "q": "o, I am usually healthy. Do you get sick often?",
+    "a": "N"
+  },
+  {
+    "q": "o, I am usually healthy. What do you do when you are sick?",
+    "a": "I"
+  },
+  {
+    "q": "rest and drink tea. What do you do when you are sick?",
+    "a": "I"
+  },
+  {
+    "q": "rest and drink tea. Do you visit the doctor often?",
+    "a": "N"
+  },
+  {
+    "q": "o, only when I am sick. Do you visit the doctor often?",
+    "a": "N"
+  },
+  {
+    "q": "o, only when I am sick. Do you like holidays?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love holidays. Do you like holidays?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love holidays. What is your favorite holiday?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite holiday is Christmas. What is your favorite holiday?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite holiday is Christmas. How do you celebrate Christmas?",
+    "a": "I"
+  },
+  {
+    "q": "celebrate with my family. How do you celebrate Christmas?",
+    "a": "I"
+  },
+  {
+    "q": "celebrate with my family. Do you give gifts on Christmas?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I give and receive gifts. Do you give gifts on Christmas?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I give and receive gifts. Do you like birthdays?",
+    "a": "Y"
+  },
+  {
+    "q": "es, birthdays are fun. Do you like birthdays?",
+    "a": "Y"
+  },
+  {
+    "q": "es, birthdays are fun. How do you celebrate your birthday?",
+    "a": "I"
+  },
+  {
+    "q": "have a party with friends. How do you celebrate your birthday?",
+    "a": "I"
+  },
+  {
+    "q": "have a party with friends. Do you eat cake on your birthday?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love birthday cake. Do you eat cake on your birthday?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love birthday cake. Do you like fireworks?",
+    "a": "Y"
+  },
+  {
+    "q": "es, they are beautiful. Do you like fireworks?",
+    "a": "Y"
+  },
+  {
+    "q": "es, they are beautiful. Do you travel during holidays?",
+    "a": "S"
+  },
+  {
+    "q": "ometimes I travel with my family. Do you travel during holidays?",
+    "a": "S"
+  },
+  {
+    "q": "ometimes I travel with my family. Do you enjoy spending time with family?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love family time. Do you enjoy spending time with family?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love family time. Do you have many friends?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have many friends. Do you have many friends?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have many friends. Who is your best friend?",
+    "a": "M"
+  },
+  {
+    "q": "y best friend is Sarah. Who is your best friend?",
+    "a": "M"
+  },
+  {
+    "q": "y best friend is Sarah. How long have you known Sarah?",
+    "a": "I"
+  },
+  {
+    "q": "have known her for 5 years. How long have you known Sarah?",
+    "a": "I"
+  },
+  {
+    "q": "have known her for 5 years. Where did you meet your best friend?",
+    "a": "W"
+  },
+  {
+    "q": "e met at school. Where did you meet your best friend?",
+    "a": "W"
+  },
+  {
+    "q": "e met at school. What do you do with your friends?",
+    "a": "W"
+  },
+  {
+    "q": "e talk play games and watch movies. What do you do with your friends?",
+    "a": "W"
+  },
+  {
+    "q": "e talk play games and watch movies. Do you go out with your friends often?",
+    "a": "Y"
+  },
+  {
+    "q": "es, we go out every weekend. Do you go out with your friends often?",
+    "a": "Y"
+  },
+  {
+    "q": "es, we go out every weekend. Where do you and your friends go?",
+    "a": "W"
+  },
+  {
+    "q": "e go to mall in the park. Where do you and your friends go?",
+    "a": "W"
+  },
+  {
+    "q": "e go to mall in the park. Do you like meeting new people?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like making new friends. Do you like meeting new people?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like making new friends. Do you and your friends have similar hobbies?",
+    "a": "Y"
+  },
+  {
+    "q": "es, we all like music and movies. Do you and your friends have similar hobbies?",
+    "a": "Y"
+  },
+  {
+    "q": "es, we all like music and movies. Do you talk to your friends every day?",
+    "a": "Y"
+  },
+  {
+    "q": "es, we chat every day. Do you talk to your friends every day?",
+    "a": "Y"
+  },
+  {
+    "q": "es, we chat every day. Do you live in a house or an apartment?",
+    "a": "I"
+  },
+  {
+    "q": "live in a house. Do you live in a house or an apartment?",
+    "a": "I"
+  },
+  {
+    "q": "live in a house. Is your house big or small?",
+    "a": "I"
+  },
+  {
+    "q": "t is a small house. Is your house big or small?",
+    "a": "I"
+  },
+  {
+    "q": "t is a small house. How many people live in your house?",
+    "a": "F"
+  },
+  {
+    "q": "our people live in my house. How many people live in your house?",
+    "a": "F"
+  },
+  {
+    "q": "our people live in my house. Do you have your own room?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have my own room. Do you have your own room?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have my own room. What do you do after waking up?",
+    "a": "I"
+  },
+  {
+    "q": "brush my teeth and take a shower. What do you do after waking up?",
+    "a": "I"
+  },
+  {
+    "q": "brush my teeth and take a shower. Do you eat breakfast every day?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I always eat breakfast. Do you eat breakfast every day?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I always eat breakfast. What do you do in the evening?",
+    "a": "I"
+  },
+  {
+    "q": "watch TV and relax. What do you do in the evening?",
+    "a": "I"
+  },
+  {
+    "q": "watch TV and relax. Do you go to bed early?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I go to bed at 100 p.m. Do you go to bed early?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I go to bed at 100 p.m. Do you sleep well at night?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I sleep very well. Do you sleep well at night?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I sleep very well. Do you have a job?",
+    "a": "N"
+  },
+  {
+    "q": "o, I am a student. Do you have a job?",
+    "a": "N"
+  },
+  {
+    "q": "o, I am a student. Do you want to work in the future?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I want to be a teacher. Do you want to work in the future?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I want to be a teacher. Why do you want to be a teacher?",
+    "a": "B"
+  },
+  {
+    "q": "ecause I like helping people. Why do you want to be a teacher?",
+    "a": "B"
+  },
+  {
+    "q": "ecause I like helping people. Do you think teaching is difficult?",
+    "a": "Y"
+  },
+  {
+    "q": "es, but it is also fun. Do you think teaching is difficult?",
+    "a": "Y"
+  },
+  {
+    "q": "es, but it is also fun. What skill do you need for your job?",
+    "a": "Y"
+  },
+  {
+    "q": "ou need patience and knowledge. What skill do you need for your job?",
+    "a": "Y"
+  },
+  {
+    "q": "ou need patience and knowledge. Do you like working alone or with people?",
+    "a": "I"
+  },
+  {
+    "q": "like working with people. Do you like working alone or with people?",
+    "a": "I"
+  },
+  {
+    "q": "like working with people. Do you want to work in another country?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I want to work in Canada. Do you want to work in another country?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I want to work in Canada. Do you like office jobs?",
+    "a": "N"
+  },
+  {
+    "q": "o, I like active jobs. Do you like office jobs?",
+    "a": "N"
+  },
+  {
+    "q": "o, I like active jobs. Do you think working is important?",
+    "a": "Y"
+  },
+  {
+    "q": "es, work gives people a purpose. Do you think working is important?",
+    "a": "Y"
+  },
+  {
+    "q": "es, work gives people a purpose. Do you like nature?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love nature. Do you like nature?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love nature. Do you like going to the park?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I go to the park often. Do you like going to the park?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I go to the park often. Do you like flowers?",
+    "a": "Y"
+  },
+  {
+    "q": "es, flowers are beautiful. Do you like flowers?",
+    "a": "Y"
+  },
+  {
+    "q": "es, flowers are beautiful. Do you have plants at home?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have some small plants. Do you have plants at home?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I have some small plants. Do you like animals?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love animals. Do you like animals?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I love animals. What is your favorite animal?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite animal is a dolphin. What is your favorite animal?",
+    "a": "M"
+  },
+  {
+    "q": "y favorite animal is a dolphin. Have you been to a zoo?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I went last year. Have you been to a zoo?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I went last year. Do you recycle?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I recycle. Do you recycle?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I recycle. Do you think pollution is a problem?",
+    "a": "Y"
+  },
+  {
+    "q": "es, pollution is very bad. Do you think pollution is a problem?",
+    "a": "Y"
+  },
+  {
+    "q": "es, pollution is very bad. What can we do to help the environment?",
+    "a": "W"
+  },
+  {
+    "q": "e can plant trees and recycle culture and traditions. What can we do to help the environment?",
+    "a": "W"
+  },
+  {
+    "q": "e can plant trees and recycle culture and traditions. (1:00:15) Do you like learning about other cultures?",
+    "a": "I"
+  },
+  {
+    "q": "find it very interesting. Do you like learning about other cultures?",
+    "a": "I"
+  },
+  {
+    "q": "find it very interesting. Have you ever visited another country?",
+    "a": "N"
+  },
+  {
+    "q": "o, but I want to. Have you ever visited another country?",
+    "a": "N"
+  },
+  {
+    "q": "o, but I want to. What country do you want to visit?",
+    "a": "I"
+  },
+  {
+    "q": "want to visit Japan. What country do you want to visit?",
+    "a": "I"
+  },
+  {
+    "q": "want to visit Japan. (1:00:48) Do you like traditional food?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like trying new foods. Do you like traditional food?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like trying new foods. Do you celebrate national holidays?",
+    "a": "Y"
+  },
+  {
+    "q": "es, we celebrate Independence Day. Do you celebrate National Holidays?",
+    "a": "Y"
+  },
+  {
+    "q": "es, we celebrate Independence Day. Do you wear traditional clothes?",
+    "a": "S"
+  },
+  {
+    "q": "ometimes for special events. (1:01:21) Do you wear traditional clothes?",
+    "a": "s"
+  },
+  {
+    "q": "ometimes for special events. Do you like music from other countries?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I listen to many types of music. Do you like music from other countries?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I listen to many types of music. Do you like learning new languages?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like learning languages. Do you like learning new languages?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I like learning languages. (1:01:54) How many languages do you speak?",
+    "a": "I"
+  },
+  {
+    "q": "speak two languages. How many languages do you speak?",
+    "a": "I"
+  },
+  {
+    "q": "speak two languages. Do you want to learn another language?",
+    "a": "Y"
+  },
+  {
+    "q": "es, I want to learn Spanish. Do you want to learn another language?",
+    "a": "Yes, I want to learn Spanish."
+  }
+]
