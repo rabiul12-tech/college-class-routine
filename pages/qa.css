@@ -84,11 +84,11 @@ body,
 
 .qa-question-title {
   font-weight: 700;
-  font-size: 13px;
+  font-size: 23px;
 }
 .qa-question-excerpt {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 22px;
   margin-top: 6px;
 }
 
