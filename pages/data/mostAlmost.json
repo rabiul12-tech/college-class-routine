@@ -1,0 +1,238 @@
+{
+  "title": "MOST • MOST OF • THE MOST • MOSTLY • ALMOST • ALMOST ALL • NEARLY",
+  "subtitle": "Structure • Example • Short Explanation",
+  "sections": [
+    {
+      "id": 1,
+      "heading": "MOST / MOST OF",
+      "subsections": [
+        {
+          "title": "MOST + plural noun / uncountable noun",
+          "meaning": "general majority (about 90%)",
+          "structure": ["most + plural noun", "most + uncountable noun"],
+          "examples": [
+            "Most people work during the day.",
+            "Most sand is yellow.",
+            "A few people didn't pay, but most did."
+          ],
+          "explanation": "Used for general statements."
+        },
+        {
+          "title": "MOST OF + determiner + plural / uncountable noun",
+          "meaning": "specific majority",
+          "structure": [
+            "most of + determiner + noun",
+            "(determiner = the, this, that, my, your, his, her, etc.)"
+          ],
+          "examples": [
+            "I get most of my news from Facebook.",
+            "Most of his books are set in Roman times.",
+            "Most of the people arrived early."
+          ],
+          "explanation": "More specific than 'most.' Must include a determiner — except with countries/cities."
+        },
+        {
+          "title": "MOST OF + country/city (no determiner needed)",
+          "structure": ["most of + country/city"],
+          "examples": ["Most of South Korea is surrounded by water."],
+          "explanation": "Countries and cities can follow 'most of' directly."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "heading": "THE MOST (SUPERLATIVE)",
+      "subsections": [
+        {
+          "title": "THE MOST + long adjective (3+ syllables)",
+          "structure": ["the most + adjective"],
+          "examples": [
+            "Orchids are the most beautiful flowers to me.",
+            "The boxed jellyfish is the most dangerous.",
+            "A quiet morning with coffee is the most relaxing."
+          ],
+          "explanation": ""
+        },
+        {
+          "title": "THE MOST + noun",
+          "structure": ["the most + noun"],
+          "examples": [
+            "Jackson earns the most money in the family.",
+            "The student with the most points wins."
+          ],
+          "explanation": "'The most' = number one in amount or quality."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "heading": "MOSTLY (adverb)",
+      "meaning": "mainly",
+      "subsections": [
+        {
+          "title": "Position in sentence",
+          "structure": [
+            "be + mostly",
+            "mostly + main verb",
+            "(informal) mostly at front or end of sentence"
+          ],
+          "examples": [
+            "The tourists are mostly from the USA.",
+            "It's mostly egg white and sugar.",
+            "I mostly work from home.",
+            "We are mostly focusing on adverb position.",
+            "I wake up at seven, mostly.",
+            "Mostly, we just drink tea at book club."
+          ],
+          "explanation": "Shows the main part or main amount."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "heading": "ALMOST ALL",
+      "subsections": [
+        {
+          "title": "ALMOST ALL + plural / uncountable noun",
+          "structure": [
+            "almost all + plural noun",
+            "almost all + uncountable noun"
+          ],
+          "examples": [
+            "Almost all dogs are cute.",
+            "Almost all water on Mars is ice."
+          ],
+          "explanation": ""
+        },
+        {
+          "title": "ALMOST ALL OF + determiner + plural/uncountable noun",
+          "structure": ["almost all of + determiner + noun"],
+          "examples": [
+            "He invested almost all of his money in the stock market."
+          ],
+          "explanation": "'Almost all' = slightly stronger than 'most.'"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "heading": "ALMOST / NEARLY (adverbs)",
+      "meaning": "about 90% / very close to",
+      "subsections": [
+        {
+          "title": "ALMOST/NEARLY + adjective",
+          "structure": ["almost + adjective", "nearly + adjective"],
+          "examples": [
+            "My plant is almost/nearly dead.",
+            "The tank is almost dry."
+          ],
+          "explanation": ""
+        },
+        {
+          "title": "ALMOST/NEARLY + noun phrase",
+          "structure": ["almost + noun phrase", "nearly + noun phrase"],
+          "examples": [
+            "I bought almost/nearly a year's worth of toilet paper.",
+            "She spends almost/nearly her whole salary on rent."
+          ],
+          "explanation": "Use before the noun phrase you describe."
+        },
+        {
+          "title": "ALMOST/NEARLY + verb",
+          "structure": ["almost + verb", "nearly + verb"],
+          "examples": ["I almost said yes.", "The house nearly collapsed."],
+          "explanation": ""
+        },
+        {
+          "title": "ALMOST/NEARLY + adverb/time",
+          "structure": ["almost + adverb/time", "nearly + adverb/time"],
+          "examples": [
+            "Our food is almost/nearly here.",
+            "It's almost/nearly 12 o'clock."
+          ],
+          "explanation": "Usually interchangeable with the same meaning."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "heading": "SPECIAL RULES",
+      "subsections": [
+        {
+          "title": "ALMOST before -ly adverbs (not nearly)",
+          "structure": ["almost + -ly adverb"],
+          "examples": [
+            "She fixed the window almost soundlessly.",
+            "(Not correct: *nearly soundlessly*)"
+          ],
+          "explanation": ""
+        },
+        {
+          "title": "ALMOST LIKE",
+          "structure": ["almost like"],
+          "examples": ["It's almost like she doesn't work here."],
+          "explanation": ""
+        },
+        {
+          "title": "ALMOST before negatives (never, no, none, nothing)",
+          "structure": ["almost + negative word"],
+          "examples": ["Almost nobody orders the carrot cake."],
+          "explanation": ""
+        },
+        {
+          "title": "NOT NEARLY (strong negative emphasis)",
+          "structure": ["not nearly + enough/as"],
+          "examples": [
+            "That's not nearly enough food.",
+            "My running time is not nearly as good as last year."
+          ],
+          "explanation": ""
+        }
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "phrase": "most",
+      "meaning": "general majority",
+      "structure": "most + plural/uncountable",
+      "example": "most people"
+    },
+    {
+      "phrase": "most of",
+      "meaning": "specific majority",
+      "structure": "most of + determiner + noun",
+      "example": "most of my friends"
+    },
+    {
+      "phrase": "the most",
+      "meaning": "superlative / #1",
+      "structure": "the most + adj/noun",
+      "example": "the most dangerous"
+    },
+    {
+      "phrase": "mostly",
+      "meaning": "mainly",
+      "structure": "be + mostly / mostly + verb",
+      "example": "mostly work from home"
+    },
+    {
+      "phrase": "almost all",
+      "meaning": "very large majority",
+      "structure": "almost all + noun",
+      "example": "almost all dogs"
+    },
+    {
+      "phrase": "almost / nearly",
+      "meaning": "about 90%",
+      "structure": "almost/nearly + adj/verb/time",
+      "example": "almost died"
+    },
+    {
+      "phrase": "not nearly",
+      "meaning": "strong negative",
+      "structure": "not nearly + adj/noun",
+      "example": "not nearly enough"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "title": "LIKE • DISLIKE • ALIKE • UNLIKE • LIKEN • LIKELY • UNLIKELY • LIKELIHOOD",
+  "subtitle": "Structures + Examples + Explanations",
+  "sections": [
+    {
+      "id": 1,
+      "heading": "LIKE (verb: enjoy / preference)",
+      "structure": [
+        "like + noun",
+        "like + pronoun",
+        "like + to-infinitive",
+        "like + gerund (verb + ing)"
+      ],
+      "examples": [
+        "I like ice cream.",
+        "Jane will like them.",
+        "Michelle likes to go to the gym.",
+        "My husband and I like ordering pizza."
+      ],
+      "explanation": "Use 'like' to show enjoyment or a preference. Infinitive and gerund are both possible. Sometimes gerund = enjoyment, infinitive = habit, but in daily use both are common."
+    },
+    {
+      "id": 2,
+      "heading": "DON'T LIKE (negative)",
+      "structure": ["don't/doesn't like + noun/pronoun/infinitive/gerund"],
+      "examples": [
+        "I don't like spiders.",
+        "She doesn't like to share her pens.",
+        "We don't like spending too much money on pizza."
+      ],
+      "explanation": "The natural, everyday negative form of 'like'."
+    },
+    {
+      "id": 3,
+      "heading": "DISLIKE (stronger, more formal)",
+      "structure": [
+        "dislike + noun/pronoun/gerund",
+        "express a dislike for + noun (noun form)"
+      ],
+      "examples": [
+        "I dislike the way Adam speaks to people.",
+        "My parents dislike my new tattoo.",
+        "Emily expresses her dislike for anything not her idea."
+      ],
+      "explanation": "Stronger and more formal than 'don't like.' Not commonly used in casual speech."
+    },
+    {
+      "id": 4,
+      "heading": "LIKE (verb + like = similar)",
+      "structure": [
+        "sense verb + like + noun/pronoun/clause",
+        "(sense verbs: look, sound, feel, taste, smell)"
+      ],
+      "examples": [
+        "This soap smells like roses.",
+        "You look like your mom.",
+        "It tastes like a dessert.",
+        "He dances like he's celebrating."
+      ],
+      "explanation": "Shows similarity. Add 'just' or 'exactly' for stronger similarity."
+    },
+    {
+      "id": 5,
+      "heading": "ALIKE (adjective / adverb)",
+      "structure": [
+        "two subjects + verb + alike",
+        "noun + verb + alike (2 groups equally)",
+        "NOT before a noun (incorrect: *alike songs)"
+      ],
+      "examples": [
+        "They look alike.",
+        "These songs sound alike.",
+        "Children and adults alike love hot chocolate.",
+        "Critics and readers alike loved the novel."
+      ],
+      "explanation": "Means 'similar' or 'equally.' Used after the verb, not before a noun."
+    },
+    {
+      "id": 6,
+      "heading": "GREAT MINDS THINK ALIKE (expression)",
+      "structure": ["Expression used when two people have the same idea"],
+      "examples": [
+        "You bought her a stationery set? So did I. Great minds think alike."
+      ],
+      "explanation": "Light, playful expression. Not serious."
+    },
+    {
+      "id": 7,
+      "heading": "LIKEN (verb: compare)",
+      "structure": ["liken A to B", "A is likened to B"],
+      "examples": [
+        "Getting a tattoo is likened to being stung by bees.",
+        "She likens her boss to a giant cockroach.",
+        "The internet age can be likened to the industrial revolution."
+      ],
+      "explanation": "Used to compare two things because they are similar. More formal."
+    },
+    {
+      "id": 8,
+      "heading": "UNLIKE (preposition: contrast)",
+      "structure": [
+        "unlike + noun/pronoun",
+        "unlike + any/anything",
+        "unlike someone + to + infinitive (out of character)"
+      ],
+      "examples": [
+        "Unlike you, I'm not good with computers.",
+        "Unlike many languages, English spelling is tricky.",
+        "My trip to Borneo was unlike anything I'd ever experienced.",
+        "It's unlike Christina to be late.",
+        "It's unlike me to have no motivation."
+      ],
+      "explanation": "Shows difference or contrast. Used with nouns, pronouns, and with 'someone + to' for unusual behavior."
+    },
+    {
+      "id": 9,
+      "heading": "LIKELY (adjective: probable)",
+      "structure": [
+        "likely that + will",
+        "likely + to + infinitive",
+        "highly/extremely/very likely"
+      ],
+      "examples": [
+        "It's likely that she'll leave the job soon.",
+        "Schools are likely to stay closed.",
+        "You're likely to take the exam this year.",
+        "It's highly likely you won't get a response today."
+      ],
+      "explanation": "Used to predict something with strong probability."
+    },
+    {
+      "id": 10,
+      "heading": "UNLIKELY (adjective: not probable)",
+      "structure": [
+        "unlikely that + will",
+        "unlikely + to + infinitive",
+        "highly/extremely unlikely"
+      ],
+      "examples": [
+        "It's unlikely that she'll find a job soon.",
+        "He's unlikely to change his mind.",
+        "It's highly unlikely you'll hear back today."
+      ],
+      "explanation": "Shows low probability."
+    },
+    {
+      "id": 11,
+      "heading": "LIKELIHOOD (noun)",
+      "structure": [
+        "the likelihood of + gerund/noun",
+        "the likelihood that + clause",
+        "every / any / little + likelihood",
+        "in all likelihood = very probable"
+      ],
+      "examples": [
+        "What is the likelihood of you taking the IELTS exam?",
+        "Eating fatty foods increases the likelihood of a heart attack.",
+        "There is little likelihood that crime rates will fall.",
+        "There is every likelihood this branch will double in size.",
+        "In all likelihood, the program will close."
+      ],
+      "explanation": "Formal noun meaning probability or chance."
+    }
+  ]
+}

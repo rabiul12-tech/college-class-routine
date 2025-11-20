@@ -1,0 +1,259 @@
+{
+  "title": "The Complete Guide to All 12 English Tenses",
+  "subtitle": "Structure • Examples • Explanations",
+  "sections": [
+    {
+      "id": 1,
+      "heading": "The Simple Tenses",
+      "description": "Used for habits, repeated actions, states (situations, opinions, feelings), and sometimes single actions.",
+      "subsections": [
+        {
+          "title": "Grammatical Structures",
+          "structure": [
+            "Present Simple: Subject + Base Verb (Verb 1)",
+            "Past Simple: Subject + Past Simple Verb (Verb 2)",
+            "Future Simple: Subject + will + Base Verb"
+          ],
+          "examples": [
+            "I work. She works. (Present)",
+            "I worked. She worked. (Past)",
+            "I will work. She will work. (Future)"
+          ],
+          "explanation": "For he/she/it in Present Simple, add -s or -es. The verb 'be' has special forms: I am, you are, he/she/it is, etc."
+        },
+        {
+          "title": "Uses and Examples",
+          "structure": [
+            "Habits & Repeated Actions",
+            "States (Situations, Opinions, Feelings)",
+            "Single Actions (Past & Future only)",
+            "Scheduled Events (Present only)"
+          ],
+          "examples": [
+            "I wake up at 6 am every day. (Present habit)",
+            "I have long hair. Doug is our team leader. (Present states)",
+            "I made an omelette yesterday. (Past single action)",
+            "Our train leaves at 9:00 PM. (Scheduled future)"
+          ],
+          "explanation": "Simple tenses describe permanent situations, habits, or facts. For scheduled events we can't control, use Present Simple."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "heading": "The Continuous Tenses",
+      "description": "Describe temporary actions happening during a specific period. Often used for background actions.",
+      "subsections": [
+        {
+          "title": "Grammatical Structures",
+          "structure": [
+            "Present Continuous: Subject + am/are/is + Verb-ing",
+            "Past Continuous: Subject + was/were + Verb-ing",
+            "Future Continuous: Subject + will be + Verb-ing"
+          ],
+          "examples": [
+            "I am talking to you. (Present)",
+            "I was talking to you. (Past)",
+            "I will be talking to you. (Future)"
+          ],
+          "explanation": "Continuous tenses show actions in progress at specific times."
+        },
+        {
+          "title": "Uses and Examples",
+          "structure": [
+            "Temporary Actions at Specific Times",
+            "Background Actions (often interrupted)",
+            "Future Plans (Present Continuous only)"
+          ],
+          "examples": [
+            "Yesterday at 2 PM, I was talking to you. (Past temporary)",
+            "I was holding coffee when my son bumped into me. (Background)",
+            "Tomorrow we are flying to Rome. (Definite future plan)"
+          ],
+          "explanation": "Use for temporary situations and actions in progress. Present Continuous for definite personal plans."
+        },
+        {
+          "title": "Stative Verbs - CRITICAL RULE",
+          "structure": [
+            "Stative verbs are NOT used in continuous tenses",
+            "Common stative verbs: want, know, love, hate, need, prefer, believe, own, understand"
+          ],
+          "examples": [
+            "❌ I am wanting breakfast. (Incorrect)",
+            "✅ I want breakfast. (Correct)",
+            "❌ The students were knowing the answers. (Incorrect)",
+            "✅ The students knew the answers. (Correct)"
+          ],
+          "explanation": "Stative verbs describe states (thoughts, emotions, possession, senses) and cannot be used in continuous forms."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "heading": "The Perfect Tenses",
+      "description": "Emphasize an action that happened BEFORE another point in time.",
+      "subsections": [
+        {
+          "title": "Grammatical Structures",
+          "structure": [
+            "Present Perfect: Subject + have/has + Past Participle (Verb 3)",
+            "Past Perfect: Subject + had + Past Participle (Verb 3)",
+            "Future Perfect: Subject + will have + Past Participle (Verb 3)"
+          ],
+          "examples": [
+            "I have eaten. (Present Perfect)",
+            "I had eaten. (Past Perfect)",
+            "I will have eaten. (Future Perfect)"
+          ],
+          "explanation": "Perfect tenses focus on the relationship between actions in time."
+        },
+        {
+          "title": "Uses and Examples",
+          "structure": [
+            "Emphasis on 'Before Another Point'",
+            "Past vs. Present Perfect Comparison",
+            "Actions Continuing Up to a Point"
+          ],
+          "examples": [
+            "I have been to Paris. (Before now - experience)",
+            "I had been to Paris before university. (Before past action)",
+            "By 2025, I will have lived here 22 years. (Continues to future point)"
+          ],
+          "explanation": "Present Perfect: experience relevant to present. Past Simple: specific time important. Perfect tenses show continuation."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "heading": "The Perfect Continuous Tenses",
+      "description": "Emphasize the DURATION (how long) of an action that continues up to another point.",
+      "subsections": [
+        {
+          "title": "Grammatical Structures",
+          "structure": [
+            "Present Perfect Continuous: Subject + have/has been + Verb-ing",
+            "Past Perfect Continuous: Subject + had been + Verb-ing",
+            "Future Perfect Continuous: Subject + will have been + Verb-ing"
+          ],
+          "examples": [
+            "The pie has been baking for 20 minutes. (Present)",
+            "The pie had been baking for 20 minutes. (Past)",
+            "The pie will have been baking for 20 minutes. (Future)"
+          ],
+          "explanation": "Perfect Continuous tenses emphasize the ongoing duration of an action."
+        },
+        {
+          "title": "Present Perfect Simple vs. Continuous",
+          "structure": [
+            "Step 1: Is the verb STATIVE? → Use Present Perfect Simple",
+            "Step 2: Is the verb DYNAMIC? → Choose:",
+            "  - Completed action → Present Perfect Simple",
+            "  - Ongoing action → Present Perfect Continuous"
+          ],
+          "examples": [
+            "I have been a nurse since 2015. (Stative verb 'be')",
+            "The guests have eaten the main course. (Completed action)",
+            "The guests have been eating for two hours. (Ongoing action)"
+          ],
+          "explanation": "Use this decision process to choose between Simple and Continuous perfect forms."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "heading": "Summary & Final Review",
+      "subsections": [
+        {
+          "title": "Core Concepts",
+          "structure": [
+            "Simple Tenses: Habits, states, facts (Permanent feeling)",
+            "Continuous Tenses: Temporary actions in progress (Background)",
+            "Perfect Tenses: Action BEFORE another point in time",
+            "Perfect Continuous: DURATION of action up to another point"
+          ],
+          "examples": [
+            "I work every day. (Simple - habit)",
+            "I am working right now. (Continuous - temporary)",
+            "I have worked here before. (Perfect - before now)",
+            "I have been working for hours. (Perfect Continuous - duration)"
+          ],
+          "explanation": "Each tense category serves a specific purpose in showing time relationships and action types."
+        }
+      ]
+    }
+  ],
+  "tensesTable": [
+    {
+      "tense": "Present Simple",
+      "structure": "Subject + Base Verb",
+      "use": "Habits, states, facts",
+      "example": "I work every day."
+    },
+    {
+      "tense": "Past Simple",
+      "structure": "Subject + Verb 2",
+      "use": "Completed past actions",
+      "example": "I worked yesterday."
+    },
+    {
+      "tense": "Future Simple",
+      "structure": "Subject + will + Base Verb",
+      "use": "Future actions, predictions",
+      "example": "I will work tomorrow."
+    },
+    {
+      "tense": "Present Continuous",
+      "structure": "Subject + am/are/is + Verb-ing",
+      "use": "Actions happening now",
+      "example": "I am working now."
+    },
+    {
+      "tense": "Past Continuous",
+      "structure": "Subject + was/were + Verb-ing",
+      "use": "Past actions in progress",
+      "example": "I was working at 5 PM."
+    },
+    {
+      "tense": "Future Continuous",
+      "structure": "Subject + will be + Verb-ing",
+      "use": "Future actions in progress",
+      "example": "I will be working at 5 PM."
+    },
+    {
+      "tense": "Present Perfect",
+      "structure": "Subject + have/has + Verb 3",
+      "use": "Past actions with present relevance",
+      "example": "I have worked here before."
+    },
+    {
+      "tense": "Past Perfect",
+      "structure": "Subject + had + Verb 3",
+      "use": "Action before another past action",
+      "example": "I had worked there before I moved."
+    },
+    {
+      "tense": "Future Perfect",
+      "structure": "Subject + will have + Verb 3",
+      "use": "Action before future point",
+      "example": "I will have worked 8 hours by 5 PM."
+    },
+    {
+      "tense": "Present Perfect Continuous",
+      "structure": "Subject + have/has been + Verb-ing",
+      "use": "Duration of ongoing action",
+      "example": "I have been working for hours."
+    },
+    {
+      "tense": "Past Perfect Continuous",
+      "structure": "Subject + had been + Verb-ing",
+      "use": "Duration before past action",
+      "example": "I had been working for hours."
+    },
+    {
+      "tense": "Future Perfect Continuous",
+      "structure": "Subject + will have been + Verb-ing",
+      "use": "Duration before future point",
+      "example": "I will have been working for hours."
+    }
+  ]
+}

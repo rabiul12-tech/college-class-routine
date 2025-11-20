@@ -1,0 +1,110 @@
+{
+  "title": "OTHER • ANOTHER • OTHERS",
+  "subtitle": "Structure • Examples • Short Explanation",
+  "sections": [
+    {
+      "id": 1,
+      "heading": "ANOTHER",
+      "structure": [
+        "another + singular countable noun",
+        "another + number + plural noun (when a number comes in the middle)",
+        "another (pronoun: meaning another one)"
+      ],
+      "examples": [
+        "We need another chair.",
+        "Would you like another cappuccino?",
+        "If the cable doesn't fit, buy another cable (a different one).",
+        "I still need to take another three exams.",
+        "You can keep those tissues; I have another two packs.",
+        "I can't have another (= another child).",
+        "Do you want another? (= another drink)"
+      ],
+      "explanation": "'Another' means one more or a different one. Used with singular nouns, or plural nouns when a number is included."
+    },
+    {
+      "id": 2,
+      "heading": "OTHER",
+      "structure": [
+        "other + plural noun",
+        "other + uncountable noun",
+        "determiner + other + singular noun (the second of two)",
+        "determiner + other + plural/uncountable noun (the remaining ones)"
+      ],
+      "examples": [
+        "We need other flavors.",
+        "Other information is on the website.",
+        "Look on other websites.",
+        "My right eye is itchy. The other eye is fine.",
+        "This cup is black coffee; the other cup has sugar.",
+        "I can fly on the 7th. My other option is the 8th.",
+        "These chips are for cookies; the other chips are for brownies.",
+        "My other stuff arrives next week."
+      ],
+      "explanation": "'Other' refers to more of something, different ones, the second of two, or the remaining part of a group."
+    },
+    {
+      "id": 3,
+      "heading": "OTHERS (pronoun)",
+      "structure": [
+        "others = other + plural noun",
+        "the others = the remaining people/things"
+      ],
+      "examples": [
+        "Cara and Rachel are here. Where are the others? (the other children)",
+        "These two muffins don't contain nuts, but the others do.",
+        "I seem outgoing to my friends, but to others I look shy. (other people)"
+      ],
+      "explanation": "'Others' replaces a plural noun. 'The others' = the remaining people/things in a specific group."
+    },
+    {
+      "id": 4,
+      "heading": "NOT NEEDED: 'AN OTHER'",
+      "structure": ["Not used in modern English grammar"],
+      "examples": [
+        "❌ an other book",
+        "❌ an other idea",
+        "✅ another book",
+        "✅ another idea"
+      ],
+      "explanation": "You never need 'an other' as a grammar form."
+    }
+  ],
+  "summary": [
+    {
+      "form": "another",
+      "structure": "another + singular noun",
+      "meaning": "one more / different",
+      "example": "another chair"
+    },
+    {
+      "form": "another + number",
+      "structure": "another + 3 + exams",
+      "meaning": "extra amount",
+      "example": "another three exams"
+    },
+    {
+      "form": "other",
+      "structure": "other + plural/uncountable",
+      "meaning": "additional / different",
+      "example": "other websites"
+    },
+    {
+      "form": "the other",
+      "structure": "determiner + other + singular",
+      "meaning": "second of two",
+      "example": "the other cup"
+    },
+    {
+      "form": "the other + plural",
+      "structure": "determiner + other + plural",
+      "meaning": "remaining",
+      "example": "the other chips"
+    },
+    {
+      "form": "others",
+      "structure": "pronoun",
+      "meaning": "other people/things",
+      "example": "Where are the others?"
+    }
+  ]
+}

@@ -89,10 +89,18 @@ export default function QAViewer({ pairs: initialPairs }) {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
+            flexWrap: "wrap",
             padding: "12px 16px",
           }}
         >
-          <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+          <div
+            style={{
+              display: "flex",
+              gap: 12,
+              alignItems: "center",
+              flexWrap: "wrap",
+            }}
+          >
             <Link href="/" legacyBehavior>
               <a
                 className="qa-nav-link"
@@ -132,6 +140,198 @@ export default function QAViewer({ pairs: initialPairs }) {
                 aria-label="Adverbs study sheet"
               >
                 Preposition
+              </a>
+            </Link>
+            <Link href="/be-lesson" legacyBehavior>
+              <a
+                className="qa-nav-link"
+                style={{
+                  padding: "6px 10px",
+                  background: "#2575fc",
+                  color: "white",
+                  borderRadius: 6,
+                  textDecoration: "none",
+                  fontWeight: 600,
+                }}
+                aria-label="Adverbs study sheet"
+              >
+                Be lesson
+              </a>
+            </Link>
+            <Link href="/likeyLesson/" legacyBehavior>
+              <a
+                className="qa-nav-link"
+                style={{
+                  padding: "6px 10px",
+                  background: "#2575fc",
+                  color: "white",
+                  borderRadius: 6,
+                  textDecoration: "none",
+                  fontWeight: 600,
+                }}
+                aria-label="Adverbs study sheet"
+              >
+                likely Lesson
+              </a>
+            </Link>
+            <Link href="/so-such-lesson/" legacyBehavior>
+              <a
+                className="qa-nav-link"
+                style={{
+                  padding: "6px 10px",
+                  background: "#2575fc",
+                  color: "white",
+                  borderRadius: 6,
+                  textDecoration: "none",
+                  fontWeight: 600,
+                }}
+                aria-label="Adverbs study sheet"
+              >
+                so such
+              </a>
+            </Link>
+            <Link href="/thoughalthough-words/" legacyBehavior>
+              <a
+                className="qa-nav-link"
+                style={{
+                  padding: "6px 10px",
+                  background: "#2575fc",
+                  color: "white",
+                  borderRadius: 6,
+                  textDecoration: "none",
+                  fontWeight: 600,
+                }}
+                aria-label="Adverbs study sheet"
+              >
+                Though although
+              </a>
+            </Link>
+            <Link href="/other-another/" legacyBehavior>
+              <a
+                className="qa-nav-link"
+                style={{
+                  padding: "6px 10px",
+                  background: "#2575fc",
+                  color: "white",
+                  borderRadius: 6,
+                  textDecoration: "none",
+                  fontWeight: 600,
+                }}
+                aria-label="Adverbs study sheet"
+              >
+                other another
+              </a>
+            </Link>
+            <Link href="/still-already/" legacyBehavior>
+              <a
+                className="qa-nav-link"
+                style={{
+                  padding: "6px 10px",
+                  background: "#2575fc",
+                  color: "white",
+                  borderRadius: 6,
+                  textDecoration: "none",
+                  fontWeight: 600,
+                }}
+                aria-label="Adverbs study sheet"
+              >
+                still already
+              </a>
+            </Link>
+            <Link href="/causative-verbs/" legacyBehavior>
+              <a
+                className="qa-nav-link"
+                style={{
+                  padding: "6px 10px",
+                  background: "#2575fc",
+                  color: "white",
+                  borderRadius: 6,
+                  textDecoration: "none",
+                  fontWeight: 600,
+                }}
+                aria-label="Adverbs study sheet"
+              >
+                Causative
+              </a>
+            </Link>
+            <Link href="/to-vs-for/" legacyBehavior>
+              <a
+                className="qa-nav-link"
+                style={{
+                  padding: "6px 10px",
+                  background: "#2575fc",
+                  color: "white",
+                  borderRadius: 6,
+                  textDecoration: "none",
+                  fontWeight: 600,
+                }}
+                aria-label="Adverbs study sheet"
+              >
+                to vs for
+              </a>
+            </Link>
+            <Link href="/most-almost/" legacyBehavior>
+              <a
+                className="qa-nav-link"
+                style={{
+                  padding: "6px 10px",
+                  background: "#2575fc",
+                  color: "white",
+                  borderRadius: 6,
+                  textDecoration: "none",
+                  fontWeight: 600,
+                }}
+                aria-label="Adverbs study sheet"
+              >
+                most-almost
+              </a>
+            </Link>
+            <Link href="/beside-besides/" legacyBehavior>
+              <a
+                className="qa-nav-link"
+                style={{
+                  padding: "6px 10px",
+                  background: "#2575fc",
+                  color: "white",
+                  borderRadius: 6,
+                  textDecoration: "none",
+                  fontWeight: 600,
+                }}
+                aria-label="Adverbs study sheet"
+              >
+                beside-besides
+              </a>
+            </Link>
+            <Link href="/gerunds-infinitives/" legacyBehavior>
+              <a
+                className="qa-nav-link"
+                style={{
+                  padding: "6px 10px",
+                  background: "#2575fc",
+                  color: "white",
+                  borderRadius: 6,
+                  textDecoration: "none",
+                  fontWeight: 600,
+                }}
+                aria-label="Adverbs study sheet"
+              >
+                gerunds-infinitives
+              </a>
+            </Link>
+            <Link href="/english-tenses/" legacyBehavior>
+              <a
+                className="qa-nav-link"
+                style={{
+                  padding: "6px 10px",
+                  background: "#2575fc",
+                  color: "white",
+                  borderRadius: 6,
+                  textDecoration: "none",
+                  fontWeight: 600,
+                }}
+                aria-label="Adverbs study sheet"
+              >
+                english-tenses.js
               </a>
             </Link>
           </div>

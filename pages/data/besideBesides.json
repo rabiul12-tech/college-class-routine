@@ -1,0 +1,156 @@
+{
+  "title": "BESIDE vs. BESIDES",
+  "subtitle": "Structure • Example • Short Explanation",
+  "sections": [
+    {
+      "id": 1,
+      "heading": "BESIDE",
+      "subsections": [
+        {
+          "title": "Meaning 1: next to",
+          "meaning": "preposition → needs an object",
+          "structure": ["beside + noun"],
+          "examples": [
+            "The paper clips are beside the pens.",
+            "The ketchup is beside the lemonade.",
+            "\"I hope no one sits beside me.\"",
+            "Beside the cottage, there is a 200-year-old well.",
+            "I was standing right beside her."
+          ],
+          "explanation": "\"Beside\" means next to. \"Right beside\" = very close. Slightly more formal than \"next to.\""
+        },
+        {
+          "title": "Meaning 2: compared with",
+          "structure": ["beside + noun (comparison)"],
+          "examples": [
+            "Beside Kim's poster, mine looks dull.",
+            "My cooking is no good beside my mom's."
+          ],
+          "explanation": "Used to compare two things. They don't have to be physically close."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "heading": "BESIDES",
+      "note": "Has two roles: preposition + adverb. Completely different meaning from \"beside.\"",
+      "subsections": [
+        {
+          "title": "BESIDES (preposition) - Meaning 1: in addition to",
+          "structure": ["besides + noun / pronoun"],
+          "examples": [
+            "Besides glassware and ornaments, the store sells jewelry.",
+            "This store sells jewelry besides glassware and ornaments.",
+            "Besides everything we already know, no new information."
+          ],
+          "explanation": "Adds extra information. Synonym: \"in addition to.\""
+        },
+        {
+          "title": "BESIDES (preposition) - Meaning 2: except for",
+          "structure": ["besides + noun"],
+          "examples": [
+            "Besides the weather, did you have a good time?",
+            "I'm available every day next week besides Monday."
+          ],
+          "explanation": "Means \"apart from\" or \"except for.\""
+        },
+        {
+          "title": "BESIDES (preposition) - Meaning 3: besides + gerund (-ing)",
+          "structure": ["besides + gerund (-ing)"],
+          "examples": [
+            "You can defend yourself besides kicking and punching.",
+            "Besides walking my dog, I don't get much exercise."
+          ],
+          "explanation": "Same meaning as \"apart from\" / \"in addition to,\" but with actions."
+        },
+        {
+          "title": "BESIDES (adverb) - Meaning: adding a reason / extra point",
+          "structure": ["Besides, + sentence"],
+          "examples": [
+            "I don't want to paint our bedroom gray. Besides, we're moving soon.",
+            "Don't worry about the gift. Besides, she won't remember who gave what."
+          ],
+          "explanation": "Adds an extra reason. Similar to \"moreover,\" but more natural in conversation."
+        },
+        {
+          "title": "BESIDES (adverb) - End position (less common)",
+          "structure": ["and much more besides", "and a lot more besides"],
+          "examples": [
+            "The gym offers classes, trainers, and much more besides.",
+            "We'll go hiking, roast marshmallows, and a lot more besides."
+          ],
+          "explanation": "Used in fixed phrases meaning \"plus more.\""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "heading": "IMPORTANT WARNING",
+      "subsections": [
+        {
+          "title": "Using the wrong word changes meaning completely",
+          "structure": [
+            "beside = next to",
+            "besides = except for / in addition to"
+          ],
+          "examples": [
+            "Leave all the bags besides the red one. → Leave all except the red one.",
+            "Leave all the bags beside the red one. → Put them next to the red one."
+          ],
+          "explanation": "Because \"beside\" and \"besides\" sound similar, using the wrong one changes the meaning completely."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "word": "beside",
+      "type": "preposition",
+      "meaning": "next to",
+      "structure": "beside + noun",
+      "example": "beside the pens"
+    },
+    {
+      "word": "beside",
+      "type": "preposition",
+      "meaning": "compared with",
+      "structure": "beside + noun",
+      "example": "beside Kim's work"
+    },
+    {
+      "word": "besides",
+      "type": "preposition",
+      "meaning": "in addition to",
+      "structure": "besides + noun",
+      "example": "besides ornaments"
+    },
+    {
+      "word": "besides",
+      "type": "preposition",
+      "meaning": "except for",
+      "structure": "besides Monday",
+      "example": "except for Monday"
+    },
+    {
+      "word": "besides",
+      "type": "preposition",
+      "meaning": "besides + ing",
+      "structure": "besides walking",
+      "example": "apart from walking"
+    },
+    {
+      "word": "besides",
+      "type": "adverb",
+      "meaning": "extra reason",
+      "structure": "Besides, + clause",
+      "example": "Besides, we're moving"
+    },
+    {
+      "word": "... besides",
+      "type": "fixed phrase",
+      "meaning": "plus more",
+      "structure": "much more besides",
+      "example": "classes and more besides"
+    }
+  ]
+}

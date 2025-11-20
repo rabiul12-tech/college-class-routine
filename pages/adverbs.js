@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useState } from "react";
-
+import Link from "next/link";
 export default function AdverbsPage() {
   const [active, setActive] = useState("literally");
 
@@ -18,7 +18,27 @@ export default function AdverbsPage() {
             Clean, clear, and easy-to-study reference sheet
           </p>
         </header>
-
+        <nav>
+          <Link
+            href="/qa/"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              padding: "8px 16px",
+              backgroundColor: "#f8f9fa",
+              border: "1px solid #dee2e6",
+              borderRadius: "6px",
+              cursor: "pointer",
+              fontSize: "14px",
+              fontWeight: "500",
+              color: "#495057",
+              transition: "all 0.2s ease",
+            }}
+          >
+            ← Back Home
+          </Link>
+        </nav>
         <div className="intro">
           <p>
             Click on each adverb tab to view its meaning and example sentences.

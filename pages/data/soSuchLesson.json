@@ -1,0 +1,72 @@
+{
+  "title": "SO & SUCH — Structure • Examples • Explanation",
+  "subtitle": "Master the difference with clear patterns",
+  "sections": [
+    {
+      "id": 1,
+      "heading": "SO (meaning: very)",
+      "structure": [
+        "so + adjective",
+        "so + adverb",
+        "so + much + uncountable noun",
+        "so + many + countable noun"
+      ],
+      "examples": [
+        "This food looks so good.",
+        "He played the violin so beautifully.",
+        "She drinks so much coffee.",
+        "I met so many wonderful people."
+      ],
+      "explanation": "Use 'so' to intensify an adjective, adverb, or quantity. Use so much for uncountable nouns and so many for countable nouns."
+    },
+    {
+      "id": 2,
+      "heading": "SUCH (meaning: very, but used with nouns)",
+      "structure": [
+        "such + (a/an) + adjective + noun",
+        "such + adjective + plural noun",
+        "such + adjective + uncountable noun"
+      ],
+      "examples": [
+        "Yesterday was such a beautiful day.",
+        "They put on such an amazing performance.",
+        "I had such patient parents.",
+        "My son is being such a little monster today."
+      ],
+      "explanation": "Use 'such' before a noun. Use a/an only with singular countable nouns."
+    },
+    {
+      "id": 3,
+      "heading": "SO vs SUCH (side-by-side)",
+      "structure": [
+        "so + adjective",
+        "such + (a/an) + adjective + noun",
+        "so + many/much + noun",
+        "never: *such many / such much*"
+      ],
+      "examples": [
+        "I'm so hungry. I have such a big appetite.",
+        "I'm so sick. I have such a bad cold.",
+        "I took so many great pictures.",
+        "Wrong: *such much toilet paper*"
+      ],
+      "explanation": "'So' works with adjectives and amounts. 'Such' works with nouns."
+    },
+    {
+      "id": 4,
+      "heading": "SO / SUCH + THAT (result structure)",
+      "structure": [
+        "so + adjective/adverb + that + result",
+        "so many/much + noun + that + result",
+        "such + (a/an) + adjective + noun + that + result"
+      ],
+      "examples": [
+        "I was so tired that I went to bed early.",
+        "I was so angry that I couldn't breathe.",
+        "There were so many people that I decided to walk.",
+        "She's such a nice lady that I baked her cookies."
+      ],
+      "explanation": "Shows one action happens because of the intensity of the first part."
+    }
+  ]
+}

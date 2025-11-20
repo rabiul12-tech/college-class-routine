@@ -1,0 +1,95 @@
+{
+  "title": "CAUSATIVE VERBS: HAVE • GET • MAKE • LET",
+  "subtitle": "Structure • Example • Short Explanation",
+  "sections": [
+    {
+      "id": 1,
+      "heading": "PAYING FOR A SERVICE",
+      "structure": [
+        "HAVE + something + past participle (V3)",
+        "GET + something + past participle (V3)"
+      ],
+      "examples": [
+        "I have my shirts ironed every week.",
+        "I get my shirts ironed every week.",
+        "I had my window repaired.",
+        "I got my window repaired.",
+        "I'm having my pool cleaned tomorrow.",
+        "I might have my boat repainted."
+      ],
+      "explanation": "You don't do the action. You pay someone to do it. 'Have' = slightly formal. 'Get' = more conversational.",
+      "importantNote": "Correct: I had my groceries delivered. Incorrect: I had delivered my groceries. (this becomes past perfect, not causative)"
+    },
+    {
+      "id": 2,
+      "heading": "ASK / CONVINCE / PERSUADE (Have vs. Get)",
+      "structure": [
+        "HAVE + someone + base verb (V1)",
+        "GET + someone + to + base verb (V1)"
+      ],
+      "examples": [
+        "I'll have him take a look.",
+        "I can't get my son to sleep.",
+        "I have my students put their homework on my desk.",
+        "How do you get your students to listen to you?",
+        "I'll have my lawyer call you.",
+        "It's hard to get my parents to agree with me."
+      ],
+      "explanation": "Both can mean 'ask someone to do something,' but get usually means you must persuade / convince them. Have is more neutral."
+    },
+    {
+      "id": 3,
+      "heading": "FORCE (MAKE)",
+      "structure": ["MAKE + someone + base verb (V1)"],
+      "examples": [
+        "The robbers made the guard give them the code.",
+        "My boss makes us work late on Fridays.",
+        "Stop making me laugh!",
+        "My kids make me cut the crusts off their sandwiches."
+      ],
+      "explanation": "Shows no choice. Stronger than 'get' or 'have.'"
+    },
+    {
+      "id": 4,
+      "heading": "PERMISSION (LET)",
+      "structure": [
+        "LET + someone + base verb (V1)",
+        "let = let, let, let (same in all forms)"
+      ],
+      "examples": [
+        "My professor let us use our phones during the test.",
+        "My sister lets me borrow her car.",
+        "My landlord won't let me have a pet.",
+        "Open the wine and let it breathe for 30 minutes."
+      ],
+      "explanation": "Shows permission or allowing something to happen."
+    }
+  ],
+  "summary": [
+    {
+      "purpose": "Paying for a service",
+      "structure": "have/get + something + V3",
+      "example": "I had my hair done."
+    },
+    {
+      "purpose": "Ask / persuade",
+      "structure": "have + someone + V1",
+      "example": "I'll have Sam email you."
+    },
+    {
+      "purpose": "Ask / persuade",
+      "structure": "get + someone + to + V1",
+      "example": "I can't get him to help."
+    },
+    {
+      "purpose": "Force",
+      "structure": "make + someone + V1",
+      "example": "They made him open the door."
+    },
+    {
+      "purpose": "Permission",
+      "structure": "let + someone + V1",
+      "example": "She lets me borrow her bike."
+    }
+  ]
+}

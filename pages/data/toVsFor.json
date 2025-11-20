@@ -1,0 +1,169 @@
+{
+  "title": "TO vs. FOR",
+  "subtitle": "Structure • Examples • Short Explanation",
+  "sections": [
+    {
+      "id": 1,
+      "heading": "PURPOSE / REASON",
+      "subsections": [
+        {
+          "title": "TO + base verb (V1)",
+          "structure": ["to + base verb (V1)"],
+          "examples": [
+            "I started going to bed at 10 to get more sleep.",
+            "I bought these chimes to hang on my window.",
+            "He stepped outside to smoke."
+          ],
+          "explanation": "Use to + verb 1 for purpose. Never: *to getting*, *to relax-ing* when explaining reason."
+        },
+        {
+          "title": "FOR + noun",
+          "structure": ["for + noun"],
+          "examples": [
+            "I started going to bed at 10 for my health.",
+            "I bought these chimes for decoration.",
+            "He stepped outside for a cigarette."
+          ],
+          "explanation": "Use for + noun when the reason is a thing, not an action."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "heading": "FUNCTION (WHAT SOMETHING IS USED FOR)",
+      "subsections": [
+        {
+          "title": "FOR + -ing",
+          "structure": ["for + -ing"],
+          "examples": [
+            "This app is for learning vocabulary.",
+            "Get off the chair. It's for sitting, not standing.",
+            "That tool? It's for making melon balls."
+          ],
+          "explanation": "Use for + ing when explaining the specific function of an object."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "heading": "DESTINATION",
+      "subsections": [
+        {
+          "title": "TO = direction or movement",
+          "structure": ["to + place/person/target"],
+          "examples": [
+            "I'm going to the park.",
+            "I gave the gift to Liz.",
+            "Did you speak to Paula?",
+            "I brought cookies to the picnic."
+          ],
+          "explanation": "Use to when something moves toward a destination.",
+          "specialNote": "I threw the ball to Lila. (so she can catch it) vs. I threw the ball at Lila. (she is the target)"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "heading": "TO ME vs. FOR ME",
+      "subsections": [
+        {
+          "title": "TO ME = opinion",
+          "structure": ["to me"],
+          "examples": ["It looks good to me.", "To me, she seemed nervous."],
+          "explanation": "Use to me when expressing personal opinion or perception."
+        },
+        {
+          "title": "FOR ME = effect / benefit / situation",
+          "structure": ["for me"],
+          "examples": [
+            "Exercise is good for me.",
+            "Meditating would be therapeutic for me.",
+            "That test was hard for me.",
+            "It's too expensive for me."
+          ],
+          "explanation": "Use for me when something has an effect, benefit, or describes your situation."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "heading": "DOING SOMETHING FOR SOMEONE",
+      "subsections": [
+        {
+          "title": "FOR = being nice or doing something instead of someone",
+          "structure": ["for + person"],
+          "examples": [
+            "I bought these flowers for you. (nice gesture)",
+            "A student baked cupcakes for the whole class.",
+            "My colleague was sick, so I taught her class for her. (instead of her)",
+            "Can you call the bank for me? (do it instead of me)"
+          ],
+          "explanation": "Use for when you help someone or act on their behalf."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "heading": "SPECIAL NOTE ABOUT \"TO + ing\"",
+      "subsections": [
+        {
+          "title": "When to is a preposition",
+          "structure": [
+            "to + -ing (when to is part of phrasal verb/preposition)"
+          ],
+          "examples": [
+            "I'm looking forward to the show.",
+            "I'm looking forward to it.",
+            "I'm looking forward to going."
+          ],
+          "explanation": "If to is part of a phrasal verb or preposition, it can take -ing.",
+          "specialNote": "Not correct: *looking forward to go*"
+        }
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "meaning": "Purpose",
+      "use": "action",
+      "structure": "to + V1",
+      "example": "I go to the gym to exercise."
+    },
+    {
+      "meaning": "Purpose",
+      "use": "noun",
+      "structure": "for + noun",
+      "example": "This is for storage."
+    },
+    {
+      "meaning": "Function",
+      "use": "what something is used for",
+      "structure": "for + ing",
+      "example": "This tool is for cutting."
+    },
+    {
+      "meaning": "Destination",
+      "use": "movement",
+      "structure": "to",
+      "example": "She moved to Turkey."
+    },
+    {
+      "meaning": "Opinion",
+      "use": "personal view",
+      "structure": "to me",
+      "example": "It seems fine to me."
+    },
+    {
+      "meaning": "Effect / benefit",
+      "use": "impact on someone",
+      "structure": "for me",
+      "example": "Coffee is bad for me."
+    },
+    {
+      "meaning": "Helping",
+      "use": "being nice / instead",
+      "structure": "for + person",
+      "example": "Can you do this for me?"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "title": "STILL • ALREADY • JUST • YET",
+  "subtitle": "Structure • Example • Short Explanation",
+  "sections": [
+    {
+      "id": 1,
+      "heading": "STILL",
+      "structure": [
+        "still + main verb",
+        "auxiliary + still + main verb",
+        "be + still + adjective",
+        "In negatives → still + auxiliary + not + verb"
+      ],
+      "examples": [
+        "My brother still lives with my parents.",
+        "I can still go into the office.",
+        "I'm still sick.",
+        "I still don't know how to use chopsticks."
+      ],
+      "explanation": "Shows something is continuing. Often surprising. Works in present, past, and future."
+    },
+    {
+      "id": 2,
+      "heading": "ALREADY",
+      "structure": [
+        "already + main verb",
+        "auxiliary + already + main verb",
+        "be + already + complement",
+        "already at the end (informal)"
+      ],
+      "examples": [
+        "Your son is already five.",
+        "The snow is already melting.",
+        "I already had one.",
+        "They will already be there.",
+        "I had one already. (more casual)"
+      ],
+      "explanation": "Something happened earlier than expected or before now. Position rules stay the same in positives, negatives, and questions."
+    },
+    {
+      "id": 3,
+      "heading": "JUST",
+      "structure": [
+        "just + main verb",
+        "auxiliary + just + main verb",
+        "be + just + complement"
+      ],
+      "examples": [
+        "Rachel has just called.",
+        "I just called her.",
+        "I was just there.",
+        "I was just talking to him.",
+        "We just bought a house."
+      ],
+      "explanation": "Used for something that happened very recently (seconds, minutes, or even a short while ago)."
+    },
+    {
+      "id": 4,
+      "heading": "YET",
+      "structure": [
+        "negative sentences + yet",
+        "questions + yet",
+        "end position",
+        "(formal) have/has yet to + infinitive"
+      ],
+      "examples": [
+        "I haven't eaten breakfast yet.",
+        "It's not open yet.",
+        "Has the meeting started yet?",
+        "She hadn't met him yet.",
+        "The judges have yet to announce a winner. (formal)"
+      ],
+      "explanation": "We're waiting for something. Shows expectation. Most natural at the end of the sentence."
+    }
+  ],
+  "comparison": [
+    {
+      "word": "still",
+      "meaning": "continuing",
+      "example": "I'm still working."
+    },
+    {
+      "word": "already",
+      "meaning": "earlier than expected",
+      "example": "I already finished."
+    },
+    {
+      "word": "just",
+      "meaning": "very recent",
+      "example": "I just started."
+    },
+    {
+      "word": "yet",
+      "meaning": "waiting/expecting",
+      "example": "They haven't arrived yet."
+    }
+  ]
+}

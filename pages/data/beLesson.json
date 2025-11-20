@@ -1,0 +1,149 @@
+{
+  "title": "BE / BEING / BEEN — Structured Lesson",
+  "subtitle": "Structure → Example → Short explanation. Content mirrors the provided transcript.",
+  "sections": [
+    {
+      "id": 1,
+      "heading": "Forms of the Verb \"BE\"",
+      "structure": [
+        "Base: be",
+        "Past simple: was / were",
+        "Past participle: been",
+        "Present participle: being"
+      ],
+      "examples": ["be – was/were – been – being"],
+      "explanation": "\"Be\" follows the same pattern as other verbs (eat/ate/eaten, go/went/gone). It has distinct present and past forms."
+    },
+    {
+      "id": 2,
+      "heading": "BEING — Present / Past Continuous",
+      "structure": [
+        "Present continuous: am/is/are + being",
+        "Past continuous: was/were + being"
+      ],
+      "examples": [
+        "She is being nice.",
+        "He was being taught how to tie his shoes."
+      ],
+      "explanation": "\"Being\" functions like other -ing verbs in continuous tenses. In the second example, the phrase is passive continuous (was being taught)."
+    },
+    {
+      "id": 3,
+      "heading": "BEING — Gerund (Noun Use)",
+      "structure": [
+        "Being + noun/adjective phrase → used as subject or object"
+      ],
+      "examples": [
+        "Being an online English teacher is amazing.",
+        "Being tired affects concentration."
+      ],
+      "explanation": "\"Being\" acts as a gerund (a noun). It can function as the subject of the sentence."
+    },
+    {
+      "id": 4,
+      "heading": "BEEN — Perfect Tenses (Overview)",
+      "structure": [
+        "Present perfect: have/has + been",
+        "Past perfect: had + been",
+        "Future perfect: will have + been"
+      ],
+      "examples": [
+        "I have been to Germany.",
+        "I had been to Germany.",
+        "I will have been to Germany by next year."
+      ],
+      "explanation": "\"Been\" is the past participle used in perfect tenses to indicate experiences or actions completed before a reference time."
+    },
+    {
+      "id": 5,
+      "heading": "BE — After Modal Verbs",
+      "structure": ["modal + be (can/could/may/might/should/will/shall/must)"],
+      "examples": [
+        "Jerry might be late.",
+        "You should wear green more often.",
+        "We can use a calculator."
+      ],
+      "explanation": "After modal verbs, use the base form (be). Do not insert 'to' after modals."
+    },
+    {
+      "id": 6,
+      "heading": "BE — Infinitive Form",
+      "structure": ["to + be (infinitive)"],
+      "examples": [
+        "I want to be just like you.",
+        "To go is my infinitive. (comparison)"
+      ],
+      "explanation": "\"To be\" is the infinitive. Certain verbs commonly take the infinitive form after them."
+    },
+    {
+      "id": 7,
+      "heading": "BE — Subjunctive",
+      "structure": ["(that) + subject + be + ... (subjunctive)"],
+      "examples": [
+        "The teacher recommended that he be put in a higher reading group."
+      ],
+      "explanation": "In subjunctive constructions the verb does not change for person or number; it remains 'be'."
+    },
+    {
+      "id": 8,
+      "heading": "Passive Voice — Be / Being / Been",
+      "structure": ["be-form + verb3 (be / being / been + past participle)"],
+      "examples": [
+        "Our windows are being washed.",
+        "Our windows have been washed.",
+        "Our windows will be washed next week."
+      ],
+      "explanation": "Passive voice uses the appropriate form of 'be' according to tense, followed by the past participle (verb 3). Use passive when the doer is unimportant or unknown."
+    }
+  ],
+  "summary": [
+    {
+      "form": "being",
+      "structure": "am/is/are + being",
+      "use": "continuous",
+      "example": "She is being nice."
+    },
+    {
+      "form": "being",
+      "structure": "being + noun",
+      "use": "gerund (subject)",
+      "example": "Being tired is normal."
+    },
+    {
+      "form": "been",
+      "structure": "have/has + been",
+      "use": "present perfect",
+      "example": "I have been to Germany."
+    },
+    {
+      "form": "been",
+      "structure": "had + been",
+      "use": "past perfect",
+      "example": "I had been there before."
+    },
+    {
+      "form": "be",
+      "structure": "modal + be",
+      "use": "base form after modals",
+      "example": "He might be late."
+    },
+    {
+      "form": "be",
+      "structure": "to + be",
+      "use": "infinitive",
+      "example": "I want to be a singer."
+    },
+    {
+      "form": "be",
+      "structure": "subjunctive",
+      "use": "unchanged form",
+      "example": "They recommended he be moved."
+    },
+    {
+      "form": "be/being/been",
+      "structure": "be-form + verb3",
+      "use": "passive",
+      "example": "Windows have been washed."
+    }
+  ]
+}

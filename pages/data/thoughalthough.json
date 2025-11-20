@@ -1,0 +1,92 @@
+{
+  "title": "IN SPITE OF • DESPITE • ALTHOUGH • EVEN THOUGH • THOUGH",
+  "subtitle": "Structure • Examples • Explanation",
+  "sections": [
+    {
+      "id": 1,
+      "heading": "IN SPITE OF",
+      "structure": ["in spite of + noun", "in spite of + gerund (verb + ing)"],
+      "examples": [
+        "I went jogging in spite of the rain.",
+        "In spite of being underage, Tina went to a bar.",
+        "I went to work in spite of my cold.",
+        "I arrived on time in spite of the bad traffic."
+      ],
+      "explanation": "Shows contrast: A happens even though B normally stops it. Meaning: 'B didn't matter.'"
+    },
+    {
+      "id": 2,
+      "heading": "DESPITE",
+      "structure": [
+        "despite + noun",
+        "despite + gerund",
+        "despite the fact that + clause"
+      ],
+      "examples": [
+        "I went jogging despite the rain.",
+        "Despite being underage, Tina went to a bar.",
+        "I went to work despite my cold.",
+        "I absolutely love Disney princesses despite the fact that I'm 30."
+      ],
+      "explanation": "Same meaning as 'in spite of.' Never use 'despite of.' 'Despite' is slightly more formal."
+    },
+    {
+      "id": 3,
+      "heading": "ALTHOUGH",
+      "structure": [
+        "although + clause",
+        "(can come at the beginning or middle of a sentence)"
+      ],
+      "examples": [
+        "Although England is famous for tea, many people love coffee.",
+        "We enjoyed the restaurant although the food wasn't very good.",
+        "Although Karin is only 12, she's very mature."
+      ],
+      "explanation": "Shows contrast between two ideas. Weaker than 'even though.'"
+    },
+    {
+      "id": 4,
+      "heading": "EVEN THOUGH",
+      "structure": [
+        "even though + clause",
+        "(can be at the beginning or middle)"
+      ],
+      "examples": [
+        "Even though Karin is only 12, she's very mature.",
+        "I watched the movie even though I don't like those kinds of films.",
+        "I bought new shoes even though I can't afford them.",
+        "He got the job even though he didn't have an interview."
+      ],
+      "explanation": "Meaning is the same as 'although,' but stronger contrast."
+    },
+    {
+      "id": 5,
+      "heading": "THOUGH",
+      "structure": [
+        "though + clause",
+        "often used at the end of a sentence in informal speech"
+      ],
+      "examples": [
+        "I had a good time at the restaurant. I didn't like the food though.",
+        "I didn't eat lunch. I had an apple though.",
+        "I left work early though my boss told me not to."
+      ],
+      "explanation": "Same meaning as 'although,' but more casual. Very common at the end in spoken English."
+    },
+    {
+      "id": 6,
+      "heading": "SUMMARY OF CONTRAST WORDS",
+      "structure": [
+        "in spite of / despite + noun/gerund",
+        "despite the fact that + clause",
+        "although / even though / though + clause"
+      ],
+      "examples": [
+        "Even though → strongest",
+        "Although → normal",
+        "Though → informal"
+      ],
+      "explanation": "Use 'in spite of/despite' with nouns/gerunds. Use 'although/even though/though' with clauses. Choose based on formality and contrast strength."
+    }
+  ]
+}

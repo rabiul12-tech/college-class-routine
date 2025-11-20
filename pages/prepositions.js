@@ -7,7 +7,7 @@
 
 import Head from "next/head";
 import { useMemo, useState, useEffect } from "react";
-
+import Link from "next/link";
 const PREPOSITIONS = [
   {
     key: "on",
@@ -599,6 +599,27 @@ export default function PrepositionsStudy() {
           fontFamily: "Inter, system-ui, sans-serif",
         }}
       >
+        <nav>
+          <Link
+            href="/qa/"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              padding: "8px 16px",
+              backgroundColor: "#f8f9fa",
+              border: "1px solid #dee2e6",
+              borderRadius: "6px",
+              cursor: "pointer",
+              fontSize: "14px",
+              fontWeight: "500",
+              color: "#495057",
+              transition: "all 0.2s ease",
+            }}
+          >
+            ← Back Home
+          </Link>
+        </nav>
         <header
           style={{
             display: "flex",

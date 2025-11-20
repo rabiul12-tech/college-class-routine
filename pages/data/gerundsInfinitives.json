@@ -1,0 +1,236 @@
+{
+  "title": "GERUNDS & INFINITIVES",
+  "subtitle": "Structure • Examples • Short Explanations",
+  "sections": [
+    {
+      "id": 1,
+      "heading": "DEFINITIONS",
+      "subsections": [
+        {
+          "title": "Gerund",
+          "structure": ["verb + ing → functions as a noun"],
+          "examples": ["eating, playing, driving"],
+          "explanation": "A gerund looks like a verb but acts like a noun."
+        },
+        {
+          "title": "Infinitive",
+          "structure": ["to + base verb"],
+          "examples": ["to eat, to play, to go"],
+          "explanation": "Used for purpose, goals, and after specific verbs."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "heading": "STARTING A SENTENCE",
+      "subsections": [
+        {
+          "title": "GERUND as subject",
+          "structure": ["gerund phrase + main verb"],
+          "examples": [
+            "Cleaning is hard work.",
+            "Walking to work every day has helped my back.",
+            "Driving without a seat belt is dangerous.",
+            "Smoking has many negative effects."
+          ],
+          "explanation": "If you want a verb as the subject, use a gerund."
+        },
+        {
+          "title": "INFINITIVE as subject",
+          "structure": [
+            "Two uses:",
+            "1. Poetic / abstract",
+            "2. Goals / achievements"
+          ],
+          "examples": [
+            "To love is to admire with the heart.",
+            "To be or not to be.",
+            "To study so long and quit seems like a waste.",
+            "To become a doctor was her dream.",
+            "To pass this class is my only goal."
+          ],
+          "explanation": "Infinitive subjects sound formal, abstract, or related to goals."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "heading": "PURPOSE (Why we do something)",
+      "subsections": [
+        {
+          "title": "INFINITIVE = purpose",
+          "structure": ["to = in order to"],
+          "examples": [
+            "I wear glasses to see.",
+            "You need to be 18 to vote.",
+            "The company installed cameras to make employees feel safer.",
+            "To listen to the message again, press one."
+          ],
+          "explanation": "Use to + verb when explaining why."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "heading": "GERUND vs. INFINITIVE AFTER VERBS",
+      "note": "There are 5 verb groups",
+      "subsections": [
+        {
+          "title": "LIST 1: Verbs ALWAYS followed by a gerund",
+          "structure": ["avoid + gerund", "involve + gerund"],
+          "examples": [
+            "I avoid sitting in the sun.",
+            "Learning a language involves studying daily."
+          ],
+          "explanation": "These verbs MUST be followed by -ing."
+        },
+        {
+          "title": "LIST 2: Verbs ALWAYS followed by the infinitive",
+          "structure": ["manage + infinitive", "refuse + infinitive"],
+          "examples": [
+            "I finally managed to find a babysitter.",
+            "My son refuses to eat vegetables."
+          ],
+          "explanation": "These verbs MUST be followed by to + verb."
+        },
+        {
+          "title": "LIST 3: Verb + object + infinitive",
+          "structure": ["verb + object + to + verb"],
+          "examples": [
+            "I asked to see the menu. / I asked my friend to help me.",
+            "Please remind me to call mom."
+          ],
+          "explanation": "When someone else does the action → object + to + verb."
+        },
+        {
+          "title": "LIST 4: Either gerund OR infinitive (no change in meaning)",
+          "structure": ["verb + gerund OR infinitive"],
+          "examples": [
+            "I can't stand seeing you sad. / I can't stand to see you sad.",
+            "They started shouting. / They started to shout."
+          ],
+          "explanation": "Both forms are correct with the same meaning."
+        },
+        {
+          "title": "LIST 5: Verbs that CHANGE meaning (very important)",
+          "structure": ["remember, forget, try, stop, regret"],
+          "examples": [
+            "Remember: Gerund = memory, Infinitive = obligation",
+            "Forget: Gerund = forget memory, Infinitive = forget to do",
+            "Try: Gerund = experiment, Infinitive = attempt",
+            "Stop: Gerund = quit activity, Infinitive = stop to do another",
+            "Regret: Gerund = feel guilty, Infinitive = announce bad news"
+          ],
+          "explanation": "These verbs change meaning depending on gerund or infinitive."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "heading": "VERBS WITH MEANING CHANGES - DETAILED",
+      "subsections": [
+        {
+          "title": "1. Remember",
+          "structure": [
+            "Gerund = memory",
+            "Infinitive = obligation / not forgetting"
+          ],
+          "examples": [
+            "I remember learning to swim. (memory)",
+            "I remember seeing a man with a suitcase. (memory)",
+            "Remember to cancel your appointment. (obligation)",
+            "He remembered to turn off the stove. (obligation)"
+          ],
+          "explanation": ""
+        },
+        {
+          "title": "2. Forget",
+          "structure": [
+            "Gerund = forget a memory",
+            "Infinitive = forget to do something"
+          ],
+          "examples": [
+            "I'll never forget playing with my childhood friend. (memory)",
+            "I forgot to take out the trash. (obligation)",
+            "He forgot to get gas. (obligation)"
+          ],
+          "explanation": ""
+        },
+        {
+          "title": "3. Try",
+          "structure": [
+            "Gerund = experiment",
+            "Infinitive = attempt (may be difficult)"
+          ],
+          "examples": [
+            "Have you tried meditating? (experiment)",
+            "Have you tried drinking herbal tea? (experiment)",
+            "I'll try to do that pose. (attempt)",
+            "I tried to get tickets, but they were sold out. (attempt)"
+          ],
+          "explanation": ""
+        },
+        {
+          "title": "4. Stop",
+          "structure": [
+            "Gerund = quit an activity",
+            "Infinitive = stop one action to do another"
+          ],
+          "examples": [
+            "Please stop chewing your gum. (quit activity)",
+            "I stopped going to French class. (quit activity)",
+            "I stopped to take pictures. (stop to do another)",
+            "The car stopped to let the ambulance pass. (stop to do another)"
+          ],
+          "explanation": ""
+        },
+        {
+          "title": "5. Regret",
+          "structure": [
+            "Gerund = feel guilty about a past action",
+            "Infinitive = formal / announcing bad news"
+          ],
+          "examples": [
+            "I regret not spending more time with my grandma. (feel guilty)",
+            "I regret eating all those donuts. (feel guilty)",
+            "We regret to inform you that your application was rejected. (announce)",
+            "I regret to announce she is leaving. (announce)"
+          ],
+          "explanation": ""
+        }
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "use": "Subject of sentence",
+      "gerund": "✔ common",
+      "infinitive": "✔ but formal/goal-like"
+    },
+    {
+      "use": "Purpose (why?)",
+      "gerund": "✘",
+      "infinitive": "✔ to + verb"
+    },
+    {
+      "use": "After certain verbs",
+      "gerund": "list 1",
+      "infinitive": "list 2"
+    },
+    {
+      "use": "Verb + object",
+      "gerund": "✘",
+      "infinitive": "✔ object + to + verb"
+    },
+    {
+      "use": "Both possible",
+      "gerund": "✔ list 4",
+      "infinitive": "✔ list 4"
+    },
+    {
+      "use": "Meaning changes",
+      "gerund": "remember, forget, try, stop, regret",
+      "infinitive": "same verbs but different meaning"
+    }
+  ]
+}
