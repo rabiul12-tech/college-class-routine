@@ -1,6 +1,7 @@
 // File: pages/qa.js
 import { useEffect, useState } from "react";
 import path from "path";
+import Link from "next/link";
 import "./qa.css";
 
 export async function getStaticProps() {
@@ -78,6 +79,70 @@ export default function QAViewer({ pairs: initialPairs }) {
 
   return (
     <div className="qa-container">
+      {/* NAVBAR */}
+      <nav className="qa-nav" style={{ borderBottom: "1px solid #e6e6e6" }}>
+        <div
+          className="qa-nav-inner"
+          style={{
+            maxWidth: 1100,
+            margin: "0 auto",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            padding: "12px 16px",
+          }}
+        >
+          <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+            <Link href="/" legacyBehavior>
+              <a
+                className="qa-nav-link"
+                style={{ fontWeight: 700, color: "#222" }}
+              >
+                Home
+              </a>
+            </Link>
+
+            <Link href="/adverbs" legacyBehavior>
+              <a
+                className="qa-nav-link"
+                style={{
+                  padding: "6px 10px",
+                  background: "#2575fc",
+                  color: "white",
+                  borderRadius: 6,
+                  textDecoration: "none",
+                  fontWeight: 600,
+                }}
+                aria-label="Adverbs study sheet"
+              >
+                Adverbs
+              </a>
+            </Link>
+            <Link href="/prepositions" legacyBehavior>
+              <a
+                className="qa-nav-link"
+                style={{
+                  padding: "6px 10px",
+                  background: "#2575fc",
+                  color: "white",
+                  borderRadius: 6,
+                  textDecoration: "none",
+                  fontWeight: 600,
+                }}
+                aria-label="Adverbs study sheet"
+              >
+                Preposition
+              </a>
+            </Link>
+          </div>
+
+          <div style={{ fontSize: 14, color: "#666" }}>
+            <span style={{ marginRight: 8 }}>Q → A Viewer</span>
+            <small style={{ color: "#999" }}>quick access</small>
+          </div>
+        </div>
+      </nav>
+
       <div className="qa-header">
         <h2 className="qa-title">Q → A Viewer</h2>
         <div className="qa-meta">

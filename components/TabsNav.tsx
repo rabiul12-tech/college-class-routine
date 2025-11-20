@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 type TabsNavProps = {
   active: "today" | "full" | "reports";
   onChange: (tab: "today" | "full" | "reports") => void;
@@ -8,8 +10,7 @@ type TabsNavProps = {
 export default function TabsNav({ active, onChange }: TabsNavProps) {
   const base =
     "tab-btn px-4 py-3 font-semibold border-b-4 border-transparent cursor-pointer transition-colors";
-  const activeClass =
-    "border-blue-600 text-blue-600";
+  const activeClass = "border-blue-600 text-blue-600";
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
@@ -20,31 +21,35 @@ export default function TabsNav({ active, onChange }: TabsNavProps) {
             ক্লাস রুটিন ম্যানেজমেন্ট
           </h1>
 
-          <nav className="hidden md:flex space-x-4">
+          <nav className="hidden md:flex items-center space-x-4">
             <button
-              className={`${base} ${
-                active === "today" ? activeClass : ""
-              }`}
+              className={`${base} ${active === "today" ? activeClass : ""}`}
               onClick={() => onChange("today")}
             >
               আজকের রুটিন
             </button>
             <button
-              className={`${base} ${
-                active === "full" ? activeClass : ""
-              }`}
+              className={`${base} ${active === "full" ? activeClass : ""}`}
               onClick={() => onChange("full")}
             >
               সম্পূর্ণ রুটিন
             </button>
             <button
-              className={`${base} ${
-                active === "reports" ? activeClass : ""
-              }`}
+              className={`${base} ${active === "reports" ? activeClass : ""}`}
               onClick={() => onChange("reports")}
             >
               রিপোর্ট
             </button>
+
+            {/* QA Link (desktop) */}
+            <Link href="/qa" legacyBehavior>
+              <a
+                className={`${base} ml-4 inline-flex items-center rounded-sm hover:bg-gray-50`}
+                aria-label="QA"
+              >
+                প্রশ্নোত্তর
+              </a>
+            </Link>
           </nav>
         </div>
 
@@ -74,6 +79,13 @@ export default function TabsNav({ active, onChange }: TabsNavProps) {
           >
             রিপোর্ট
           </button>
+
+          {/* QA Link (mobile) */}
+          <Link href="/qa" legacyBehavior>
+            <a className={`${base} flex-1 text-center`} aria-label="QA">
+              QA
+            </a>
+          </Link>
         </nav>
       </div>
     </header>
