@@ -1,0 +1,315 @@
+/* app/seo-guide/seo-guide.css */
+.seo-guide-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 2rem 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.seo-guide-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header Styles */
+.seo-guide-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+
+.seo-guide-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.seo-guide-subtitle {
+  font-size: 1.25rem;
+  color: #6b7280;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+/* Section Styles */
+.content-section {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.section-text {
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.highlight-text {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f3f4f6;
+  border-left: 4px solid #3b82f6;
+  border-radius: 0.25rem;
+}
+
+/* List Styles */
+.content-list {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  color: #374151;
+}
+
+.content-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Calculator Types */
+.calculator-types {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.calculator-type {
+  padding: 1rem;
+  background-color: #f8fafc;
+  border-radius: 0.375rem;
+  border-left: 4px solid #10b981;
+}
+
+.type-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.type-list {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  color: #374151;
+}
+
+.type-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Table Styles */
+.table-container {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+}
+
+.seo-table {
+  width: 100%;
+  background-color: #f9fafb;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.seo-table th {
+  background-color: #e5e7eb;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.seo-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: top;
+}
+
+.seo-table tr:last-child td {
+  border-bottom: none;
+}
+
+.seo-table tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.tip-number {
+  font-weight: 600;
+  color: #111827;
+  width: 3rem;
+  text-align: center;
+}
+
+.tip-title {
+  font-weight: 600;
+  color: #111827;
+  min-width: 150px;
+}
+
+.tip-reason {
+  color: #374151;
+  min-width: 200px;
+}
+
+.tip-steps {
+  color: #374151;
+  min-width: 250px;
+}
+
+.tip-steps ul {
+  list-style-type: disc;
+  margin-left: 1.25rem;
+}
+
+.tip-steps li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Box Styles */
+.checklist-box,
+.quick-wins-box {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.checklist-box {
+  background-color: #dbeafe;
+  border-left: 4px solid #2563eb;
+}
+
+.quick-wins-box {
+  background-color: #dcfce7;
+  border-left: 4px solid #16a34a;
+}
+
+.checklist-title,
+.quick-wins-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.checklist {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.checklist li,
+.quick-wins-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.checklist-note,
+.quick-wins-note {
+  color: #374151;
+  font-style: italic;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.quick-wins-list {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+/* Footer Styles */
+.seo-guide-footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footer-text {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-subtext {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .seo-guide-content {
+    padding: 0 0.5rem;
+  }
+
+  .seo-guide-title {
+    font-size: 2rem;
+  }
+
+  .seo-guide-subtitle {
+    font-size: 1.125rem;
+  }
+
+  .content-section {
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+  }
+
+  .calculator-type {
+    padding: 0.75rem;
+  }
+
+  .type-title {
+    font-size: 1.125rem;
+  }
+
+  .seo-table th,
+  .seo-table td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .checklist-box,
+  .quick-wins-box {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .seo-guide-title {
+    font-size: 1.75rem;
+  }
+
+  .seo-guide-subtitle {
+    font-size: 1rem;
+  }
+
+  .content-list,
+  .type-list,
+  .checklist,
+  .quick-wins-list {
+    margin-left: 1rem;
+  }
+}

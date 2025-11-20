@@ -334,6 +334,22 @@ export default function QAViewer({ pairs: initialPairs }) {
                 english-tenses.js
               </a>
             </Link>
+            <Link href="/seo/" legacyBehavior>
+              <a
+                className="qa-nav-link"
+                style={{
+                  padding: "6px 10px",
+                  background: "#ff0000",
+                  color: "white",
+                  borderRadius: 6,
+                  textDecoration: "none",
+                  fontWeight: 600,
+                }}
+                aria-label="Adverbs study sheet"
+              >
+                SEO GUIDE
+              </a>
+            </Link>
           </div>
 
           <div style={{ fontSize: 14, color: "#666" }}>
