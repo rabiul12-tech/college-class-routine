@@ -350,7 +350,7 @@ export default function QAViewer({ pairs: initialPairs }) {
                 SEO GUIDE
               </a>
             </Link>
-            <Link href="/SEO/keyword/" legacyBehavior>
+            <Link href="/keyword/" legacyBehavior>
               <a
                 className="qa-nav-link"
                 style={{
@@ -366,7 +366,7 @@ export default function QAViewer({ pairs: initialPairs }) {
                 keyword
               </a>
             </Link>
-            <Link href="/SEO/semrushkeyword/" legacyBehavior>
+            <Link href="/semrushkeyword/" legacyBehavior>
               <a
                 className="qa-nav-link"
                 style={{
