@@ -1,4 +1,4 @@
-import { keywordData, seoStrategy } from "../SEO/lib/keywordData";
+import { keywordData, seoStrategy } from "../SEO/bibs/keywordData";
 
 import "../qa.css";
 export default function KeywordResearchAnalysis() {
