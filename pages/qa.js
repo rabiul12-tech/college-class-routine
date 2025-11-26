@@ -350,6 +350,38 @@ export default function QAViewer({ pairs: initialPairs }) {
                 SEO GUIDE
               </a>
             </Link>
+            <Link href="/SEO/keyword/" legacyBehavior>
+              <a
+                className="qa-nav-link"
+                style={{
+                  padding: "6px 10px",
+                  background: "#ff0000",
+                  color: "white",
+                  borderRadius: 6,
+                  textDecoration: "none",
+                  fontWeight: 600,
+                }}
+                aria-label="Adverbs study sheet"
+              >
+                keyword
+              </a>
+            </Link>
+            <Link href="/SEO/semrushkeyword/" legacyBehavior>
+              <a
+                className="qa-nav-link"
+                style={{
+                  padding: "6px 10px",
+                  background: "#ff0000",
+                  color: "white",
+                  borderRadius: 6,
+                  textDecoration: "none",
+                  fontWeight: 600,
+                }}
+                aria-label="Adverbs study sheet"
+              >
+                Semrush keyword strategy in bangla
+              </a>
+            </Link>
           </div>
 
           <div style={{ fontSize: 14, color: "#666" }}>
