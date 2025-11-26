@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { notesData, categories } from "./lib/notesData";
+import { notesData, categories } from "./lib/notesData.js";
 
 export default function SEONotesApp() {
   const [activeCategory, setActiveCategory] = useState("all");
