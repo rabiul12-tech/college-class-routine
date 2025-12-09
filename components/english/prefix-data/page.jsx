@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { prefixCategories } from "../../data/adverb";
 import { suffixCategories } from "../../data/adverb";
 
@@ -5,6 +6,27 @@ export default function AffixHome() {
   return (
     <>
       <div className="container">
+        <nav>
+          <Link
+            href="/qa/"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              padding: "8px 16px",
+              backgroundColor: "#f8f9fa",
+              border: "1px solid #dee2e6",
+              borderRadius: "6px",
+              cursor: "pointer",
+              fontSize: "14px",
+              fontWeight: "500",
+              color: "#495057",
+              transition: "all 0.2s ease",
+            }}
+          >
+            ← Back Home
+          </Link>
+        </nav>
         <header className="header">
           <h1>📚 English Affix Learning Tool</h1>
           <p className="subtitle">

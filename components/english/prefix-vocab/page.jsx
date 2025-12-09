@@ -1,6 +1,7 @@
 // app/vocabulary/page.jsx
 "use client";
 
+import Link from "next/link";
 import { useState, useMemo } from "react";
 
 const vocabularyWords = [
@@ -1993,6 +1994,27 @@ export default function VocabularyPage() {
         {styles}
       </style>
       <div className="vocabulary-page">
+        <nav>
+          <Link
+            href="/qa/"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              padding: "8px 16px",
+              backgroundColor: "#f8f9fa",
+              border: "1px solid #dee2e6",
+              borderRadius: "6px",
+              cursor: "pointer",
+              fontSize: "14px",
+              fontWeight: "500",
+              color: "#495057",
+              transition: "all 0.2s ease",
+            }}
+          >
+            ← Back Home
+          </Link>
+        </nav>
         <div className="container">
           {/* Header */}
           <header className="header">
