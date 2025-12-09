@@ -5,7 +5,6 @@ import Link from "next/link";
 import "./qa.css";
 
 export async function getStaticProps() {
-  // dynamic import of fs so bundler doesn't try to include it for client
   let pairs = [];
   try {
     const fs = await import("fs");
@@ -14,14 +13,9 @@ export async function getStaticProps() {
       const raw = fs.readFileSync(jsonPath, "utf8");
       pairs = JSON.parse(raw || "[]");
     } else {
-      // file not present at build time
       pairs = [];
     }
   } catch (err) {
-    // if any server-side read error, log to console and return empty list
-    // Next build or dev server console will show this
-    // We still allow client-side fetch fallback.
-    // eslint-disable-next-line no-console
     console.error(
       "getStaticProps - failed to read data.json:",
       err && err.message
@@ -31,7 +25,6 @@ export async function getStaticProps() {
 
   return {
     props: { pairs },
-    // short ISR so you can regenerate by running the generator and waiting or re-building
     revalidate: 10,
   };
 }
@@ -46,7 +39,6 @@ export default function QAViewer({ pairs: initialPairs }) {
   const [showAnswers, setShowAnswers] = useState(true);
 
   useEffect(() => {
-    // 1) prefer window.QA_DATA if present (data.js)
     if (
       typeof window !== "undefined" &&
       Array.isArray(window.QA_DATA) &&
@@ -57,7 +49,6 @@ export default function QAViewer({ pairs: initialPairs }) {
       return;
     }
 
-    // 2) if server-side didn't provide data, try fetch /data.json
     if (!initialPairs || initialPairs.length === 0) {
       fetch("/data.json", { cache: "no-store" })
         .then((res) => {
@@ -71,338 +62,119 @@ export default function QAViewer({ pairs: initialPairs }) {
           }
         })
         .catch((err) => {
-          // eslint-disable-next-line no-console
           console.info("client fetch /data.json failed:", err && err.message);
         });
     }
   }, [initialPairs]);
 
+  // Create study pages array for navigation
+  const studyPages = [
+    { href: "/adverbs", label: "Adverbs", color: "#2575fc" },
+    { href: "/prepositions", label: "Preposition", color: "#2575fc" },
+    { href: "/be-lesson", label: "Be lesson", color: "#2575fc" },
+    { href: "/likeyLesson/", label: "likely Lesson", color: "#2575fc" },
+    { href: "/so-such-lesson/", label: "so such", color: "#2575fc" },
+    {
+      href: "/thoughalthough-words/",
+      label: "Though although",
+      color: "#2575fc",
+    },
+    { href: "/other-another/", label: "other another", color: "#2575fc" },
+    { href: "/still-already/", label: "still already", color: "#2575fc" },
+    { href: "/causative-verbs/", label: "Causative", color: "#2575fc" },
+    { href: "/to-vs-for/", label: "to vs for", color: "#2575fc" },
+    { href: "/most-almost/", label: "most-almost", color: "#2575fc" },
+    { href: "/beside-besides/", label: "beside-besides", color: "#2575fc" },
+    {
+      href: "/gerunds-infinitives/",
+      label: "gerunds-infinitives",
+      color: "#2575fc",
+    },
+    { href: "/english-tenses/", label: "english-tenses", color: "#2575fc" },
+    { href: "/tene-datolearn/", label: "Learn tense", color: "#2575fc" },
+
+    {
+      href: "/indirect-questions",
+      label: "indirect-questions",
+      color: "#3b82f6",
+    }, // Added Tenses page
+    {
+      href: "/word-formation-mistakes/",
+      label: "word-formation-mistakes",
+      color: "#3b82f6",
+    }, // Added Tenses page
+    {
+      href: "/adverbs-lesson/",
+      label: "adverbs-lesson",
+      color: "#3b82f6",
+    }, // Added Tenses page
+    {
+      href: "/prefix-data/",
+      label: "prefix-data",
+      color: "#3b82f6",
+    },
+    {
+      href: "/prefix-vocab/",
+      label: "prefix-vocab",
+      color: "#3b82f6",
+    },
+  ];
+
+  const seoPages = [
+    { href: "/seo/", label: "SEO GUIDE", color: "#ff0000" },
+    { href: "/keyword/", label: "keyword", color: "#ff0000" },
+    { href: "/semrushkeyword/", label: "Semrush keyword", color: "#ff0000" },
+    { href: "/OnPageSeo/", label: "ON Page SEO", color: "#ff0000" },
+  ];
+
   return (
     <div className="qa-container">
       {/* NAVBAR */}
-      <nav className="qa-nav" style={{ borderBottom: "1px solid #e6e6e6" }}>
-        <div
-          className="qa-nav-inner"
-          style={{
-            maxWidth: 1100,
-            margin: "0 auto",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            flexWrap: "wrap",
-            padding: "12px 16px",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              gap: 12,
-              alignItems: "center",
-              flexWrap: "wrap",
-            }}
-          >
+      <nav className="qa-nav">
+        <div className="qa-nav-inner">
+          <div className="qa-nav-links">
             <Link href="/" legacyBehavior>
-              <a
-                className="qa-nav-link"
-                style={{ fontWeight: 700, color: "#222" }}
-              >
-                Home
-              </a>
+              <a className="qa-nav-home">Home</a>
             </Link>
 
-            <Link href="/adverbs" legacyBehavior>
-              <a
-                className="qa-nav-link"
-                style={{
-                  padding: "6px 10px",
-                  background: "#2575fc",
-                  color: "white",
-                  borderRadius: 6,
-                  textDecoration: "none",
-                  fontWeight: 600,
-                }}
-                aria-label="Adverbs study sheet"
-              >
-                Adverbs
-              </a>
-            </Link>
-            <Link href="/prepositions" legacyBehavior>
-              <a
-                className="qa-nav-link"
-                style={{
-                  padding: "6px 10px",
-                  background: "#2575fc",
-                  color: "white",
-                  borderRadius: 6,
-                  textDecoration: "none",
-                  fontWeight: 600,
-                }}
-                aria-label="Adverbs study sheet"
-              >
-                Preposition
-              </a>
-            </Link>
-            <Link href="/be-lesson" legacyBehavior>
-              <a
-                className="qa-nav-link"
-                style={{
-                  padding: "6px 10px",
-                  background: "#2575fc",
-                  color: "white",
-                  borderRadius: 6,
-                  textDecoration: "none",
-                  fontWeight: 600,
-                }}
-                aria-label="Adverbs study sheet"
-              >
-                Be lesson
-              </a>
-            </Link>
-            <Link href="/likeyLesson/" legacyBehavior>
-              <a
-                className="qa-nav-link"
-                style={{
-                  padding: "6px 10px",
-                  background: "#2575fc",
-                  color: "white",
-                  borderRadius: 6,
-                  textDecoration: "none",
-                  fontWeight: 600,
-                }}
-                aria-label="Adverbs study sheet"
-              >
-                likely Lesson
-              </a>
-            </Link>
-            <Link href="/so-such-lesson/" legacyBehavior>
-              <a
-                className="qa-nav-link"
-                style={{
-                  padding: "6px 10px",
-                  background: "#2575fc",
-                  color: "white",
-                  borderRadius: 6,
-                  textDecoration: "none",
-                  fontWeight: 600,
-                }}
-                aria-label="Adverbs study sheet"
-              >
-                so such
-              </a>
-            </Link>
-            <Link href="/thoughalthough-words/" legacyBehavior>
-              <a
-                className="qa-nav-link"
-                style={{
-                  padding: "6px 10px",
-                  background: "#2575fc",
-                  color: "white",
-                  borderRadius: 6,
-                  textDecoration: "none",
-                  fontWeight: 600,
-                }}
-                aria-label="Adverbs study sheet"
-              >
-                Though although
-              </a>
-            </Link>
-            <Link href="/other-another/" legacyBehavior>
-              <a
-                className="qa-nav-link"
-                style={{
-                  padding: "6px 10px",
-                  background: "#2575fc",
-                  color: "white",
-                  borderRadius: 6,
-                  textDecoration: "none",
-                  fontWeight: 600,
-                }}
-                aria-label="Adverbs study sheet"
-              >
-                other another
-              </a>
-            </Link>
-            <Link href="/still-already/" legacyBehavior>
-              <a
-                className="qa-nav-link"
-                style={{
-                  padding: "6px 10px",
-                  background: "#2575fc",
-                  color: "white",
-                  borderRadius: 6,
-                  textDecoration: "none",
-                  fontWeight: 600,
-                }}
-                aria-label="Adverbs study sheet"
-              >
-                still already
-              </a>
-            </Link>
-            <Link href="/causative-verbs/" legacyBehavior>
-              <a
-                className="qa-nav-link"
-                style={{
-                  padding: "6px 10px",
-                  background: "#2575fc",
-                  color: "white",
-                  borderRadius: 6,
-                  textDecoration: "none",
-                  fontWeight: 600,
-                }}
-                aria-label="Adverbs study sheet"
-              >
-                Causative
-              </a>
-            </Link>
-            <Link href="/to-vs-for/" legacyBehavior>
-              <a
-                className="qa-nav-link"
-                style={{
-                  padding: "6px 10px",
-                  background: "#2575fc",
-                  color: "white",
-                  borderRadius: 6,
-                  textDecoration: "none",
-                  fontWeight: 600,
-                }}
-                aria-label="Adverbs study sheet"
-              >
-                to vs for
-              </a>
-            </Link>
-            <Link href="/most-almost/" legacyBehavior>
-              <a
-                className="qa-nav-link"
-                style={{
-                  padding: "6px 10px",
-                  background: "#2575fc",
-                  color: "white",
-                  borderRadius: 6,
-                  textDecoration: "none",
-                  fontWeight: 600,
-                }}
-                aria-label="Adverbs study sheet"
-              >
-                most-almost
-              </a>
-            </Link>
-            <Link href="/beside-besides/" legacyBehavior>
-              <a
-                className="qa-nav-link"
-                style={{
-                  padding: "6px 10px",
-                  background: "#2575fc",
-                  color: "white",
-                  borderRadius: 6,
-                  textDecoration: "none",
-                  fontWeight: 600,
-                }}
-                aria-label="Adverbs study sheet"
-              >
-                beside-besides
-              </a>
-            </Link>
-            <Link href="/gerunds-infinitives/" legacyBehavior>
-              <a
-                className="qa-nav-link"
-                style={{
-                  padding: "6px 10px",
-                  background: "#2575fc",
-                  color: "white",
-                  borderRadius: 6,
-                  textDecoration: "none",
-                  fontWeight: 600,
-                }}
-                aria-label="Adverbs study sheet"
-              >
-                gerunds-infinitives
-              </a>
-            </Link>
-            <Link href="/english-tenses/" legacyBehavior>
-              <a
-                className="qa-nav-link"
-                style={{
-                  padding: "6px 10px",
-                  background: "#2575fc",
-                  color: "white",
-                  borderRadius: 6,
-                  textDecoration: "none",
-                  fontWeight: 600,
-                }}
-                aria-label="Adverbs study sheet"
-              >
-                english-tenses.js
-              </a>
-            </Link>
-            <Link href="/seo/" legacyBehavior>
-              <a
-                className="qa-nav-link"
-                style={{
-                  padding: "6px 10px",
-                  background: "#ff0000",
-                  color: "white",
-                  borderRadius: 6,
-                  textDecoration: "none",
-                  fontWeight: 600,
-                }}
-                aria-label="Adverbs study sheet"
-              >
-                SEO GUIDE
-              </a>
-            </Link>
-            <Link href="/keyword/" legacyBehavior>
-              <a
-                className="qa-nav-link"
-                style={{
-                  padding: "6px 10px",
-                  background: "#ff0000",
-                  color: "white",
-                  borderRadius: 6,
-                  textDecoration: "none",
-                  fontWeight: 600,
-                }}
-                aria-label="Adverbs study sheet"
-              >
-                keyword
-              </a>
-            </Link>
-            <Link href="/semrushkeyword/" legacyBehavior>
-              <a
-                className="qa-nav-link"
-                style={{
-                  padding: "6px 10px",
-                  background: "#ff0000",
-                  color: "white",
-                  borderRadius: 6,
-                  textDecoration: "none",
-                  fontWeight: 600,
-                }}
-                aria-label="Adverbs study sheet"
-              >
-                Semrush keyword strategy in bangla
-              </a>
-            </Link>
-            <Link href="/OnPageSeo/" legacyBehavior>
-              <a
-                className="qa-nav-link"
-                style={{
-                  padding: "6px 10px",
-                  background: "#ff0000",
-                  color: "white",
-                  borderRadius: 6,
-                  textDecoration: "none",
-                  fontWeight: 600,
-                }}
-                aria-label="Adverbs study sheet"
-              >
-                ON Page SEO
-              </a>
-            </Link>
+            <div className="qa-nav-section">
+              <span className="qa-nav-section-label">Study Pages:</span>
+              <div className="qa-nav-buttons">
+                {studyPages.map((page) => (
+                  <Link key={page.href} href={page.href} legacyBehavior>
+                    <a
+                      className="qa-nav-link"
+                      style={{ backgroundColor: page.color }}
+                      aria-label={`${page.label} study sheet`}
+                    >
+                      {page.label}
+                    </a>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div className="qa-nav-section">
+              <span className="qa-nav-section-label">SEO Pages:</span>
+              <div className="qa-nav-buttons">
+                {seoPages.map((page) => (
+                  <Link key={page.href} href={page.href} legacyBehavior>
+                    <a
+                      className="qa-nav-link"
+                      style={{ backgroundColor: page.color }}
+                      aria-label={`${page.label} page`}
+                    >
+                      {page.label}
+                    </a>
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
 
-          <div style={{ fontSize: 14, color: "#666" }}>
-            <span style={{ marginRight: 8 }}>Q → A Viewer</span>
-            <small style={{ color: "#999" }}>quick access</small>
+          <div className="qa-nav-info">
+            <span className="qa-nav-title">Q → A Viewer</span>
+            <small className="qa-nav-subtitle">quick access</small>
           </div>
         </div>
       </nav>

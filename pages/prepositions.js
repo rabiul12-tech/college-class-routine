@@ -611,7 +611,7 @@ export default function PrepositionsStudy() {
               border: "1px solid #dee2e6",
               borderRadius: "6px",
               cursor: "pointer",
-              fontSize: "14px",
+              fontSize: "24px",
               fontWeight: "500",
               color: "#495057",
               transition: "all 0.2s ease",
@@ -630,7 +630,7 @@ export default function PrepositionsStudy() {
           }}
         >
           <div style={{ flex: 1, minWidth: 300 }}>
-            <h1 style={{ margin: 0, fontSize: 22 }}>
+            <h1 style={{ margin: 0, fontSize: 32 }}>
               Prepositions — Study Mode
             </h1>
             <p style={{ margin: "6px 0 0", color: "#555" }}>
@@ -691,7 +691,7 @@ export default function PrepositionsStudy() {
         <main style={{ marginTop: 20 }}>
           {mode === "learn" && (
             <section>
-              <h2 style={{ fontSize: 18, marginBottom: 8 }}>
+              <h2 style={{ fontSize: 28, marginBottom: 8 }}>
                 Learn — Prepositions & Examples
               </h2>
               <p style={{ color: "#444" }}>
@@ -747,7 +747,7 @@ export default function PrepositionsStudy() {
                       }}
                     >
                       <h3 style={{ margin: 0 }}>{p.label}</h3>
-                      <div style={{ fontSize: 13, color: "#6b7280" }}>
+                      <div style={{ fontSize: 23, color: "#6b7280" }}>
                         {p.meaning}
                       </div>
                     </div>
@@ -756,7 +756,11 @@ export default function PrepositionsStudy() {
                       {p.examples.map((ex, i) => (
                         <li
                           key={i}
-                          style={{ marginBottom: 6, lineHeight: 1.6 }}
+                          style={{
+                            marginBottom: 6,
+                            lineHeight: 1.6,
+                            fontSize: 28,
+                          }}
                         >
                           {ex}
                         </li>
@@ -770,7 +774,7 @@ export default function PrepositionsStudy() {
 
           {mode === "flash" && (
             <section>
-              <h2 style={{ fontSize: 18 }}>Flashcards</h2>
+              <h2 style={{ fontSize: 28 }}>Flashcards</h2>
               <p style={{ color: "#444" }}>
                 Flip each card to reveal meaning & examples. Use the arrows to
                 move.
@@ -813,7 +817,7 @@ export default function PrepositionsStudy() {
                       }}
                     >
                       <div style={{ flex: 1 }}>
-                        <div style={{ fontSize: 20, fontWeight: 700 }}>
+                        <div style={{ fontSize: 30, fontWeight: 700 }}>
                           {fcItem.label}
                         </div>
                         <div style={{ color: "#6b7280", marginTop: 6 }}>
@@ -827,7 +831,7 @@ export default function PrepositionsStudy() {
                           flexShrink: 0,
                         }}
                       >
-                        <div style={{ fontSize: 12 }}>Card</div>
+                        <div style={{ fontSize: 22 }}>Card</div>
                         <div style={{ marginTop: 6 }}>
                           {fcIndex + 1} / {totalFlash}
                         </div>
@@ -836,7 +840,7 @@ export default function PrepositionsStudy() {
 
                     <div style={{ marginTop: 4, flex: 1 }}>
                       {!showFcBack ? (
-                        <div style={{ color: "#374151", fontSize: 14 }}>
+                        <div style={{ color: "#374151", fontSize: 24 }}>
                           👆 Tap the card to reveal examples
                         </div>
                       ) : (
@@ -846,7 +850,10 @@ export default function PrepositionsStudy() {
                           </div>
                           <ul style={{ paddingLeft: 18, margin: 0 }}>
                             {fcItem.examples.map((ex, i) => (
-                              <li key={i} style={{ marginBottom: 6 }}>
+                              <li
+                                key={i}
+                                style={{ marginBottom: 6, fontSize: 28 }}
+                              >
                                 {ex}
                               </li>
                             ))}
@@ -887,7 +894,7 @@ export default function PrepositionsStudy() {
 
           {mode === "quiz" && (
             <section>
-              <h2 style={{ fontSize: 18 }}>Quiz — Fill the blank</h2>
+              <h2 style={{ fontSize: 28 }}>Quiz — Fill the blank</h2>
               <p style={{ color: "#444" }}>
                 The app blanks a preposition in a real example. Type the missing
                 preposition and submit.
@@ -944,7 +951,7 @@ export default function PrepositionsStudy() {
                             style={{
                               marginBottom: 12,
                               color: "#6b7280",
-                              fontSize: 13,
+                              fontSize: 23,
                             }}
                           >
                             Preposition group:{" "}
@@ -953,7 +960,7 @@ export default function PrepositionsStudy() {
 
                           <div
                             style={{
-                              fontSize: 18,
+                              fontSize: 28,
                               marginBottom: 12,
                               lineHeight: 1.5,
                             }}
@@ -1075,7 +1082,7 @@ function SearchJumpList({ items, onJump }) {
             cursor: "pointer",
             fontWeight: 600,
             color: "#111827",
-            fontSize: 12,
+            fontSize: 22,
           }}
         >
           {it.label}
@@ -1092,7 +1099,7 @@ const navBtnStyle = {
   border: "none",
   cursor: "pointer",
   fontWeight: 700,
-  fontSize: 16,
+  fontSize: 26,
 };
 
 const actionBtnStyle = {

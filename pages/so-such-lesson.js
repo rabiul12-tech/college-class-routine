@@ -14,7 +14,7 @@ export default function SoSuchLesson() {
       style={{
         padding: "32px 24px",
         fontFamily: "'Inter', 'Segoe UI', system-ui, sans-serif",
-        maxWidth: "800px",
+        maxWidth: "1000px",
         margin: "0 auto",
         lineHeight: 1.6,
         backgroundColor: "#f8fafc",
@@ -67,7 +67,7 @@ export default function SoSuchLesson() {
         </h1>
         <p
           style={{
-            fontSize: "16px",
+            fontSize: "26px",
             margin: 0,
             opacity: 0.9,
             fontWeight: 400,
@@ -121,7 +121,7 @@ export default function SoSuchLesson() {
                   justifyContent: "center",
                   color: "white",
                   fontWeight: 600,
-                  fontSize: "14px",
+                  fontSize: "24px",
                   marginRight: "12px",
                 }}
               >
@@ -129,7 +129,7 @@ export default function SoSuchLesson() {
               </div>
               <h2
                 style={{
-                  fontSize: "20px",
+                  fontSize: "30px",
                   fontWeight: 600,
                   color: "#1e293b",
                   margin: 0,
@@ -154,7 +154,7 @@ export default function SoSuchLesson() {
                 <div>
                   <h3
                     style={{
-                      fontSize: "13px",
+                      fontSize: "23px",
                       fontWeight: 600,
                       color: "#475569",
                       marginBottom: "12px",
@@ -174,7 +174,7 @@ export default function SoSuchLesson() {
                           borderRadius: "8px",
                           border: "1px solid #e2e8f0",
                           borderLeft: "4px solid #667eea",
-                          fontSize: "14px",
+                          fontSize: "24px",
                           color: "#475569",
                           fontWeight: 500,
                         }}
@@ -189,7 +189,7 @@ export default function SoSuchLesson() {
                 <div>
                   <h3
                     style={{
-                      fontSize: "13px",
+                      fontSize: "23px",
                       fontWeight: 600,
                       color: "#475569",
                       marginBottom: "12px",
@@ -201,7 +201,7 @@ export default function SoSuchLesson() {
                   </h3>
                   <p
                     style={{
-                      fontSize: "15px",
+                      fontSize: "25px",
                       lineHeight: 1.6,
                       color: "#475569",
                       padding: "16px",
@@ -220,7 +220,7 @@ export default function SoSuchLesson() {
               <div>
                 <h3
                   style={{
-                    fontSize: "13px",
+                    fontSize: "23px",
                     fontWeight: 600,
                     color: "#475569",
                     marginBottom: "12px",
@@ -239,7 +239,7 @@ export default function SoSuchLesson() {
                         backgroundColor: "#f8fafc",
                         borderRadius: "8px",
                         border: "1px solid #e2e8f0",
-                        fontSize: "15px",
+                        fontSize: "25px",
                         fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
                         color: "#1e293b",
                         transition: "all 0.2s ease",
@@ -277,7 +277,7 @@ export default function SoSuchLesson() {
       >
         <h3
           style={{
-            fontSize: "16px",
+            fontSize: "26px",
             fontWeight: 600,
             color: "#1e293b",
             marginBottom: "8px",
@@ -287,7 +287,7 @@ export default function SoSuchLesson() {
         </h3>
         <p
           style={{
-            fontSize: "15px",
+            fontSize: "25px",
             color: "#475569",
             margin: 0,
             fontWeight: 500,

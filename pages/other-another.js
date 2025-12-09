@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import lessonData from "./data/otherAnother.json";
 import Link from "next/link";
+
 export default function OtherAnother() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -12,9 +13,9 @@ export default function OtherAnother() {
   return (
     <main
       style={{
-        padding: "32px 24px",
+        padding: "clamp(20px, 4vw, 32px) clamp(16px, 3vw, 24px)",
         fontFamily: "'Inter', 'Segoe UI', system-ui, sans-serif",
-        maxWidth: "1000px",
+        maxWidth: "min(1000px, 95vw)",
         margin: "0 auto",
         lineHeight: 1.6,
         backgroundColor: "#f8fafc",
@@ -23,51 +24,64 @@ export default function OtherAnother() {
         transition: "opacity 0.5s ease-in-out",
       }}
     >
-      <nav>
+      {/* Navigation */}
+      <nav style={{ marginBottom: "clamp(24px, 5vw, 32px)" }}>
         <Link
           href="/qa/"
           style={{
             display: "inline-flex",
             alignItems: "center",
-            gap: "8px",
-            padding: "8px 16px",
+            gap: "clamp(6px, 1.5vw, 8px)",
+            padding: "clamp(8px, 2vw, 12px) clamp(12px, 3vw, 16px)",
             backgroundColor: "#f8f9fa",
             border: "1px solid #dee2e6",
             borderRadius: "6px",
             cursor: "pointer",
-            fontSize: "14px",
+            fontSize: "clamp(18px, 4vw, 26px)", // +12px from 14px
             fontWeight: "500",
             color: "#495057",
             transition: "all 0.2s ease",
+            textDecoration: "none",
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.backgroundColor = "#e9ecef";
+            e.target.style.borderColor = "#ced4da";
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.backgroundColor = "#f8f9fa";
+            e.target.style.borderColor = "#dee2e6";
           }}
         >
           ← Back Home
         </Link>
       </nav>
+
       {/* Header */}
       <header
         style={{
-          marginBottom: "40px",
+          marginBottom: "clamp(32px, 6vw, 40px)",
           textAlign: "center",
         }}
       >
         <h1
           style={{
-            fontSize: "28px",
-            marginBottom: "8px",
+            fontSize: "clamp(28px, 6vw, 40px)", // +12px from 28px
+            marginBottom: "clamp(8px, 2vw, 12px)",
             fontWeight: 700,
             color: "#1e293b",
             letterSpacing: "-0.02em",
+            lineHeight: 1.2,
           }}
         >
           {lessonData.title}
         </h1>
         <p
           style={{
-            fontSize: "16px",
+            fontSize: "clamp(20px, 4vw, 28px)", // +12px from 16px
             margin: 0,
             color: "#64748b",
             fontWeight: 500,
+            lineHeight: 1.3,
           }}
         >
           {lessonData.subtitle}
@@ -78,15 +92,15 @@ export default function OtherAnother() {
       <div
         style={{
           display: "grid",
-          gap: "28px",
-          marginBottom: "40px",
+          gap: "clamp(20px, 5vw, 28px)",
+          marginBottom: "clamp(32px, 6vw, 40px)",
         }}
       >
         {lessonData.sections.map((sec, index) => (
           <section
             key={sec.id}
             style={{
-              padding: "28px",
+              padding: "clamp(20px, 4vw, 28px)",
               backgroundColor: "white",
               borderRadius: "12px",
               boxShadow: "0 4px 12px rgba(0,0,0,0.06)",
@@ -94,6 +108,7 @@ export default function OtherAnother() {
               transform: isVisible ? "translateY(0)" : "translateY(20px)",
               opacity: isVisible ? 1 : 0,
               transition: `all 0.5s ease-out ${index * 0.1}s`,
+              overflow: "hidden",
             }}
           >
             {/* Section Header */}
@@ -101,16 +116,18 @@ export default function OtherAnother() {
               style={{
                 display: "flex",
                 alignItems: "center",
-                marginBottom: "24px",
-                paddingBottom: "16px",
+                marginBottom: "clamp(20px, 4vw, 24px)",
+                paddingBottom: "clamp(12px, 3vw, 16px)",
                 borderBottom:
                   sec.id === 4 ? "2px solid #fecaca" : "2px solid #f1f5f9",
+                flexWrap: "wrap",
+                gap: "12px",
               }}
             >
               <div
                 style={{
-                  width: "32px",
-                  height: "32px",
+                  width: "clamp(40px, 8vw, 48px)",
+                  height: "clamp(40px, 8vw, 48px)",
                   borderRadius: "8px",
                   background:
                     sec.id === 4
@@ -121,18 +138,21 @@ export default function OtherAnother() {
                   justifyContent: "center",
                   color: "white",
                   fontWeight: 600,
-                  fontSize: "14px",
-                  marginRight: "12px",
+                  fontSize: "clamp(18px, 4vw, 26px)", // +12px from 14px
+                  flexShrink: 0,
                 }}
               >
                 {sec.id}
               </div>
               <h2
                 style={{
-                  fontSize: "20px",
+                  fontSize: "clamp(22px, 5vw, 32px)", // +12px from 20px
                   fontWeight: 600,
                   color: sec.id === 4 ? "#dc2626" : "#1e293b",
                   margin: 0,
+                  lineHeight: 1.2,
+                  flex: 1,
+                  minWidth: "min(200px, 100%)",
                 }}
               >
                 {sec.heading}
@@ -143,31 +163,33 @@ export default function OtherAnother() {
             <div
               style={{
                 display: "grid",
-                gap: "24px",
-                gridTemplateColumns: "1fr 1fr 1fr",
+                gap: "clamp(20px, 4vw, 24px)",
+                gridTemplateColumns:
+                  "repeat(auto-fit, minmax(min(280px, 100%), 1fr))",
                 alignItems: "start",
               }}
             >
-              {/* Structure */}
+              {/* Structure Column */}
               <div>
                 <h3
                   style={{
-                    fontSize: "13px",
+                    fontSize: "clamp(18px, 4vw, 25px)", // +12px from 13px
                     fontWeight: 600,
                     color: "#475569",
-                    marginBottom: "12px",
+                    marginBottom: "clamp(10px, 2vw, 12px)",
                     textTransform: "uppercase",
                     letterSpacing: "0.05em",
                   }}
                 >
                   Structure
                 </h3>
-                <div style={{ display: "grid", gap: "8px" }}>
+                <div style={{ display: "grid", gap: "clamp(8px, 2vw, 10px)" }}>
                   {sec.structure.map((item, i) => (
                     <div
                       key={i}
                       style={{
-                        padding: "12px 16px",
+                        padding:
+                          "clamp(12px, 2vw, 14px) clamp(14px, 3vw, 16px)",
                         backgroundColor: sec.id === 4 ? "#fef2f2" : "#f8fafc",
                         borderRadius: "8px",
                         border:
@@ -178,9 +200,12 @@ export default function OtherAnother() {
                           sec.id === 4
                             ? "4px solid #ef4444"
                             : "4px solid #6366f1",
-                        fontSize: "14px",
+                        fontSize: "clamp(18px, 4vw, 26px)", // +12px from 14px
                         color: sec.id === 4 ? "#dc2626" : "#475569",
                         fontWeight: 500,
+                        wordBreak: "break-word",
+                        overflowWrap: "break-word",
+                        lineHeight: 1.4,
                       }}
                     >
                       {item}
@@ -189,45 +214,53 @@ export default function OtherAnother() {
                 </div>
               </div>
 
-              {/* Examples */}
+              {/* Examples Column */}
               <div>
                 <h3
                   style={{
-                    fontSize: "13px",
+                    fontSize: "clamp(18px, 4vw, 25px)", // +12px from 13px
                     fontWeight: 600,
                     color: "#475569",
-                    marginBottom: "12px",
+                    marginBottom: "clamp(10px, 2vw, 12px)",
                     textTransform: "uppercase",
                     letterSpacing: "0.05em",
                   }}
                 >
                   Examples
                 </h3>
-                <div style={{ display: "grid", gap: "10px" }}>
+                <div style={{ display: "grid", gap: "clamp(10px, 2vw, 12px)" }}>
                   {sec.examples.map((ex, i) => (
                     <div
                       key={i}
                       style={{
-                        padding: "12px 16px",
+                        padding:
+                          "clamp(12px, 2vw, 14px) clamp(14px, 3vw, 16px)",
                         backgroundColor: sec.id === 4 ? "#fef2f2" : "#f8fafc",
                         borderRadius: "8px",
                         border:
                           sec.id === 4
                             ? "1px solid #fecaca"
                             : "1px solid #e2e8f0",
-                        fontSize: "15px",
+                        fontSize: "clamp(19px, 4vw, 27px)", // +12px from 15px
                         fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
                         color: sec.id === 4 ? "#dc2626" : "#1e293b",
                         transition: "all 0.2s ease",
                         cursor: "pointer",
+                        wordBreak: "break-word",
+                        overflowWrap: "break-word",
+                        lineHeight: 1.4,
                       }}
                       onMouseEnter={(e) => {
                         e.target.style.transform = "translateX(4px)";
                         e.target.style.boxShadow = "0 2px 8px rgba(0,0,0,0.1)";
+                        e.target.style.backgroundColor =
+                          sec.id === 4 ? "#fee2e2" : "#f1f5f9";
                       }}
                       onMouseLeave={(e) => {
                         e.target.style.transform = "translateX(0)";
                         e.target.style.boxShadow = "none";
+                        e.target.style.backgroundColor =
+                          sec.id === 4 ? "#fef2f2" : "#f8fafc";
                       }}
                     >
                       {ex}
@@ -236,14 +269,14 @@ export default function OtherAnother() {
                 </div>
               </div>
 
-              {/* Explanation */}
+              {/* Explanation Column */}
               <div>
                 <h3
                   style={{
-                    fontSize: "13px",
+                    fontSize: "clamp(18px, 4vw, 25px)", // +12px from 13px
                     fontWeight: 600,
                     color: "#475569",
-                    marginBottom: "12px",
+                    marginBottom: "clamp(10px, 2vw, 12px)",
                     textTransform: "uppercase",
                     letterSpacing: "0.05em",
                   }}
@@ -252,15 +285,16 @@ export default function OtherAnother() {
                 </h3>
                 <p
                   style={{
-                    fontSize: "15px",
+                    fontSize: "clamp(19px, 4vw, 27px)", // +12px from 15px
                     lineHeight: 1.6,
                     color: sec.id === 4 ? "#dc2626" : "#475569",
-                    padding: "16px",
+                    padding: "clamp(14px, 3vw, 16px)",
                     backgroundColor: sec.id === 4 ? "#fef2f2" : "#f0f9ff",
                     borderRadius: "8px",
                     border:
                       sec.id === 4 ? "1px solid #fecaca" : "1px solid #bae6fd",
                     margin: 0,
+                    wordBreak: "break-word",
                   }}
                 >
                   {sec.explanation}
@@ -274,34 +308,33 @@ export default function OtherAnother() {
       {/* Summary Table */}
       <section
         style={{
-          padding: "32px",
+          padding: "clamp(24px, 5vw, 32px)",
           backgroundColor: "white",
           borderRadius: "12px",
           boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
           border: "1px solid #e2e8f0",
-          marginBottom: "32px",
+          marginBottom: "clamp(28px, 6vw, 32px)",
         }}
       >
         <h2
           style={{
-            fontSize: "22px",
-            marginBottom: "24px",
+            fontSize: "clamp(24px, 5vw, 34px)", // +12px from 22px
+            marginBottom: "clamp(20px, 4vw, 24px)",
             fontWeight: 600,
             color: "#1e293b",
             textAlign: "center",
+            lineHeight: 1.2,
           }}
         >
           Summary Table
         </h2>
-        <div style={{ overflowX: "auto" }}>
+        <div style={{ overflowX: "auto", borderRadius: "8px" }}>
           <table
             style={{
               width: "100%",
               borderCollapse: "separate",
               borderSpacing: 0,
-              borderRadius: "8px",
-              overflow: "hidden",
-              boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+              minWidth: "600px",
             }}
           >
             <thead>
@@ -312,14 +345,15 @@ export default function OtherAnother() {
                       key={header}
                       style={{
                         textAlign: "left",
-                        padding: "16px",
+                        padding: "clamp(14px, 3vw, 18px)",
                         backgroundColor: "#4f46e5",
                         color: "white",
                         fontWeight: 600,
-                        fontSize: "14px",
+                        fontSize: "clamp(16px, 3vw, 26px)", // +12px from 14px
                         textTransform: "uppercase",
                         letterSpacing: "0.05em",
                         borderRight: index < 3 ? "1px solid #6366f1" : "none",
+                        whiteSpace: "nowrap",
                       }}
                     >
                       {header}
@@ -346,37 +380,42 @@ export default function OtherAnother() {
                 >
                   <td
                     style={{
-                      padding: "16px",
+                      padding: "clamp(14px, 3vw, 18px)",
                       borderBottom: "1px solid #e2e8f0",
                       fontWeight: 600,
                       color: "#1e293b",
+                      fontSize: "clamp(18px, 4vw, 28px)", // Adjusted
+                      whiteSpace: "nowrap",
                     }}
                   >
                     {row.form}
                   </td>
                   <td
                     style={{
-                      padding: "16px",
+                      padding: "clamp(14px, 3vw, 18px)",
                       borderBottom: "1px solid #e2e8f0",
                       color: "#475569",
                       fontFamily: "'JetBrains Mono', monospace",
-                      fontSize: "14px",
+                      fontSize: "clamp(16px, 3vw, 26px)", // +12px from 14px
+                      wordBreak: "break-word",
                     }}
                   >
                     {row.structure}
                   </td>
                   <td
                     style={{
-                      padding: "16px",
+                      padding: "clamp(14px, 3vw, 18px)",
                       borderBottom: "1px solid #e2e8f0",
                       color: "#475569",
+                      fontSize: "clamp(16px, 3vw, 26px)", // Adjusted
+                      wordBreak: "break-word",
                     }}
                   >
                     {row.meaning}
                   </td>
                   <td
                     style={{
-                      padding: "16px",
+                      padding: "clamp(14px, 3vw, 18px)",
                       borderBottom: "1px solid #e2e8f0",
                     }}
                   >
@@ -384,12 +423,15 @@ export default function OtherAnother() {
                       style={{
                         fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
                         backgroundColor: "#f1f5f9",
-                        padding: "6px 10px",
+                        padding:
+                          "clamp(6px, 1.5vw, 8px) clamp(10px, 2vw, 12px)",
                         borderRadius: "6px",
-                        fontSize: "14px",
+                        fontSize: "clamp(16px, 3vw, 26px)", // +12px from 14px
                         color: "#1e293b",
                         border: "1px solid #e2e8f0",
                         display: "inline-block",
+                        wordBreak: "break-word",
+                        maxWidth: "100%",
                       }}
                     >
                       {row.example}
@@ -405,7 +447,7 @@ export default function OtherAnother() {
       {/* Quick Reference */}
       <div
         style={{
-          padding: "24px",
+          padding: "clamp(20px, 4vw, 24px)",
           backgroundColor: "white",
           borderRadius: "12px",
           boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
@@ -415,10 +457,11 @@ export default function OtherAnother() {
       >
         <h3
           style={{
-            fontSize: "16px",
+            fontSize: "clamp(20px, 4vw, 28px)", // +12px from 16px
             fontWeight: 600,
             color: "#1e293b",
-            marginBottom: "12px",
+            marginBottom: "clamp(12px, 3vw, 16px)",
+            lineHeight: 1.2,
           }}
         >
           🎯 Quick Rules
@@ -426,34 +469,68 @@ export default function OtherAnother() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gap: "16px",
-            fontSize: "14px",
+            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+            gap: "clamp(12px, 3vw, 16px)",
+            fontSize: "clamp(18px, 4vw, 26px)", // +12px from 14px
           }}
         >
           <div
             style={{
-              padding: "12px",
+              padding: "clamp(12px, 3vw, 16px)",
               backgroundColor: "#f0f9ff",
-              borderRadius: "6px",
+              borderRadius: "8px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              minHeight: "clamp(80px, 10vw, 100px)",
             }}
           >
-            <strong style={{ color: "#0369a1" }}>Another:</strong> singular
-            nouns
-            <br />
-            <em style={{ color: "#64748b" }}>one more / different one</em>
+            <strong
+              style={{
+                color: "#0369a1",
+                display: "block",
+                marginBottom: "6px",
+              }}
+            >
+              Another:
+            </strong>
+            <span style={{ display: "block", marginBottom: "4px" }}>
+              singular nouns
+            </span>
+            <em
+              style={{ color: "#64748b", fontSize: "clamp(16px, 3vw, 24px)" }}
+            >
+              one more / different one
+            </em>
           </div>
           <div
             style={{
-              padding: "12px",
+              padding: "clamp(12px, 3vw, 16px)",
               backgroundColor: "#f0f9ff",
-              borderRadius: "6px",
+              borderRadius: "8px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              minHeight: "clamp(80px, 10vw, 100px)",
             }}
           >
-            <strong style={{ color: "#0369a1" }}>Other:</strong>{" "}
-            plural/uncountable
-            <br />
-            <em style={{ color: "#64748b" }}>additional / different</em>
+            <strong
+              style={{
+                color: "#0369a1",
+                display: "block",
+                marginBottom: "6px",
+              }}
+            >
+              Other:
+            </strong>
+            <span style={{ display: "block", marginBottom: "4px" }}>
+              plural/uncountable
+            </span>
+            <em
+              style={{ color: "#64748b", fontSize: "clamp(16px, 3vw, 24px)" }}
+            >
+              additional / different
+            </em>
           </div>
         </div>
       </div>
@@ -461,15 +538,17 @@ export default function OtherAnother() {
       {/* Footer */}
       <footer
         style={{
-          marginTop: "48px",
+          marginTop: "clamp(32px, 6vw, 48px)",
           textAlign: "center",
-          padding: "24px",
+          padding: "clamp(20px, 4vw, 24px)",
           color: "#94a3b8",
-          fontSize: "14px",
+          fontSize: "clamp(16px, 3vw, 26px)", // +12px from 14px
           borderTop: "1px solid #e2e8f0",
         }}
       >
-        <p>Other/Another study sheet • Clear structure patterns</p>
+        <p style={{ margin: 0, lineHeight: 1.4 }}>
+          Other/Another study sheet • Clear structure patterns
+        </p>
       </footer>
     </main>
   );

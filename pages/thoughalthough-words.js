@@ -12,9 +12,9 @@ export default function ContrastWords() {
   return (
     <main
       style={{
-        padding: "32px 24px",
+        padding: "clamp(20px, 4vw, 32px) clamp(16px, 3vw, 24px)",
         fontFamily: "'Inter', 'Segoe UI', system-ui, sans-serif",
-        maxWidth: "900px",
+        maxWidth: "min(900px, 95vw)",
         margin: "0 auto",
         lineHeight: 1.6,
         backgroundColor: "#f8fafc",
@@ -23,51 +23,63 @@ export default function ContrastWords() {
         transition: "opacity 0.5s ease-in-out",
       }}
     >
-      <nav>
+      <nav style={{ marginBottom: "clamp(24px, 5vw, 32px)" }}>
         <Link
           href="/qa/"
           style={{
             display: "inline-flex",
             alignItems: "center",
             gap: "8px",
-            padding: "8px 16px",
+            padding: "clamp(6px, 1.5vw, 8px) clamp(12px, 2vw, 16px)",
             backgroundColor: "#f8f9fa",
             border: "1px solid #dee2e6",
             borderRadius: "6px",
             cursor: "pointer",
-            fontSize: "14px",
+            fontSize: "clamp(16px, 4vw, 27px)",
             fontWeight: "500",
             color: "#495057",
             transition: "all 0.2s ease",
+            textDecoration: "none",
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.backgroundColor = "#e9ecef";
+            e.target.style.borderColor = "#ced4da";
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.backgroundColor = "#f8f9fa";
+            e.target.style.borderColor = "#dee2e6";
           }}
         >
           ← Back Home
         </Link>
       </nav>
+
       {/* Header */}
       <header
         style={{
-          marginBottom: "40px",
+          marginBottom: "clamp(32px, 6vw, 40px)",
           textAlign: "center",
         }}
       >
         <h1
           style={{
-            fontSize: "26px",
-            marginBottom: "8px",
+            fontSize: "clamp(28px, 5vw, 39px)",
+            marginBottom: "clamp(4px, 1vw, 8px)",
             fontWeight: 700,
             color: "#1e293b",
             letterSpacing: "-0.02em",
+            lineHeight: 1.2,
           }}
         >
           {lessonData.title}
         </h1>
         <p
           style={{
-            fontSize: "16px",
+            fontSize: "clamp(18px, 3.5vw, 29px)",
             margin: 0,
             color: "#64748b",
             fontWeight: 500,
+            lineHeight: 1.3,
           }}
         >
           {lessonData.subtitle}
@@ -78,15 +90,15 @@ export default function ContrastWords() {
       <div
         style={{
           display: "grid",
-          gap: "24px",
-          marginBottom: "40px",
+          gap: "clamp(16px, 4vw, 24px)",
+          marginBottom: "clamp(32px, 6vw, 40px)",
         }}
       >
         {lessonData.sections.map((sec, index) => (
           <section
             key={sec.id}
             style={{
-              padding: "28px",
+              padding: "clamp(20px, 4vw, 28px)",
               backgroundColor: "white",
               borderRadius: "12px",
               boxShadow: "0 4px 12px rgba(0,0,0,0.06)",
@@ -94,6 +106,7 @@ export default function ContrastWords() {
               transform: isVisible ? "translateY(0)" : "translateY(20px)",
               opacity: isVisible ? 1 : 0,
               transition: `all 0.5s ease-out ${index * 0.1}s`,
+              overflow: "hidden",
             }}
           >
             {/* Section Header */}
@@ -101,15 +114,17 @@ export default function ContrastWords() {
               style={{
                 display: "flex",
                 alignItems: "center",
-                marginBottom: "24px",
-                paddingBottom: "16px",
+                marginBottom: "clamp(16px, 4vw, 24px)",
+                paddingBottom: "clamp(12px, 3vw, 16px)",
                 borderBottom: "2px solid #f1f5f9",
+                flexWrap: "wrap",
+                gap: "12px",
               }}
             >
               <div
                 style={{
-                  width: "32px",
-                  height: "32px",
+                  width: "clamp(36px, 8vw, 42px)",
+                  height: "clamp(36px, 8vw, 42px)",
                   borderRadius: "8px",
                   background:
                     sec.id === 6
@@ -120,18 +135,21 @@ export default function ContrastWords() {
                   justifyContent: "center",
                   color: "white",
                   fontWeight: 600,
-                  fontSize: "14px",
-                  marginRight: "12px",
+                  fontSize: "clamp(18px, 4vw, 27px)",
+                  flexShrink: 0,
                 }}
               >
                 {sec.id}
               </div>
               <h2
                 style={{
-                  fontSize: "20px",
+                  fontSize: "clamp(22px, 4.5vw, 33px)",
                   fontWeight: 600,
                   color: sec.id === 6 ? "#d97706" : "#1e293b",
                   margin: 0,
+                  lineHeight: 1.2,
+                  flex: 1,
+                  minWidth: "200px",
                 }}
               >
                 {sec.heading}
@@ -142,8 +160,11 @@ export default function ContrastWords() {
             <div
               style={{
                 display: "grid",
-                gap: "24px",
-                gridTemplateColumns: sec.id === 6 ? "1fr 1fr" : "1fr 1fr 1fr",
+                gap: "clamp(16px, 4vw, 24px)",
+                gridTemplateColumns:
+                  sec.id === 6
+                    ? "repeat(auto-fit, minmax(min(300px, 100%), 1fr))"
+                    : "repeat(auto-fit, minmax(min(250px, 100%), 1fr))",
                 alignItems: "start",
               }}
             >
@@ -151,29 +172,32 @@ export default function ContrastWords() {
               <div>
                 <h3
                   style={{
-                    fontSize: "13px",
+                    fontSize: "clamp(18px, 3.5vw, 26px)",
                     fontWeight: 600,
                     color: "#475569",
-                    marginBottom: "12px",
+                    marginBottom: "clamp(8px, 2vw, 12px)",
                     textTransform: "uppercase",
                     letterSpacing: "0.05em",
                   }}
                 >
                   Structure
                 </h3>
-                <div style={{ display: "grid", gap: "8px" }}>
+                <div style={{ display: "grid", gap: "clamp(6px, 1.5vw, 8px)" }}>
                   {sec.structure.map((item, i) => (
                     <div
                       key={i}
                       style={{
-                        padding: "12px 16px",
+                        padding:
+                          "clamp(10px, 2vw, 12px) clamp(12px, 2vw, 16px)",
                         backgroundColor: "#f8fafc",
                         borderRadius: "8px",
                         border: "1px solid #e2e8f0",
                         borderLeft: "4px solid #6366f1",
-                        fontSize: "14px",
+                        fontSize: "clamp(16px, 4vw, 27px)",
                         color: "#475569",
                         fontWeight: 500,
+                        wordBreak: "break-word",
+                        overflowWrap: "break-word",
                       }}
                     >
                       {item}
@@ -186,29 +210,30 @@ export default function ContrastWords() {
               <div>
                 <h3
                   style={{
-                    fontSize: "13px",
+                    fontSize: "clamp(18px, 3.5vw, 26px)",
                     fontWeight: 600,
                     color: "#475569",
-                    marginBottom: "12px",
+                    marginBottom: "clamp(8px, 2vw, 12px)",
                     textTransform: "uppercase",
                     letterSpacing: "0.05em",
                   }}
                 >
                   Examples
                 </h3>
-                <div style={{ display: "grid", gap: "10px" }}>
+                <div style={{ display: "grid", gap: "clamp(8px, 2vw, 10px)" }}>
                   {sec.examples.map((ex, i) => (
                     <div
                       key={i}
                       style={{
-                        padding: "14px 16px",
+                        padding:
+                          "clamp(12px, 2.5vw, 14px) clamp(12px, 2vw, 16px)",
                         backgroundColor: sec.id === 6 ? "#fffbeb" : "#f8fafc",
                         borderRadius: "8px",
                         border:
                           sec.id === 6
                             ? "1px solid #fed7aa"
                             : "1px solid #e2e8f0",
-                        fontSize: "15px",
+                        fontSize: "clamp(16px, 4vw, 28px)",
                         fontFamily:
                           sec.id === 6
                             ? "inherit"
@@ -216,6 +241,9 @@ export default function ContrastWords() {
                         color: sec.id === 6 ? "#92400e" : "#1e293b",
                         transition: "all 0.2s ease",
                         cursor: "pointer",
+                        wordBreak: "break-word",
+                        overflowWrap: "break-word",
+                        lineHeight: 1.4,
                       }}
                       onMouseEnter={(e) => {
                         e.target.style.transform = "translateX(4px)";
@@ -237,10 +265,10 @@ export default function ContrastWords() {
                 <div>
                   <h3
                     style={{
-                      fontSize: "13px",
+                      fontSize: "clamp(18px, 3.5vw, 26px)",
                       fontWeight: 600,
                       color: "#475569",
-                      marginBottom: "12px",
+                      marginBottom: "clamp(8px, 2vw, 12px)",
                       textTransform: "uppercase",
                       letterSpacing: "0.05em",
                     }}
@@ -249,14 +277,15 @@ export default function ContrastWords() {
                   </h3>
                   <p
                     style={{
-                      fontSize: "15px",
+                      fontSize: "clamp(16px, 4vw, 28px)",
                       lineHeight: 1.6,
                       color: "#475569",
-                      padding: "16px",
+                      padding: "clamp(12px, 3vw, 16px)",
                       backgroundColor: "#f0f9ff",
                       borderRadius: "8px",
                       border: "1px solid #bae6fd",
                       margin: 0,
+                      wordBreak: "break-word",
                     }}
                   >
                     {sec.explanation}
@@ -269,8 +298,8 @@ export default function ContrastWords() {
             {sec.id === 6 && (
               <div
                 style={{
-                  marginTop: "20px",
-                  padding: "20px",
+                  marginTop: "clamp(16px, 4vw, 20px)",
+                  padding: "clamp(16px, 4vw, 20px)",
                   backgroundColor: "#fffbeb",
                   borderRadius: "8px",
                   border: "2px solid #fed7aa",
@@ -278,10 +307,10 @@ export default function ContrastWords() {
               >
                 <h3
                   style={{
-                    fontSize: "13px",
+                    fontSize: "clamp(18px, 3.5vw, 26px)",
                     fontWeight: 600,
                     color: "#92400e",
-                    marginBottom: "12px",
+                    marginBottom: "clamp(8px, 2vw, 12px)",
                     textTransform: "uppercase",
                     letterSpacing: "0.05em",
                   }}
@@ -290,11 +319,12 @@ export default function ContrastWords() {
                 </h3>
                 <p
                   style={{
-                    fontSize: "15px",
+                    fontSize: "clamp(16px, 4vw, 28px)",
                     lineHeight: 1.6,
                     color: "#92400e",
                     margin: 0,
                     fontWeight: 500,
+                    wordBreak: "break-word",
                   }}
                 >
                   {sec.explanation}
@@ -308,7 +338,7 @@ export default function ContrastWords() {
       {/* Quick Reference Card */}
       <div
         style={{
-          padding: "24px",
+          padding: "clamp(20px, 4vw, 24px)",
           backgroundColor: "white",
           borderRadius: "12px",
           boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
@@ -318,10 +348,11 @@ export default function ContrastWords() {
       >
         <h3
           style={{
-            fontSize: "16px",
+            fontSize: "clamp(18px, 3.5vw, 29px)",
             fontWeight: 600,
             color: "#1e293b",
-            marginBottom: "12px",
+            marginBottom: "clamp(8px, 2vw, 12px)",
+            lineHeight: 1.2,
           }}
         >
           🎯 Quick Reference
@@ -329,43 +360,76 @@ export default function ContrastWords() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "16px",
-            fontSize: "14px",
+            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+            gap: "clamp(12px, 3vw, 16px)",
+            fontSize: "clamp(16px, 4vw, 27px)",
           }}
         >
           <div
             style={{
-              padding: "12px",
+              padding: "clamp(10px, 2vw, 12px)",
               backgroundColor: "#f0f9ff",
               borderRadius: "6px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              minHeight: "80px",
             }}
           >
-            <strong style={{ color: "#0369a1" }}>Noun/Gerund:</strong>
-            <br />
-            in spite of / despite
+            <strong
+              style={{
+                color: "#0369a1",
+                display: "block",
+                marginBottom: "4px",
+              }}
+            >
+              Noun/Gerund:
+            </strong>
+            <span>in spite of / despite</span>
           </div>
           <div
             style={{
-              padding: "12px",
+              padding: "clamp(10px, 2vw, 12px)",
               backgroundColor: "#f0f9ff",
               borderRadius: "6px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              minHeight: "80px",
             }}
           >
-            <strong style={{ color: "#0369a1" }}>Clause:</strong>
-            <br />
-            although / even though / though
+            <strong
+              style={{
+                color: "#0369a1",
+                display: "block",
+                marginBottom: "4px",
+              }}
+            >
+              Clause:
+            </strong>
+            <span>although / even though / though</span>
           </div>
           <div
             style={{
-              padding: "12px",
+              padding: "clamp(10px, 2vw, 12px)",
               backgroundColor: "#f0f9ff",
               borderRadius: "6px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              minHeight: "80px",
             }}
           >
-            <strong style={{ color: "#0369a1" }}>Strongest:</strong>
-            <br />
-            even though
+            <strong
+              style={{
+                color: "#0369a1",
+                display: "block",
+                marginBottom: "4px",
+              }}
+            >
+              Strongest:
+            </strong>
+            <span>even though</span>
           </div>
         </div>
       </div>
@@ -373,15 +437,17 @@ export default function ContrastWords() {
       {/* Footer */}
       <footer
         style={{
-          marginTop: "48px",
+          marginTop: "clamp(32px, 6vw, 48px)",
           textAlign: "center",
-          padding: "24px",
+          padding: "clamp(16px, 4vw, 24px)",
           color: "#94a3b8",
-          fontSize: "14px",
+          fontSize: "clamp(14px, 3vw, 27px)",
           borderTop: "1px solid #e2e8f0",
         }}
       >
-        <p>Contrast words study sheet • Structure → Examples → Explanation</p>
+        <p style={{ margin: 0, lineHeight: 1.4 }}>
+          Contrast words study sheet • Structure → Examples → Explanation
+        </p>
       </footer>
     </main>
   );

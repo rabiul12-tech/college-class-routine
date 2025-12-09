@@ -37,7 +37,7 @@ export default function BeLesson() {
             border: "1px solid #dee2e6",
             borderRadius: "6px",
             cursor: "pointer",
-            fontSize: "14px",
+            fontSize: "24px",
             fontWeight: "500",
             color: "#495057",
             transition: "all 0.2s ease",
@@ -69,7 +69,7 @@ export default function BeLesson() {
         </h1>
         <p
           style={{
-            fontSize: "18px",
+            fontSize: "28px",
             margin: 0,
             opacity: 0.9,
             fontWeight: 400,
@@ -114,7 +114,7 @@ export default function BeLesson() {
           <div style={{ marginBottom: "24px" }}>
             <h3
               style={{
-                fontSize: "18px",
+                fontSize: "28px",
                 marginBottom: "12px",
                 fontWeight: 600,
                 color: "#4a5568",
@@ -150,7 +150,7 @@ export default function BeLesson() {
                     backgroundColor: "#f7fafc",
                     borderRadius: "6px",
                     borderLeft: "3px solid #667eea",
-                    fontSize: "15px",
+                    fontSize: "35px",
                     color: "#4a5568",
                   }}
                 >
@@ -164,7 +164,7 @@ export default function BeLesson() {
           <div style={{ marginBottom: "24px" }}>
             <h3
               style={{
-                fontSize: "22px",
+                fontSize: "32px",
                 marginBottom: "16px",
                 fontWeight: 600,
                 color: "#2d3748",
@@ -186,7 +186,7 @@ export default function BeLesson() {
                     backgroundColor: "#edf2f7",
                     borderRadius: "8px",
                     border: "1px solid #e2e8f0",
-                    fontSize: "16px",
+                    fontSize: "26px",
                     fontFamily:
                       "'Fira Code', 'Monaco', 'Cascadia Code', monospace",
                     color: "#2d3748",
@@ -212,7 +212,7 @@ export default function BeLesson() {
           <div>
             <h3
               style={{
-                fontSize: "20px",
+                fontSize: "40px",
                 marginBottom: "12px",
                 fontWeight: 600,
                 color: "#2d3748",
@@ -222,7 +222,7 @@ export default function BeLesson() {
             </h3>
             <p
               style={{
-                fontSize: "16px",
+                fontSize: "26px",
                 lineHeight: 1.7,
                 color: "#4a5568",
                 padding: "16px",
@@ -254,7 +254,7 @@ export default function BeLesson() {
       >
         <h2
           style={{
-            fontSize: "24px",
+            fontSize: "34px",
             marginBottom: "24px",
             fontWeight: 600,
             color: "#2d3748",
@@ -286,7 +286,7 @@ export default function BeLesson() {
                         backgroundColor: "#4a5568",
                         color: "white",
                         fontWeight: 600,
-                        fontSize: "14px",
+                        fontSize: "24px",
                         textTransform: "uppercase",
                         letterSpacing: "0.05em",
                         borderRight: index < 3 ? "1px solid #718096" : "none",
@@ -355,7 +355,7 @@ export default function BeLesson() {
                         backgroundColor: "#edf2f7",
                         padding: "4px 8px",
                         borderRadius: "4px",
-                        fontSize: "14px",
+                        fontSize: "24px",
                         color: "#2d3748",
                         border: "1px solid #e2e8f0",
                       }}
@@ -377,7 +377,7 @@ export default function BeLesson() {
           textAlign: "center",
           padding: "24px",
           color: "#718096",
-          fontSize: "14px",
+          fontSize: "24px",
           borderTop: "1px solid #e2e8f0",
         }}
       >

@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import lessonData from "./data/causativeVerbs.json";
 import Link from "next/link";
+
 export default function CausativeVerbs() {
   const [isVisible, setIsVisible] = useState(false);
   const [hoverCardIndex, setHoverCardIndex] = useState(null);
@@ -11,7 +12,7 @@ export default function CausativeVerbs() {
     setIsVisible(true);
   }, []);
 
-  // Helpers
+  // Helper functions
   const hexToRgba = (hex, alpha = 1) => {
     const clean = String(hex || "").replace("#", "");
     if (clean.length !== 6) return hex;
@@ -23,19 +24,17 @@ export default function CausativeVerbs() {
 
   const getColorScheme = (id) => {
     const schemes = {
-      1: { primary: "#6366f1", light: "#e0e7ff", border: "#c7d2fe" }, // have/get - indigo
-      2: { primary: "#10b981", light: "#d1fae5", border: "#a7f3d0" }, // ask/persuade - emerald
-      3: { primary: "#ef4444", light: "#fee2e2", border: "#fecaca" }, // force - red
-      4: { primary: "#8b5cf6", light: "#ede9fe", border: "#ddd6fe" }, // permission - violet
+      1: { primary: "#6366f1", light: "#e0e7ff", border: "#c7d2fe" },
+      2: { primary: "#10b981", light: "#d1fae5", border: "#a7f3d0" },
+      3: { primary: "#ef4444", light: "#fee2e2", border: "#fecaca" },
+      4: { primary: "#8b5cf6", light: "#ede9fe", border: "#ddd6fe" },
     };
     return schemes[id] || schemes[1];
   };
 
-  // Render string with inline highlights as React nodes (safe)
-  function renderHighlightedText(text) {
+  const renderHighlightedText = (text) => {
     if (!text) return null;
 
-    // Primary verb colors
     const verbMap = {
       have: "#6366f1",
       got: "#10b981",
@@ -44,8 +43,6 @@ export default function CausativeVerbs() {
       let: "#8b5cf6",
     };
 
-    // Regex: verbs (word boundary), -ed words, and short phrase pattern (word + word)
-    // We'll process verbs first, then ED words as a secondary pass on plain strings.
     const verbs = Object.keys(verbMap).join("|");
     const verbRegex = new RegExp(`\\b(${verbs})\\b`, "gi");
 
@@ -71,19 +68,15 @@ export default function CausativeVerbs() {
       nodes.push(text.slice(lastIndex));
     }
 
-    // Secondary pass: highlight simple -ed words inside string fragments
-    // We'll map nodes array: for strings, split further by /(\b\w+ed\b)/i
     const edRegex = /(\b\w+ed\b)/gi;
-    const phraseRegex = /(\b\w+\s[a-z]{1,12}\b)/gi; // simple short phrase heuristic
+    const phraseRegex = /(\b\w+\s[a-z]{1,12}\b)/gi;
 
     const finalNodes = nodes.flatMap((node, i) => {
       if (typeof node !== "string") return node;
 
-      // First split by -ed words
       const parts = node.split(edRegex).filter((p) => p !== "");
       return parts.flatMap((part, j) => {
         if (edRegex.test(part)) {
-          // it's an -ed word
           return (
             <span
               key={`ed-${i}-${j}`}
@@ -94,8 +87,6 @@ export default function CausativeVerbs() {
           );
         }
 
-        // Next, for remaining plain text, optionally highlight short phrase patterns
-        // We'll split by phraseRegex
         const phraseParts = part.split(phraseRegex).filter((p) => p !== "");
         return phraseParts.map((p, k) => {
           if (phraseRegex.test(p)) {
@@ -114,7 +105,7 @@ export default function CausativeVerbs() {
     });
 
     return finalNodes;
-  }
+  };
 
   const verbQuick = [
     { verb: "HAVE", meaning: "Pay/Ask", color: "#6366f1" },
@@ -126,57 +117,71 @@ export default function CausativeVerbs() {
   return (
     <main
       style={{
-        padding: "32px 24px",
+        padding: "clamp(24px, 4vw, 48px) clamp(16px, 3vw, 32px)",
         fontFamily: "'Inter', 'Segoe UI', system-ui, sans-serif",
-        maxWidth: "1100px",
+        maxWidth: "1200px",
         margin: "0 auto",
         lineHeight: 1.6,
         backgroundColor: "#f8fafc",
         minHeight: "100vh",
         opacity: isVisible ? 1 : 0,
         transition: "opacity 0.45s ease-in-out",
+        fontSize: "16px", // Base font size increased
       }}
     >
-      <nav>
+      {/* Navigation */}
+      <nav style={{ marginBottom: "40px" }}>
         <Link
           href="/qa/"
           style={{
             display: "inline-flex",
             alignItems: "center",
-            gap: "8px",
-            padding: "8px 16px",
-            backgroundColor: "#f8f9fa",
-            border: "1px solid #dee2e6",
-            borderRadius: "6px",
+            gap: "10px",
+            padding: "12px 20px",
+            backgroundColor: "#ffffff",
+            border: "1px solid #e2e8f0",
+            borderRadius: "8px",
             cursor: "pointer",
-            fontSize: "14px",
+            fontSize: "16px",
             fontWeight: "500",
-            color: "#495057",
+            color: "#475569",
             transition: "all 0.2s ease",
+            textDecoration: "none",
+            boxShadow: "0 2px 8px rgba(0, 0, 0, 0.05)",
           }}
+          onMouseEnter={(e) =>
+            (e.currentTarget.style.backgroundColor = "#f8fafc")
+          }
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.backgroundColor = "#ffffff")
+          }
         >
-          ← Back Home
+          ← Back to Home
         </Link>
       </nav>
+
       {/* Header */}
-      <header style={{ marginBottom: "48px", textAlign: "center" }}>
+      <header style={{ marginBottom: "60px", textAlign: "center" }}>
         <h1
           style={{
-            fontSize: "32px",
-            marginBottom: "12px",
-            fontWeight: 700,
+            fontSize: "clamp(32px, 5vw, 48px)",
+            marginBottom: "16px",
+            fontWeight: 800,
             color: "#1e293b",
             letterSpacing: "-0.02em",
+            lineHeight: 1.2,
           }}
         >
           {lessonData.title}
         </h1>
         <p
           style={{
-            fontSize: "18px",
+            fontSize: "clamp(18px, 2.5vw, 22px)",
             margin: 0,
             color: "#64748b",
             fontWeight: 500,
+            maxWidth: "800px",
+            marginInline: "auto",
           }}
         >
           {lessonData.subtitle}
@@ -184,21 +189,32 @@ export default function CausativeVerbs() {
       </header>
 
       {/* Verb Quick Reference */}
-      <div
+      <section
         style={{
-          padding: "28px",
+          padding: "clamp(24px, 4vw, 32px)",
           backgroundColor: "white",
-          borderRadius: "16px",
-          boxShadow: "0 8px 32px rgba(2,6,23,0.06)",
+          borderRadius: "20px",
+          boxShadow: "0 12px 40px rgba(2, 6, 23, 0.08)",
           border: "1px solid #e6eefb",
-          marginBottom: "40px",
+          marginBottom: "60px",
         }}
       >
+        <h2
+          style={{
+            fontSize: "20px",
+            fontWeight: 600,
+            color: "#334155",
+            marginBottom: "28px",
+            textAlign: "center",
+          }}
+        >
+          Quick Verb Reference
+        </h2>
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
-            gap: "20px",
+            gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+            gap: "24px",
             textAlign: "center",
           }}
         >
@@ -218,68 +234,87 @@ export default function CausativeVerbs() {
                 onMouseLeave={() => setHoverCardIndex(null)}
                 onFocus={() => setHoverCardIndex(index)}
                 onBlur={() => setHoverCardIndex(null)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault();
-                    // space for future action
-                  }
-                }}
                 style={{
-                  padding: "20px",
+                  padding: "clamp(20px, 3vw, 28px)",
                   backgroundColor: bg,
-                  borderRadius: "12px",
-                  border: `2px solid ${border}`,
-                  transition: "transform 0.25s ease, box-shadow 0.25s ease",
+                  borderRadius: "16px",
+                  border: `3px solid ${border}`,
+                  transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
                   cursor: "pointer",
-                  transform: isHover ? "translateY(-6px)" : "translateY(0)",
-                  boxShadow: isHover ? `0 10px 30px ${shadow}` : "none",
+                  transform: isHover
+                    ? "translateY(-8px) scale(1.02)"
+                    : "translateY(0) scale(1)",
+                  boxShadow: isHover
+                    ? `0 20px 40px ${shadow}`
+                    : "0 8px 24px rgba(0, 0, 0, 0.05)",
                   outline: "none",
+                  position: "relative",
+                  overflow: "hidden",
                 }}
               >
                 <div
                   style={{
-                    fontSize: "20px",
-                    fontWeight: 700,
+                    fontSize: "clamp(22px, 3vw, 28px)",
+                    fontWeight: 800,
                     color: item.color,
-                    marginBottom: 8,
+                    marginBottom: "12px",
+                    position: "relative",
+                    zIndex: 2,
                   }}
                 >
                   {item.verb}
                 </div>
                 <div
                   style={{
-                    fontSize: "14px",
+                    fontSize: "16px",
                     color: "#64748b",
                     fontWeight: 600,
+                    position: "relative",
+                    zIndex: 2,
                   }}
                 >
                   {item.meaning}
                 </div>
+                {isHover && (
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      right: 0,
+                      bottom: 0,
+                      background: `linear-gradient(135deg, ${hexToRgba(
+                        item.color,
+                        0.1
+                      )} 0%, transparent 100%)`,
+                      zIndex: 1,
+                    }}
+                  />
+                )}
               </div>
             );
           })}
         </div>
-      </div>
+      </section>
 
-      {/* Sections */}
-      <div style={{ display: "grid", gap: "36px", marginBottom: "48px" }}>
+      {/* Main Sections */}
+      <div style={{ display: "grid", gap: "48px", marginBottom: "60px" }}>
         {lessonData.sections.map((sec, index) => {
           const colors = getColorScheme(sec.id);
           const gradPrimary = hexToRgba(colors.primary, 0.95);
-          const cardBorder = colors.border;
 
           return (
             <section
               key={sec.id}
               style={{
-                padding: "32px",
+                padding: "clamp(24px, 4vw, 40px)",
                 backgroundColor: "white",
-                borderRadius: "16px",
-                boxShadow: "0 6px 24px rgba(2,6,23,0.06)",
-                border: `1px solid ${cardBorder}`,
-                transform: isVisible ? "translateY(0)" : "translateY(20px)",
+                borderRadius: "20px",
+                boxShadow: "0 12px 32px rgba(2, 6, 23, 0.08)",
+                border: `1px solid ${colors.border}`,
+                transform: isVisible ? "translateY(0)" : "translateY(30px)",
                 opacity: isVisible ? 1 : 0,
-                transition: `all 0.48s ease-out ${index * 0.06}s`,
+                transition: `all 0.5s ease-out ${index * 0.07}s`,
               }}
             >
               {/* Section Header */}
@@ -287,16 +322,18 @@ export default function CausativeVerbs() {
                 style={{
                   display: "flex",
                   alignItems: "flex-start",
-                  marginBottom: "28px",
-                  paddingBottom: "20px",
+                  marginBottom: "36px",
+                  paddingBottom: "24px",
                   borderBottom: `2px solid ${colors.light}`,
+                  flexWrap: "wrap",
+                  gap: "20px",
                 }}
               >
                 <div
                   style={{
-                    width: "40px",
-                    height: "40px",
-                    borderRadius: "10px",
+                    width: "clamp(48px, 5vw, 60px)",
+                    height: "clamp(48px, 5vw, 60px)",
+                    borderRadius: "14px",
                     background: `linear-gradient(135deg, ${gradPrimary} 0%, ${hexToRgba(
                       colors.primary,
                       0.65
@@ -305,44 +342,50 @@ export default function CausativeVerbs() {
                     alignItems: "center",
                     justifyContent: "center",
                     color: "white",
-                    fontWeight: 700,
-                    fontSize: "16px",
-                    marginRight: "16px",
+                    fontWeight: 800,
+                    fontSize: "clamp(20px, 2.5vw, 24px)",
                     flexShrink: 0,
-                    boxShadow: `0 6px 18px ${hexToRgba(colors.primary, 0.12)}`,
+                    boxShadow: `0 10px 25px ${hexToRgba(colors.primary, 0.15)}`,
                   }}
                 >
                   {sec.id}
                 </div>
 
-                <div style={{ flex: 1 }}>
+                <div style={{ flex: 1, minWidth: "300px" }}>
                   <h2
                     style={{
-                      fontSize: "24px",
-                      fontWeight: 700,
+                      fontSize: "clamp(26px, 3.5vw, 32px)",
+                      fontWeight: 800,
                       color: colors.primary,
                       margin: 0,
-                      marginBottom: 12,
+                      marginBottom: "16px",
+                      lineHeight: 1.2,
                     }}
                   >
                     {sec.heading}
                   </h2>
 
                   <div
-                    style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}
+                    style={{
+                      display: "flex",
+                      gap: "12px",
+                      flexWrap: "wrap",
+                    }}
                   >
                     {sec.structure.map((pattern, i) => (
                       <div
                         key={i}
                         style={{
-                          padding: "10px 16px",
+                          padding: "12px 20px",
                           backgroundColor: colors.light,
-                          borderRadius: "10px",
-                          border: `1px solid ${colors.border}`,
-                          fontSize: "14px",
+                          borderRadius: "12px",
+                          border: `2px solid ${colors.border}`,
+                          fontSize: "15px",
                           color: colors.primary,
                           fontWeight: 600,
-                          fontFamily: "'JetBrains Mono', monospace",
+                          fontFamily:
+                            "'JetBrains Mono', 'Fira Code', monospace",
+                          whiteSpace: "nowrap",
                         }}
                       >
                         {pattern}
@@ -356,25 +399,26 @@ export default function CausativeVerbs() {
               {sec.importantNote && (
                 <div
                   style={{
-                    padding: "20px",
-                    backgroundColor: "#fef3c7",
-                    borderRadius: "12px",
-                    border: "1px solid #f59e0b",
-                    marginBottom: "28px",
+                    padding: "clamp(20px, 3vw, 28px)",
+                    backgroundColor: "#fffbeb",
+                    borderRadius: "16px",
+                    border: "2px solid #f59e0b",
+                    marginBottom: "32px",
                   }}
                 >
                   <div
                     style={{
                       display: "flex",
                       alignItems: "flex-start",
-                      gap: "12px",
+                      gap: "16px",
                     }}
                   >
                     <div
                       style={{
                         color: "#d97706",
-                        fontSize: "18px",
+                        fontSize: "24px",
                         fontWeight: "700",
+                        flexShrink: 0,
                       }}
                     >
                       💡
@@ -384,7 +428,8 @@ export default function CausativeVerbs() {
                         style={{
                           color: "#92400e",
                           display: "block",
-                          marginBottom: "4px",
+                          marginBottom: "8px",
+                          fontSize: "18px",
                         }}
                       >
                         Important Note
@@ -393,8 +438,8 @@ export default function CausativeVerbs() {
                         style={{
                           color: "#92400e",
                           margin: 0,
-                          fontSize: "15px",
-                          lineHeight: 1.5,
+                          fontSize: "16px",
+                          lineHeight: 1.6,
                         }}
                       >
                         {sec.importantNote}
@@ -408,8 +453,8 @@ export default function CausativeVerbs() {
               <div
                 style={{
                   display: "grid",
-                  gap: "32px",
-                  gridTemplateColumns: "1fr 1fr",
+                  gap: "40px",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
                   alignItems: "start",
                 }}
               >
@@ -417,17 +462,30 @@ export default function CausativeVerbs() {
                 <div>
                   <h3
                     style={{
-                      fontSize: "15px",
-                      fontWeight: 600,
+                      fontSize: "18px",
+                      fontWeight: 700,
                       color: colors.primary,
-                      marginBottom: "16px",
+                      marginBottom: "24px",
                       textTransform: "uppercase",
                       letterSpacing: "0.05em",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "10px",
                     }}
                   >
-                    Examples
+                    <span>Examples</span>
+                    <span
+                      style={{
+                        fontSize: "14px",
+                        color: "#94a3b8",
+                        fontWeight: 500,
+                        textTransform: "none",
+                      }}
+                    >
+                      ({sec.examples.length})
+                    </span>
                   </h3>
-                  <div style={{ display: "grid", gap: "16px" }}>
+                  <div style={{ display: "grid", gap: "20px" }}>
                     {sec.examples.map((ex, i) => {
                       const key = `${sec.id}-${i}`;
                       const isHover = hoverExampleIndex === key;
@@ -440,37 +498,39 @@ export default function CausativeVerbs() {
                           onBlur={() => setHoverExampleIndex(null)}
                           tabIndex={0}
                           style={{
-                            padding: "18px 20px 18px 28px",
+                            padding:
+                              "clamp(20px, 3vw, 24px) clamp(20px, 3vw, 28px)",
                             backgroundColor: isHover ? "#f1f5f9" : "#f8fafc",
-                            borderRadius: "12px",
-                            border: "1px solid #e2e8f0",
-                            fontSize: "15px",
+                            borderRadius: "14px",
+                            border: `2px solid ${
+                              isHover ? colors.border : "#e2e8f0"
+                            }`,
+                            fontSize: "16px",
                             fontFamily: "inherit",
                             color: "#0f172a",
                             transition:
-                              "transform 0.18s ease, background-color 0.18s ease",
+                              "all 0.25s cubic-bezier(0.4, 0, 0.2, 1)",
                             transform: isHover
-                              ? "translateX(6px)"
+                              ? "translateX(8px)"
                               : "translateX(0)",
                             cursor: "default",
                             position: "relative",
                             overflowWrap: "break-word",
-                            whiteSpace: "pre-wrap",
-                            lineHeight: 1.6,
+                            lineHeight: 1.7,
                           }}
                         >
                           <div
                             style={{
                               position: "absolute",
-                              left: 12,
-                              top: 10,
-                              bottom: 10,
-                              width: 6,
+                              left: 0,
+                              top: 0,
+                              bottom: 0,
+                              width: "6px",
                               backgroundColor: colors.primary,
                               borderRadius: "6px 0 0 6px",
                             }}
                           />
-                          <div style={{ marginLeft: 18 }}>
+                          <div style={{ marginLeft: "20px" }}>
                             {renderHighlightedText(ex)}
                           </div>
                         </div>
@@ -483,22 +543,22 @@ export default function CausativeVerbs() {
                 <div>
                   <h3
                     style={{
-                      fontSize: "15px",
-                      fontWeight: 600,
+                      fontSize: "18px",
+                      fontWeight: 700,
                       color: colors.primary,
-                      marginBottom: "16px",
+                      marginBottom: "24px",
                       textTransform: "uppercase",
                       letterSpacing: "0.05em",
                     }}
                   >
-                    Short Explanation
+                    Explanation
                   </h3>
                   <div
                     style={{
-                      padding: "28px",
+                      padding: "clamp(28px, 4vw, 36px)",
                       backgroundColor: colors.light,
-                      borderRadius: "12px",
-                      border: `1px solid ${colors.border}`,
+                      borderRadius: "16px",
+                      border: `2px solid ${colors.border}`,
                       height: "100%",
                       display: "flex",
                       alignItems: "center",
@@ -506,7 +566,7 @@ export default function CausativeVerbs() {
                   >
                     <p
                       style={{
-                        fontSize: "16px",
+                        fontSize: "17px",
                         lineHeight: 1.7,
                         color: colors.primary,
                         margin: 0,
@@ -526,24 +586,35 @@ export default function CausativeVerbs() {
       {/* Summary Table */}
       <section
         style={{
-          padding: "40px 32px",
+          padding: "clamp(32px, 5vw, 48px)",
           backgroundColor: "white",
-          borderRadius: "20px",
-          boxShadow: "0 8px 32px rgba(2,6,23,0.06)",
+          borderRadius: "24px",
+          boxShadow: "0 16px 40px rgba(2, 6, 23, 0.08)",
           border: "1px solid #ecf2ff",
-          marginBottom: "40px",
+          marginBottom: "60px",
+          overflow: "hidden",
         }}
       >
         <h2
           style={{
-            fontSize: "26px",
-            marginBottom: "32px",
-            fontWeight: 700,
+            fontSize: "clamp(28px, 4vw, 36px)",
+            marginBottom: "40px",
+            fontWeight: 800,
             color: "#1e293b",
             textAlign: "center",
+            position: "relative",
           }}
         >
-          Mini Review
+          <span
+            style={{
+              background: "linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
+            Mini Review
+          </span>
         </h2>
 
         <div style={{ overflowX: "auto" }}>
@@ -552,9 +623,10 @@ export default function CausativeVerbs() {
               width: "100%",
               borderCollapse: "separate",
               borderSpacing: 0,
-              borderRadius: "12px",
+              borderRadius: "16px",
               overflow: "hidden",
-              boxShadow: "0 4px 12px rgba(2,6,23,0.06)",
+              boxShadow: "0 8px 24px rgba(2, 6, 23, 0.06)",
+              fontSize: "16px",
             }}
           >
             <thead>
@@ -564,17 +636,18 @@ export default function CausativeVerbs() {
                     key={header}
                     style={{
                       textAlign: "left",
-                      padding: "16px 20px",
+                      padding: "20px 24px",
                       backgroundColor: "#4f46e5",
                       color: "white",
-                      fontWeight: 600,
-                      fontSize: "13px",
+                      fontWeight: 700,
+                      fontSize: "15px",
                       textTransform: "uppercase",
                       letterSpacing: "0.05em",
                       borderRight:
                         idx < 2
-                          ? `1px solid ${hexToRgba("#6366f1", 0.18)}`
+                          ? `1px solid ${hexToRgba("#6366f1", 0.2)}`
                           : "none",
+                      whiteSpace: "nowrap",
                     }}
                   >
                     {header}
@@ -594,43 +667,47 @@ export default function CausativeVerbs() {
                 >
                   <td
                     style={{
-                      padding: "16px 20px",
+                      padding: "20px 24px",
                       borderBottom: "1px solid #e8eef6",
                       fontWeight: 600,
                       color: "#1e293b",
-                      fontSize: "15px",
+                      fontSize: "16px",
+                      verticalAlign: "top",
                     }}
                   >
                     {row.purpose}
                   </td>
                   <td
                     style={{
-                      padding: "16px 20px",
+                      padding: "20px 24px",
                       borderBottom: "1px solid #e8eef6",
                       color: "#475569",
-                      fontFamily: "'JetBrains Mono', monospace",
-                      fontSize: "14px",
+                      fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
+                      fontSize: "15px",
                       fontWeight: 500,
+                      verticalAlign: "top",
                     }}
                   >
                     {row.structure}
                   </td>
                   <td
                     style={{
-                      padding: "16px 20px",
+                      padding: "20px 24px",
                       borderBottom: "1px solid #e8eef6",
+                      verticalAlign: "top",
                     }}
                   >
                     <code
                       style={{
                         fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
                         backgroundColor: "#f1f5f9",
-                        padding: "8px 12px",
-                        borderRadius: "8px",
-                        fontSize: "14px",
+                        padding: "12px 16px",
+                        borderRadius: "10px",
+                        fontSize: "15px",
                         color: "#1e293b",
                         border: "1px solid #e2e8f0",
                         display: "inline-block",
+                        lineHeight: 1.5,
                       }}
                     >
                       {row.example}
@@ -643,90 +720,144 @@ export default function CausativeVerbs() {
         </div>
       </section>
 
-      {/* Quick Reference */}
-      <div
+      {/* Key Patterns */}
+      <section
         style={{
-          padding: "28px",
+          padding: "clamp(28px, 4vw, 40px)",
           backgroundColor: "white",
-          borderRadius: "16px",
-          boxShadow: "0 6px 20px rgba(2,6,23,0.04)",
+          borderRadius: "20px",
+          boxShadow: "0 12px 32px rgba(2, 6, 23, 0.06)",
           border: "1px solid #e6eefb",
           textAlign: "center",
+          marginBottom: "60px",
         }}
       >
         <h3
           style={{
-            fontSize: "18px",
-            fontWeight: 600,
+            fontSize: "24px",
+            fontWeight: 800,
             color: "#1e293b",
-            marginBottom: "20px",
+            marginBottom: "32px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "12px",
           }}
         >
-          🎯 Key Patterns
+          <span>🎯</span>
+          <span>Key Patterns to Remember</span>
         </h3>
 
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px,1fr))",
-            gap: "20px",
-            fontSize: "15px",
+            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+            gap: "28px",
+            fontSize: "16px",
           }}
         >
           <div
             style={{
-              padding: "20px",
+              padding: "28px",
               backgroundColor: "#f0f9ff",
-              borderRadius: "12px",
-              border: "1px solid #bae6fd",
+              borderRadius: "16px",
+              border: "2px solid #bae6fd",
+              transition: "transform 0.3s ease",
             }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.transform = "translateY(-4px)")
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.transform = "translateY(0)")
+            }
           >
             <strong
               style={{
                 color: "#0369a1",
                 display: "block",
-                marginBottom: "8px",
+                marginBottom: "12px",
+                fontSize: "18px",
               }}
             >
               HAVE/GET + V3
             </strong>
-            <span style={{ color: "#64748b" }}>Paying for services</span>
+            <span style={{ color: "#64748b", fontSize: "16px" }}>
+              Paying for professional services or asking someone to do something
+            </span>
           </div>
 
           <div
             style={{
-              padding: "20px",
-              backgroundColor: "#f0f9ff",
-              borderRadius: "12px",
-              border: "1px solid #bae6fd",
+              padding: "28px",
+              backgroundColor: "#fef3c7",
+              borderRadius: "16px",
+              border: "2px solid #fde68a",
+              transition: "transform 0.3s ease",
             }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.transform = "translateY(-4px)")
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.transform = "translateY(0)")
+            }
           >
             <strong
               style={{
-                color: "#0369a1",
+                color: "#92400e",
                 display: "block",
-                marginBottom: "8px",
+                marginBottom: "12px",
+                fontSize: "18px",
               }}
             >
               MAKE/LET + V1
             </strong>
-            <span style={{ color: "#64748b" }}>Force or permission</span>
+            <span style={{ color: "#64748b", fontSize: "16px" }}>
+              Forcing someone to do something or giving permission
+            </span>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Footer */}
       <footer
         style={{
-          marginTop: "60px",
+          marginTop: "80px",
           textAlign: "center",
-          padding: "32px",
+          padding: "clamp(32px, 5vw, 48px)",
           color: "#94a3b8",
-          fontSize: "15px",
-          borderTop: "1px solid #eef3fb",
+          fontSize: "16px",
+          borderTop: "2px solid #eef3fb",
+          backgroundColor: "#ffffff",
+          borderRadius: "20px",
         }}
       >
-        <p>Causative Verbs study sheet • HAVE • GET • MAKE • LET</p>
+        <p
+          style={{
+            marginBottom: "16px",
+            fontWeight: 600,
+            color: "#475569",
+            fontSize: "18px",
+          }}
+        >
+          Causative Verbs Study Guide
+        </p>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "24px",
+            flexWrap: "wrap",
+            marginBottom: "24px",
+          }}
+        >
+          <span style={{ color: "#6366f1", fontWeight: 600 }}>HAVE</span>
+          <span style={{ color: "#10b981", fontWeight: 600 }}>GET</span>
+          <span style={{ color: "#ef4444", fontWeight: 600 }}>MAKE</span>
+          <span style={{ color: "#8b5cf6", fontWeight: 600 }}>LET</span>
+        </div>
+        <p style={{ margin: 0, opacity: 0.8 }}>
+          Master these four verbs to express causation in English
+        </p>
       </footer>
     </main>
   );

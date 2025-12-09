@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import lessonData from "./data/besideBesides.json";
 import Link from "next/link";
+
 export default function BesideBesides() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -44,736 +45,742 @@ export default function BesideBesides() {
   };
 
   return (
-    <main
-      style={{
-        padding: "32px 24px",
-        fontFamily: "'Inter', 'Segoe UI', system-ui, sans-serif",
-        maxWidth: "1200px",
-        margin: "0 auto",
-        lineHeight: 1.6,
-        backgroundColor: "#f8fafc",
-        minHeight: "100vh",
-        opacity: isVisible ? 1 : 0,
-        transition: "opacity 0.5s ease-in-out",
-      }}
-    >
-      <nav>
-        <Link
-          href="/qa/"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "8px",
-            padding: "8px 16px",
-            backgroundColor: "#f8f9fa",
-            border: "1px solid #dee2e6",
-            borderRadius: "6px",
-            cursor: "pointer",
-            fontSize: "14px",
-            fontWeight: "500",
-            color: "#495057",
-            transition: "all 0.2s ease",
-          }}
-        >
-          ← Back Home
-        </Link>
-      </nav>
-      {/* Header */}
-      <header
-        style={{
-          marginBottom: "48px",
-          textAlign: "center",
-        }}
-      >
-        <h1
-          style={{
-            fontSize: "36px",
-            marginBottom: "12px",
-            fontWeight: 700,
-            color: "#1e293b",
-            letterSpacing: "-0.02em",
-          }}
-        >
-          {lessonData.title}
-        </h1>
-        <p
-          style={{
-            fontSize: "18px",
-            margin: 0,
-            color: "#64748b",
-            fontWeight: 500,
-          }}
-        >
-          {lessonData.subtitle}
-        </p>
-      </header>
+    <>
+      <style jsx global>{`
+        /* --- Base Layout --- */
+        .page-container {
+          padding: 32px 24px;
+          font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+          max-width: 1200px;
+          margin: 0 auto;
+          line-height: 1.6;
+          background-color: #f8fafc;
+          min-height: 100vh;
+          transition: opacity 0.5s ease-in-out;
+        }
 
-      {/* Quick Comparison Banner */}
-      <div
-        style={{
-          padding: "28px",
-          backgroundColor: "white",
-          borderRadius: "16px",
-          boxShadow: "0 8px 32px rgba(0,0,0,0.1)",
-          border: "3px solid #e2e8f0",
-          marginBottom: "40px",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "60px",
-            flexWrap: "wrap",
-          }}
-        >
-          <div style={{ textAlign: "center" }}>
-            <div
-              style={{
-                fontSize: "28px",
-                fontWeight: 700,
-                color: "#6366f1",
-                marginBottom: "12px",
-              }}
-            >
-              BESIDE
-            </div>
-            <div
-              style={{
-                fontSize: "15px",
-                color: "#64748b",
-                maxWidth: "200px",
-                lineHeight: 1.4,
-              }}
-            >
-              <strong style={{ color: "#6366f1" }}>Location:</strong> next to
-              <br />
-              <strong style={{ color: "#6366f1" }}>Comparison:</strong> compared
-              with
-            </div>
-          </div>
-          <div
-            style={{
-              fontSize: "32px",
-              color: "#c7d2fe",
-              fontWeight: 300,
-            }}
-          >
-            vs
-          </div>
-          <div style={{ textAlign: "center" }}>
-            <div
-              style={{
-                fontSize: "28px",
-                fontWeight: 700,
-                color: "#10b981",
-                marginBottom: "12px",
-              }}
-            >
-              BESIDES
-            </div>
-            <div
-              style={{
-                fontSize: "15px",
-                color: "#64748b",
-                maxWidth: "200px",
-                lineHeight: 1.4,
-              }}
-            >
-              <strong style={{ color: "#10b981" }}>Addition:</strong> in
-              addition to
-              <br />
-              <strong style={{ color: "#10b981" }}>Exception:</strong> except
-              for
-              <br />
-              <strong style={{ color: "#10b981" }}>Reason:</strong> moreover
-            </div>
-          </div>
-        </div>
-      </div>
+        /* --- Navigation --- */
+        .nav-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 12px 20px;
+          background-color: #f8f9fa;
+          border: 1px solid #dee2e6;
+          border-radius: 8px;
+          cursor: pointer;
+          font-size: 24px; /* 14px + 10px */
+          font-weight: 500;
+          color: #495057;
+          transition: all 0.2s ease;
+          text-decoration: none;
+        }
+        .nav-link:hover {
+          background-color: #e9ecef;
+        }
 
-      {/* Warning Alert */}
-      <div
-        style={{
-          padding: "24px",
-          backgroundColor: "#fef3c7",
-          borderRadius: "12px",
-          border: "3px solid #f59e0b",
-          marginBottom: "40px",
-          textAlign: "center",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "12px",
-            flexWrap: "wrap",
-          }}
-        >
-          <div
-            style={{
-              fontSize: "24px",
-              color: "#d97706",
-            }}
-          >
-            ⚠️
-          </div>
-          <div>
-            <strong style={{ color: "#92400e", fontSize: "16px" }}>
-              They sound similar but have completely different meanings!
-            </strong>
-            <div
-              style={{ color: "#92400e", fontSize: "14px", marginTop: "4px" }}
-            >
-              Using the wrong one changes the meaning entirely
-            </div>
-          </div>
-        </div>
-      </div>
+        /* --- Header --- */
+        .header-section {
+          margin-bottom: 48px;
+          text-align: center;
+          margin-top: 20px;
+        }
+        .main-title {
+          font-size: 46px; /* 36px + 10px */
+          margin-bottom: 12px;
+          font-weight: 700;
+          color: #1e293b;
+          letter-spacing: -0.02em;
+        }
+        .subtitle {
+          font-size: 28px; /* 18px + 10px */
+          margin: 0;
+          color: #64748b;
+          font-weight: 500;
+        }
 
-      {/* Sections Grid */}
-      <div
-        style={{
-          display: "grid",
-          gap: "40px",
-          marginBottom: "48px",
-        }}
-      >
-        {lessonData.sections.map((section, sectionIndex) => {
-          const colors = getColorScheme(section.id);
-          return (
-            <section
-              key={section.id}
-              style={{
-                padding: "32px",
-                backgroundColor: "white",
-                borderRadius: "16px",
-                boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
-                border: `2px solid ${colors.border}`,
-                transform: isVisible ? "translateY(0)" : "translateY(20px)",
-                opacity: isVisible ? 1 : 0,
-                transition: `all 0.5s ease-out ${sectionIndex * 0.1}s`,
-              }}
-            >
-              {/* Section Header */}
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "flex-start",
-                  marginBottom: "28px",
-                  paddingBottom: "20px",
-                  borderBottom: `2px solid ${colors.light}`,
-                }}
-              >
-                <div
-                  style={{
-                    width: "44px",
-                    height: "44px",
-                    borderRadius: "12px",
-                    background: `linear-gradient(135deg, ${colors.primary} 0%, ${colors.primary}99 100%)`,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: "white",
-                    fontWeight: 700,
-                    fontSize: "18px",
-                    marginRight: "20px",
-                    flexShrink: 0,
-                    boxShadow: `0 4px 12px ${colors.primary}40`,
-                  }}
-                >
-                  {section.id}
-                </div>
-                <div style={{ flex: 1 }}>
-                  <h2
-                    style={{
-                      fontSize: "26px",
-                      fontWeight: 700,
-                      color: colors.primary,
-                      margin: 0,
-                      marginBottom: section.note ? "8px" : "0",
-                    }}
-                  >
-                    {section.heading}
-                  </h2>
-                  {section.note && (
-                    <div
-                      style={{
-                        fontSize: "16px",
-                        color: colors.primary,
-                        opacity: 0.8,
-                        fontWeight: 500,
-                        fontStyle: "italic",
-                      }}
-                    >
-                      {section.note}
-                    </div>
-                  )}
-                </div>
+        /* --- Quick Comparison Banner --- */
+        .banner-container {
+          padding: 28px;
+          background-color: white;
+          border-radius: 16px;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+          border: 3px solid #e2e8f0;
+          margin-bottom: 40px;
+        }
+        .banner-flex {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 60px;
+          flex-wrap: wrap;
+        }
+        .banner-title {
+          font-size: 38px; /* 28px + 10px */
+          font-weight: 700;
+          margin-bottom: 12px;
+        }
+        .banner-text {
+          font-size: 25px; /* 15px + 10px */
+          color: #64748b;
+          max-width: 250px; /* Increased width for larger font */
+          line-height: 1.4;
+        }
+        .banner-vs {
+          font-size: 42px; /* 32px + 10px */
+          color: #c7d2fe;
+          font-weight: 300;
+        }
+
+        /* --- Warning Alert --- */
+        .warning-container {
+          padding: 24px;
+          background-color: #fef3c7;
+          border-radius: 12px;
+          border: 3px solid #f59e0b;
+          margin-bottom: 40px;
+          text-align: center;
+        }
+        .warning-content {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          flex-wrap: wrap;
+        }
+        .warning-icon {
+          font-size: 34px; /* 24px + 10px */
+          color: #d97706;
+        }
+        .warning-text-strong {
+          color: #92400e;
+          font-size: 26px; /* 16px + 10px */
+          font-weight: bold;
+        }
+        .warning-text-small {
+          color: #92400e;
+          font-size: 24px; /* 14px + 10px */
+          margin-top: 4px;
+        }
+
+        /* --- Sections Grid --- */
+        .sections-wrapper {
+          display: grid;
+          gap: 40px;
+          margin-bottom: 48px;
+        }
+        .section-card {
+          padding: 32px;
+          background-color: white;
+          border-radius: 16px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+          transition: all 0.5s ease-out;
+        }
+        .section-header {
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 28px;
+          padding-bottom: 20px;
+          border-bottom-width: 2px;
+          border-bottom-style: solid;
+        }
+        .section-icon {
+          width: 54px; /* Increased icon size */
+          height: 54px;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-weight: 700;
+          font-size: 28px; /* 18px + 10px */
+          margin-right: 20px;
+          flex-shrink: 0;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+          font-size: 36px; /* 26px + 10px */
+          font-weight: 700;
+          margin: 0;
+          margin-bottom: 8px;
+        }
+        .section-note {
+          font-size: 26px; /* 16px + 10px */
+          opacity: 0.8;
+          font-weight: 500;
+          font-style: italic;
+        }
+
+        /* --- Subsections --- */
+        .subsection-grid {
+          display: grid;
+          gap: 32px;
+        }
+        .subsection-box {
+          padding: 28px;
+          border-radius: 12px;
+          border: 1px solid #e2e8f0;
+        }
+        .subsection-header {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          margin-bottom: 20px;
+          padding-bottom: 12px;
+          border-bottom-width: 1px;
+          border-bottom-style: solid;
+          flex-wrap: wrap; /* Responsive wrapping */
+          gap: 10px;
+        }
+        .subsection-title {
+          font-size: 28px; /* 18px + 10px */
+          font-weight: 600;
+          margin: 0;
+          flex: 1;
+        }
+        .subsection-tag {
+          padding: 6px 16px;
+          border-radius: 8px;
+          font-size: 23px; /* 13px + 10px */
+          font-weight: 600;
+          white-space: nowrap;
+        }
+
+        /* --- Content Grid (Structure, Examples, Explanation) --- */
+        .content-grid {
+          display: grid;
+          gap: 24px;
+          grid-template-columns: 1fr; /* Mobile default */
+          align-items: start;
+        }
+        @media (min-width: 1024px) {
+          .content-grid {
+            grid-template-columns: 1fr 1fr 1fr; /* Desktop 3-col */
+          }
+        }
+
+        .column-title {
+          font-size: 23px; /* 13px + 10px */
+          font-weight: 600;
+          margin-bottom: 12px;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+        }
+
+        /* Structure Items */
+        .structure-list {
+          display: grid;
+          gap: 10px;
+        }
+        .structure-item {
+          padding: 14px 16px;
+          border-radius: 8px;
+          border-width: 2px;
+          border-style: solid;
+          font-size: 24px; /* 14px + 10px */
+          font-weight: 600;
+          font-family: "JetBrains Mono", monospace;
+          text-align: center;
+        }
+
+        /* Examples */
+        .example-list {
+          display: grid;
+          gap: 12px;
+        }
+        .example-item {
+          padding: 16px 18px;
+          background-color: white;
+          border-radius: 8px;
+          border: 2px solid #e2e8f0;
+          font-size: 25px; /* 15px + 10px */
+          font-family: "JetBrains Mono", "Fira Code", monospace;
+          color: #1e293b;
+          transition: all 0.2s ease;
+          cursor: pointer;
+          position: relative;
+        }
+        .example-item:hover {
+          transform: translateX(6px);
+          background-color: #f1f5f9;
+        }
+        .example-marker {
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 4px;
+          border-radius: 4px 0 0 4px;
+        }
+
+        /* Explanation */
+        .explanation-box {
+          padding: 20px;
+          border-radius: 8px;
+          border-width: 2px;
+          border-style: solid;
+          height: 100%;
+          display: flex;
+          align-items: center;
+        }
+        .explanation-text {
+          font-size: 24px; /* 14px + 10px */
+          line-height: 1.6;
+          margin: 0;
+          font-weight: 500;
+        }
+
+        /* --- Summary Table --- */
+        .summary-section {
+          padding: 40px 32px;
+          background-color: white;
+          border-radius: 20px;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+          border: 2px solid #e2e8f0;
+          margin-bottom: 40px;
+        }
+        .summary-title {
+          font-size: 36px; /* 26px + 10px */
+          margin-bottom: 32px;
+          font-weight: 700;
+          color: #1e293b;
+          text-align: center;
+        }
+        .table-wrapper {
+          overflow-x: auto;
+        }
+        .summary-table {
+          width: 100%;
+          border-collapse: separate;
+          border-spacing: 0;
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          min-width: 800px; /* Force width to prevent squishing on mobile */
+        }
+        .th-cell {
+          text-align: left;
+          padding: 18px 12px;
+          background-color: #4f46e5;
+          color: white;
+          font-weight: 600;
+          font-size: 22px; /* 12px + 10px */
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+        }
+        .td-cell {
+          padding: 16px 12px;
+          border-bottom: 1px solid #e2e8f0;
+          font-size: 23px; /* 13px + 10px */
+          font-weight: 500;
+          color: #475569;
+        }
+        .td-structure {
+          font-family: "JetBrains Mono", monospace;
+          font-size: 22px; /* 12px + 10px */
+        }
+        .code-pill {
+          font-family: "JetBrains Mono", "Fira Code", monospace;
+          background-color: #f1f5f9;
+          padding: 6px 10px;
+          border-radius: 6px;
+          font-size: 22px; /* 12px + 10px */
+          color: #1e293b;
+          border: 1px solid #e2e8f0;
+          display: inline-block;
+        }
+
+        /* --- Key Differences --- */
+        .differences-section {
+          padding: 32px;
+          background-color: white;
+          border-radius: 16px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+          border: 2px solid #e2e8f0;
+          text-align: center;
+        }
+        .differences-title {
+          font-size: 30px; /* 20px + 10px */
+          font-weight: 600;
+          color: #1e293b;
+          margin-bottom: 24px;
+        }
+        .differences-grid {
+          display: grid;
+          grid-template-columns: 1fr; /* Mobile Default */
+          gap: 24px;
+          font-size: 25px; /* 15px + 10px */
+        }
+        @media (min-width: 768px) {
+          .differences-grid {
+            grid-template-columns: repeat(2, 1fr); /* Desktop Split */
+          }
+        }
+        .diff-card {
+          padding: 24px;
+          border-radius: 12px;
+          border-width: 3px;
+          border-style: solid;
+        }
+        .diff-card-title {
+          font-size: 30px; /* 20px + 10px */
+          font-weight: 700;
+          margin-bottom: 12px;
+        }
+        .diff-card-content {
+          line-height: 1.5;
+        }
+
+        /* --- Footer --- */
+        .footer {
+          margin-top: 60px;
+          text-align: center;
+          padding: 32px;
+          color: #94a3b8;
+          font-size: 25px; /* 15px + 10px */
+          border-top: 2px solid #e2e8f0;
+        }
+      `}</style>
+
+      <main className="page-container" style={{ opacity: isVisible ? 1 : 0 }}>
+        <nav>
+          <Link href="/qa/" className="nav-link">
+            ← Back Home
+          </Link>
+        </nav>
+
+        {/* Header */}
+        <header className="header-section">
+          <h1 className="main-title">{lessonData.title}</h1>
+          <p className="subtitle">{lessonData.subtitle}</p>
+        </header>
+
+        {/* Quick Comparison Banner */}
+        <div className="banner-container">
+          <div className="banner-flex">
+            <div style={{ textAlign: "center" }}>
+              <div className="banner-title" style={{ color: "#6366f1" }}>
+                BESIDE
               </div>
+              <div className="banner-text">
+                <strong style={{ color: "#6366f1" }}>Location:</strong> next to
+                <br />
+                <strong style={{ color: "#6366f1" }}>Comparison:</strong>{" "}
+                compared with
+              </div>
+            </div>
+            <div className="banner-vs">vs</div>
+            <div style={{ textAlign: "center" }}>
+              <div className="banner-title" style={{ color: "#10b981" }}>
+                BESIDES
+              </div>
+              <div className="banner-text">
+                <strong style={{ color: "#10b981" }}>Addition:</strong> in
+                addition to
+                <br />
+                <strong style={{ color: "#10b981" }}>Exception:</strong> except
+                for
+                <br />
+                <strong style={{ color: "#10b981" }}>Reason:</strong> moreover
+              </div>
+            </div>
+          </div>
+        </div>
 
-              {/* Subsections */}
-              <div
+        {/* Warning Alert */}
+        <div className="warning-container">
+          <div className="warning-content">
+            <div className="warning-icon">⚠️</div>
+            <div>
+              <div className="warning-text-strong">
+                They sound similar but have completely different meanings!
+              </div>
+              <div className="warning-text-small">
+                Using the wrong one changes the meaning entirely
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Sections Grid */}
+        <div className="sections-wrapper">
+          {lessonData.sections.map((section, sectionIndex) => {
+            const colors = getColorScheme(section.id);
+            return (
+              <section
+                key={section.id}
+                className="section-card"
                 style={{
-                  display: "grid",
-                  gap: "32px",
+                  borderColor: colors.border,
+                  transform: isVisible ? "translateY(0)" : "translateY(20px)",
+                  opacity: isVisible ? 1 : 0,
+                  transitionDelay: `${sectionIndex * 0.1}s`,
                 }}
               >
-                {section.subsections.map((sub, subIndex) => (
+                {/* Section Header */}
+                <div
+                  className="section-header"
+                  style={{ borderBottomColor: colors.light }}
+                >
                   <div
-                    key={subIndex}
+                    className="section-icon"
                     style={{
-                      padding: "28px",
-                      backgroundColor:
-                        subIndex % 2 === 0 ? "#fafafa" : "#f8fafc",
-                      borderRadius: "12px",
-                      border: "1px solid #e2e8f0",
+                      background: `linear-gradient(135deg, ${colors.primary} 0%, ${colors.primary}99 100%)`,
                     }}
                   >
-                    {/* Subsection Title & Meaning */}
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "flex-start",
-                        justifyContent: "space-between",
-                        marginBottom: "20px",
-                        paddingBottom: "12px",
-                        borderBottom: `1px solid ${colors.light}`,
-                      }}
+                    {section.id}
+                  </div>
+                  <div style={{ flex: 1 }}>
+                    <h2
+                      className="section-title"
+                      style={{ color: colors.primary }}
                     >
-                      <h3
-                        style={{
-                          fontSize: "18px",
-                          fontWeight: 600,
-                          color: colors.primary,
-                          margin: 0,
-                          flex: 1,
-                        }}
+                      {section.heading}
+                    </h2>
+                    {section.note && (
+                      <div
+                        className="section-note"
+                        style={{ color: colors.primary }}
                       >
-                        {sub.title}
-                      </h3>
-                      {sub.meaning && (
-                        <div
-                          style={{
-                            padding: "6px 12px",
-                            backgroundColor: colors.light,
-                            borderRadius: "8px",
-                            fontSize: "13px",
-                            color: colors.primary,
-                            fontWeight: 600,
-                            whiteSpace: "nowrap",
-                            marginLeft: "16px",
-                          }}
-                        >
-                          {sub.meaning}
-                        </div>
-                      )}
-                    </div>
+                        {section.note}
+                      </div>
+                    )}
+                  </div>
+                </div>
 
+                {/* Subsections */}
+                <div className="subsection-grid">
+                  {section.subsections.map((sub, subIndex) => (
                     <div
+                      key={subIndex}
+                      className="subsection-box"
                       style={{
-                        display: "grid",
-                        gap: "24px",
-                        gridTemplateColumns: "1fr 1fr 1fr",
-                        alignItems: "start",
+                        backgroundColor:
+                          subIndex % 2 === 0 ? "#fafafa" : "#f8fafc",
                       }}
                     >
-                      {/* Structure */}
-                      <div>
-                        <h4
-                          style={{
-                            fontSize: "13px",
-                            fontWeight: 600,
-                            color: colors.primary,
-                            marginBottom: "12px",
-                            textTransform: "uppercase",
-                            letterSpacing: "0.05em",
-                          }}
+                      {/* Subsection Title & Meaning */}
+                      <div
+                        className="subsection-header"
+                        style={{ borderBottomColor: colors.light }}
+                      >
+                        <h3
+                          className="subsection-title"
+                          style={{ color: colors.primary }}
                         >
-                          Structure
-                        </h4>
-                        <div style={{ display: "grid", gap: "10px" }}>
-                          {sub.structure.map((item, i) => (
-                            <div
-                              key={i}
-                              style={{
-                                padding: "14px 16px",
-                                backgroundColor: colors.light,
-                                borderRadius: "8px",
-                                border: `2px solid ${colors.border}`,
-                                fontSize: "14px",
-                                color: colors.primary,
-                                fontWeight: 600,
-                                fontFamily: "'JetBrains Mono', monospace",
-                                textAlign: "center",
-                              }}
-                            >
-                              {item}
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Examples */}
-                      <div>
-                        <h4
-                          style={{
-                            fontSize: "13px",
-                            fontWeight: 600,
-                            color: colors.primary,
-                            marginBottom: "12px",
-                            textTransform: "uppercase",
-                            letterSpacing: "0.05em",
-                          }}
-                        >
-                          Examples
-                        </h4>
-                        <div style={{ display: "grid", gap: "12px" }}>
-                          {sub.examples.map((ex, i) => (
-                            <div
-                              key={i}
-                              style={{
-                                padding: "16px 18px",
-                                backgroundColor: "white",
-                                borderRadius: "8px",
-                                border: "2px solid #e2e8f0",
-                                fontSize: "15px",
-                                fontFamily:
-                                  "'JetBrains Mono', 'Fira Code', monospace",
-                                color: "#1e293b",
-                                transition: "all 0.2s ease",
-                                cursor: "pointer",
-                                position: "relative",
-                              }}
-                              onMouseEnter={(e) => {
-                                e.target.style.transform = "translateX(6px)";
-                                e.target.style.backgroundColor = "#f1f5f9";
-                              }}
-                              onMouseLeave={(e) => {
-                                e.target.style.transform = "translateX(0)";
-                                e.target.style.backgroundColor = "white";
-                              }}
-                            >
-                              <div
-                                style={{
-                                  position: "absolute",
-                                  left: "0",
-                                  top: "0",
-                                  bottom: "0",
-                                  width: "4px",
-                                  backgroundColor: colors.primary,
-                                  borderRadius: "4px 0 0 4px",
-                                }}
-                              />
-                              <div
-                                dangerouslySetInnerHTML={{
-                                  __html: highlightKeywords(ex),
-                                }}
-                              />
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Explanation */}
-                      <div>
-                        <h4
-                          style={{
-                            fontSize: "13px",
-                            fontWeight: 600,
-                            color: colors.primary,
-                            marginBottom: "12px",
-                            textTransform: "uppercase",
-                            letterSpacing: "0.05em",
-                          }}
-                        >
-                          Short Explanation
-                        </h4>
-                        <div
-                          style={{
-                            padding: "20px",
-                            backgroundColor: colors.light,
-                            borderRadius: "8px",
-                            border: `2px solid ${colors.border}`,
-                            height: "100%",
-                            display: "flex",
-                            alignItems: "center",
-                          }}
-                        >
-                          <p
+                          {sub.title}
+                        </h3>
+                        {sub.meaning && (
+                          <div
+                            className="subsection-tag"
                             style={{
-                              fontSize: "14px",
-                              lineHeight: 1.6,
+                              backgroundColor: colors.light,
                               color: colors.primary,
-                              margin: 0,
-                              fontWeight: 500,
                             }}
                           >
-                            {sub.explanation}
-                          </p>
+                            {sub.meaning}
+                          </div>
+                        )}
+                      </div>
+
+                      <div className="content-grid">
+                        {/* Structure */}
+                        <div>
+                          <h4
+                            className="column-title"
+                            style={{ color: colors.primary }}
+                          >
+                            Structure
+                          </h4>
+                          <div className="structure-list">
+                            {sub.structure.map((item, i) => (
+                              <div
+                                key={i}
+                                className="structure-item"
+                                style={{
+                                  backgroundColor: colors.light,
+                                  borderColor: colors.border,
+                                  color: colors.primary,
+                                }}
+                              >
+                                {item}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Examples */}
+                        <div>
+                          <h4
+                            className="column-title"
+                            style={{ color: colors.primary }}
+                          >
+                            Examples
+                          </h4>
+                          <div className="example-list">
+                            {sub.examples.map((ex, i) => (
+                              <div key={i} className="example-item">
+                                <div
+                                  className="example-marker"
+                                  style={{ backgroundColor: colors.primary }}
+                                />
+                                <div
+                                  dangerouslySetInnerHTML={{
+                                    __html: highlightKeywords(ex),
+                                  }}
+                                />
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Explanation */}
+                        <div>
+                          <h4
+                            className="column-title"
+                            style={{ color: colors.primary }}
+                          >
+                            Short Explanation
+                          </h4>
+                          <div
+                            className="explanation-box"
+                            style={{
+                              backgroundColor: colors.light,
+                              borderColor: colors.border,
+                            }}
+                          >
+                            <p
+                              className="explanation-text"
+                              style={{ color: colors.primary }}
+                            >
+                              {sub.explanation}
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                ))}
-              </div>
-            </section>
-          );
-        })}
-      </div>
+                  ))}
+                </div>
+              </section>
+            );
+          })}
+        </div>
 
-      {/* Summary Table */}
-      <section
-        style={{
-          padding: "40px 32px",
-          backgroundColor: "white",
-          borderRadius: "20px",
-          boxShadow: "0 8px 32px rgba(0,0,0,0.1)",
-          border: "2px solid #e2e8f0",
-          marginBottom: "40px",
-        }}
-      >
-        <h2
-          style={{
-            fontSize: "26px",
-            marginBottom: "32px",
-            fontWeight: 700,
-            color: "#1e293b",
-            textAlign: "center",
-          }}
-        >
-          Quick Summary Table
-        </h2>
-        <div style={{ overflowX: "auto" }}>
-          <table
-            style={{
-              width: "100%",
-              borderCollapse: "separate",
-              borderSpacing: 0,
-              borderRadius: "12px",
-              overflow: "hidden",
-              boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-            }}
-          >
-            <thead>
-              <tr>
-                {["Word", "Type", "Meaning", "Structure", "Example"].map(
-                  (header, index) => (
-                    <th
-                      key={header}
-                      style={{
-                        textAlign: "left",
-                        padding: "18px 12px",
-                        backgroundColor: "#4f46e5",
-                        color: "white",
-                        fontWeight: 600,
-                        fontSize: "12px",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.05em",
-                        borderRight: index < 4 ? "1px solid #6366f1" : "none",
-                      }}
-                    >
-                      {header}
-                    </th>
-                  )
-                )}
-              </tr>
-            </thead>
-            <tbody>
-              {lessonData.summary.map((row, i) => (
-                <tr
-                  key={i}
-                  style={{
-                    backgroundColor: i % 2 === 0 ? "#fff" : "#f8fafc",
-                    transition: "all 0.2s ease",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = "#f1f5f9";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor =
-                      i % 2 === 0 ? "#fff" : "#f8fafc";
-                  }}
-                >
-                  <td
-                    style={{
-                      padding: "16px 12px",
-                      borderBottom: "1px solid #e2e8f0",
-                      fontWeight: 600,
-                      color: row.word.includes("beside")
-                        ? "#6366f1"
-                        : "#10b981",
-                      fontSize: "13px",
-                    }}
-                  >
-                    {row.word}
-                  </td>
-                  <td
-                    style={{
-                      padding: "16px 12px",
-                      borderBottom: "1px solid #e2e8f0",
-                      color: "#475569",
-                      fontSize: "13px",
-                      fontWeight: 500,
-                    }}
-                  >
-                    {row.type}
-                  </td>
-                  <td
-                    style={{
-                      padding: "16px 12px",
-                      borderBottom: "1px solid #e2e8f0",
-                      color: "#475569",
-                      fontSize: "13px",
-                    }}
-                  >
-                    {row.meaning}
-                  </td>
-                  <td
-                    style={{
-                      padding: "16px 12px",
-                      borderBottom: "1px solid #e2e8f0",
-                      color: "#475569",
-                      fontFamily: "'JetBrains Mono', monospace",
-                      fontSize: "12px",
-                      fontWeight: 500,
-                    }}
-                  >
-                    {row.structure}
-                  </td>
-                  <td
-                    style={{
-                      padding: "16px 12px",
-                      borderBottom: "1px solid #e2e8f0",
-                    }}
-                  >
-                    <code
-                      style={{
-                        fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
-                        backgroundColor: "#f1f5f9",
-                        padding: "6px 10px",
-                        borderRadius: "6px",
-                        fontSize: "12px",
-                        color: "#1e293b",
-                        border: "1px solid #e2e8f0",
-                        display: "inline-block",
-                      }}
-                    >
-                      {row.example}
-                    </code>
-                  </td>
+        {/* Summary Table */}
+        <section className="summary-section">
+          <h2 className="summary-title">Quick Summary Table</h2>
+          <div className="table-wrapper">
+            <table className="summary-table">
+              <thead>
+                <tr>
+                  {["Word", "Type", "Meaning", "Structure", "Example"].map(
+                    (header, index) => (
+                      <th
+                        key={header}
+                        className="th-cell"
+                        style={{
+                          borderRight: index < 4 ? "1px solid #6366f1" : "none",
+                        }}
+                      >
+                        {header}
+                      </th>
+                    )
+                  )}
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      {/* Key Differences */}
-      <div
-        style={{
-          padding: "32px",
-          backgroundColor: "white",
-          borderRadius: "16px",
-          boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
-          border: "2px solid #e2e8f0",
-          textAlign: "center",
-        }}
-      >
-        <h3
-          style={{
-            fontSize: "20px",
-            fontWeight: 600,
-            color: "#1e293b",
-            marginBottom: "24px",
-          }}
-        >
-          🎯 Key Difference
-        </h3>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gap: "24px",
-            fontSize: "15px",
-          }}
-        >
-          <div
-            style={{
-              padding: "24px",
-              backgroundColor: "#e0e7ff",
-              borderRadius: "12px",
-              border: "3px solid #6366f1",
-            }}
-          >
-            <div
-              style={{
-                fontSize: "20px",
-                fontWeight: 700,
-                color: "#6366f1",
-                marginBottom: "12px",
-              }}
-            >
-              BESIDE
-            </div>
-            <div style={{ color: "#6366f1", lineHeight: 1.5 }}>
-              <strong>Location:</strong> next to something
-              <br />
-              <strong>Comparison:</strong> compared with something
-              <br />
-              <em>Physical or comparative relationship</em>
-            </div>
+              </thead>
+              <tbody>
+                {lessonData.summary.map((row, i) => (
+                  <tr
+                    key={i}
+                    style={{
+                      backgroundColor: i % 2 === 0 ? "#fff" : "#f8fafc",
+                      transition: "all 0.2s ease",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = "#f1f5f9";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor =
+                        i % 2 === 0 ? "#fff" : "#f8fafc";
+                    }}
+                  >
+                    <td
+                      className="td-cell"
+                      style={{
+                        fontWeight: 600,
+                        color: row.word.includes("beside")
+                          ? "#6366f1"
+                          : "#10b981",
+                      }}
+                    >
+                      {row.word}
+                    </td>
+                    <td className="td-cell">{row.type}</td>
+                    <td className="td-cell">{row.meaning}</td>
+                    <td className="td-cell td-structure">{row.structure}</td>
+                    <td className="td-cell">
+                      <code className="code-pill">{row.example}</code>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-          <div
-            style={{
-              padding: "24px",
-              backgroundColor: "#d1fae5",
-              borderRadius: "12px",
-              border: "3px solid #10b981",
-            }}
-          >
+        </section>
+
+        {/* Key Differences */}
+        <div className="differences-section">
+          <h3 className="differences-title">🎯 Key Difference</h3>
+          <div className="differences-grid">
             <div
+              className="diff-card"
               style={{
-                fontSize: "20px",
-                fontWeight: 700,
-                color: "#10b981",
-                marginBottom: "12px",
+                backgroundColor: "#e0e7ff",
+                borderColor: "#6366f1",
               }}
             >
-              BESIDES
+              <div className="diff-card-title" style={{ color: "#6366f1" }}>
+                BESIDE
+              </div>
+              <div className="diff-card-content" style={{ color: "#6366f1" }}>
+                <strong>Location:</strong> next to something
+                <br />
+                <strong>Comparison:</strong> compared with something
+                <br />
+                <em>Physical or comparative relationship</em>
+              </div>
             </div>
-            <div style={{ color: "#10b981", lineHeight: 1.5 }}>
-              <strong>Addition:</strong> in addition to
-              <br />
-              <strong>Exception:</strong> except for
-              <br />
-              <strong>Reason:</strong> moreover
-              <br />
-              <em>Logical relationships and exceptions</em>
+            <div
+              className="diff-card"
+              style={{
+                backgroundColor: "#d1fae5",
+                borderColor: "#10b981",
+              }}
+            >
+              <div className="diff-card-title" style={{ color: "#10b981" }}>
+                BESIDES
+              </div>
+              <div className="diff-card-content" style={{ color: "#10b981" }}>
+                <strong>Addition:</strong> in addition to
+                <br />
+                <strong>Exception:</strong> except for
+                <br />
+                <strong>Reason:</strong> moreover
+                <br />
+                <em>Logical relationships and exceptions</em>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Footer */}
-      <footer
-        style={{
-          marginTop: "60px",
-          textAlign: "center",
-          padding: "32px",
-          color: "#94a3b8",
-          fontSize: "15px",
-          borderTop: "2px solid #e2e8f0",
-        }}
-      >
-        <p>
-          BESIDE vs. BESIDES study sheet • Clear distinction between location
-          and logic
-        </p>
-      </footer>
-    </main>
+        {/* Footer */}
+        <footer className="footer">
+          <p>
+            BESIDE vs. BESIDES study sheet • Clear distinction between location
+            and logic
+          </p>
+        </footer>
+      </main>
+    </>
   );
 }
