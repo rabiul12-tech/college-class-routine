@@ -7,10 +7,19 @@ export default function SEONotesApp() {
   const [expandedNote, setExpandedNote] = useState(null);
 
   const filteredNotes = notesData.filter((note) => {
+    // Handle search for object-based summaries (like note 19)
+    const summaryText =
+      typeof note.summary === "string"
+        ? note.summary
+        : note.summary.conclusion +
+          " " +
+          (note.summary.benefits?.join(" ") || "");
+
     const matchesCategory =
       activeCategory === "all" || note.category === activeCategory;
     const matchesSearch =
       note.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      summaryText.toLowerCase().includes(searchTerm.toLowerCase()) ||
       note.content.toLowerCase().includes(searchTerm.toLowerCase()) ||
       note.tags.some((tag) =>
         tag.toLowerCase().includes(searchTerm.toLowerCase())
@@ -113,7 +122,12 @@ export default function SEONotesApp() {
                 </div>
               </div>
 
-              <p className="note-summary">{note.summary}</p>
+              {/* FIX: Conditional rendering for Summary to handle Objects (Note 19) */}
+              <p className="note-summary">
+                {typeof note.summary === "string"
+                  ? note.summary
+                  : note.summary?.conclusion || "Summary available in details"}
+              </p>
 
               <div className="note-tags">
                 {note.tags.map((tag) => (
@@ -135,7 +149,21 @@ export default function SEONotesApp() {
               {/* Expanded Content */}
               {expandedNote === note.id && (
                 <div className="expanded-content">
-                  {/* Course Overview Specific Content */}
+                  {/* --- SPECIAL HANDLING FOR OBJECT SUMMARIES (Note 19) --- */}
+                  {typeof note.summary === "object" &&
+                    note.summary.benefits && (
+                      <div className="features-section">
+                        <h4>সুবিধাসমূহ (Summary Benefits):</h4>
+                        <ul>
+                          {note.summary.benefits.map((benefit, i) => (
+                            <li key={i}>✓ {benefit}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                  {/* --- ORIGINAL TYPES (ID 1-10) --- */}
+
                   {note.type === "course-overview" && note.features && (
                     <div className="features-section">
                       <h4>কোর্সের বৈশিষ্ট্য:</h4>
@@ -147,7 +175,6 @@ export default function SEONotesApp() {
                     </div>
                   )}
 
-                  {/* Keyword Basics Specific Content */}
                   {note.type === "keyword-basics" && note.keyPoints && (
                     <div className="keypoints-section">
                       <h4>মূল পয়েন্ট:</h4>
@@ -159,7 +186,6 @@ export default function SEONotesApp() {
                     </div>
                   )}
 
-                  {/* Keyword Research Specific Content */}
                   {note.type === "keyword-research" && note.examples && (
                     <div className="examples-section">
                       <h4>বাস্তব উদাহরণ:</h4>
@@ -176,7 +202,6 @@ export default function SEONotesApp() {
                     </div>
                   )}
 
-                  {/* Seed Keywords Specific Content */}
                   {note.type === "seed-keywords" && note.methods && (
                     <div className="methods-section">
                       <h4>সন্ধানের পদ্ধতি:</h4>
@@ -191,29 +216,23 @@ export default function SEONotesApp() {
                     </div>
                   )}
 
-                  {/* Practical Case Study Specific Content */}
                   {note.type === "practical-case-study" && note.caseStudy && (
                     <div className="case-study-section">
                       <h4>কেস স্টাডি বিবরণ:</h4>
-                      <div className="case-study-info">
+                      <div className="info-box">
                         <p>
                           <strong>ব্যবসা:</strong> {note.caseStudy.business}
                         </p>
                         <p>
                           <strong>শিল্প:</strong> {note.caseStudy.industry}
                         </p>
-                        <p>
-                          <strong>চূড়ান্ত সিড কীওয়ার্ড:</strong>{" "}
-                          {note.caseStudy.finalSeedKeyword}
-                        </p>
                         <div className="metrics-grid">
                           {Object.entries(note.caseStudy.keyMetrics || {}).map(
                             ([keyword, metrics]) => (
                               <div key={keyword} className="metric-card">
                                 <strong>{keyword}</strong>
-                                <div>ভলিউম: {metrics.volume}</div>
-                                <div>কঠিনতা: {metrics.difficulty}</div>
-                                <div>সুযোগ: {metrics.opportunity}</div>
+                                <div>ভল: {metrics.volume}</div>
+                                <div>KD: {metrics.difficulty}</div>
                               </div>
                             )
                           )}
@@ -222,66 +241,40 @@ export default function SEONotesApp() {
                     </div>
                   )}
 
-                  {/* Keyword Strategy Specific Content */}
                   {note.type === "keyword-strategy" && note.criteria && (
                     <div className="strategy-section">
-                      <h4>কীওয়ার্ড নির্বাচনের মানদণ্ড:</h4>
+                      <h4>নির্বাচন মানদণ্ড:</h4>
                       <div className="criteria-grid">
                         {note.criteria.map((criterion, index) => (
                           <div key={index} className="criterion-card">
                             <strong>{criterion.name}</strong>
                             <p>{criterion.description}</p>
-                            <span className="importance-tag">
-                              গুরুত্ব: {criterion.importance}
-                            </span>
                           </div>
                         ))}
                       </div>
                     </div>
                   )}
 
-                  {/* Tool Demo Specific Content */}
                   {note.type === "tool-demo" && note.toolUsage && (
                     <div className="tool-demo-section">
-                      <h4>টুল ব্যবহারের বিবরণ:</h4>
-                      <div className="tool-info">
+                      <h4>টুল ব্যবহার:</h4>
+                      <div className="info-box">
                         <p>
                           <strong>টুল:</strong> {note.toolUsage.toolName}
                         </p>
                         <p>
-                          <strong>সিড কীওয়ার্ড:</strong>{" "}
-                          {note.toolUsage.seedKeyword}
+                          <strong>টার্গেট:</strong> {note.toolUsage.seedKeyword}
                         </p>
-                        <div className="tool-metrics">
-                          <h5>প্রাথমিক মেট্রিক্স:</h5>
-                          <div className="metrics">
-                            <span>
-                              ভলিউম: {note.toolUsage.initialMetrics.volume}
-                            </span>
-                            <span>
-                              কঠিনতা: {note.toolUsage.initialMetrics.difficulty}
-                            </span>
-                            <span>
-                              প্রতিযোগিতা:{" "}
-                              {note.toolUsage.initialMetrics.competition}
-                            </span>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   )}
 
-                  {/* Strategy Builder Specific Content */}
                   {note.type === "strategy-builder" && note.strategyBuilder && (
                     <div className="strategy-builder-section">
-                      <h4>স্ট্র্যাটেজি বিল্ডার বিশ্লেষণ:</h4>
-                      <div className="builder-info">
+                      <h4>বিশ্লেষণ:</h4>
+                      <div className="info-box">
                         <p>
-                          <strong>মোট কীওয়ার্ড:</strong>{" "}
-                          {note.strategyBuilder.totalKeywords}
-                        </p>
-                        <p>
-                          <strong>প্রধান প্রশ্ন:</strong>{" "}
+                          <strong>প্রশ্ন:</strong>{" "}
                           {note.strategyBuilder.mainQuestion}
                         </p>
                         <p>
@@ -291,109 +284,330 @@ export default function SEONotesApp() {
                     </div>
                   )}
 
-                  {/* Competitor Analysis Specific Content */}
-                  {note.type === "competitor-analysis" && note.toolUsage && (
-                    <div className="competitor-analysis-section">
-                      <h4>প্রতিযোগী বিশ্লেষণ:</h4>
-                      <div className="competitor-info">
-                        <p>
-                          <strong>টুল:</strong> {note.toolUsage.toolName}
-                        </p>
-                        <p>
-                          <strong>প্রতিযোগী:</strong>{" "}
-                          {note.toolUsage.competitorDomain}
-                        </p>
-                        <div className="analysis-strategies">
-                          <h5>বিশ্লেষণ কৌশল:</h5>
-                          <div className="strategy-cards">
-                            {Object.entries(note.analysisStrategies || {}).map(
-                              ([strategyType, strategy]) => (
-                                <div
-                                  key={strategyType}
-                                  className="strategy-card"
-                                >
-                                  <strong>
-                                    {strategyType === "forNewSites"
-                                      ? "নতুন সাইটের জন্য"
-                                      : "বিদ্যমান সাইটের জন্য"}
-                                  </strong>
-                                  <p>ফিল্টার: {strategy.filter}</p>
-                                  <p>উদ্দেশ্য: {strategy.purpose}</p>
-                                  {strategy.examples && (
-                                    <div className="strategy-examples">
-                                      {strategy.examples
-                                        .slice(0, 3)
-                                        .map((example, idx) => (
-                                          <span
-                                            key={idx}
-                                            className="example-tag"
-                                          >
-                                            {example}
-                                          </span>
-                                        ))}
-                                    </div>
-                                  )}
-                                </div>
-                              )
-                            )}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Competitor Gap Analysis Specific Content */}
-                  {note.type === "competitor-gap-analysis" &&
-                    note.toolUsage && (
-                      <div className="gap-analysis-section">
-                        <h4>গ্যাপ বিশ্লেষণ:</h4>
-                        <div className="gap-info">
-                          <p>
-                            <strong>টুল:</strong> {note.toolUsage.toolName}
-                          </p>
-                          <p>
-                            <strong>তুলনা করা ডোমেইন:</strong>{" "}
-                            {note.toolUsage.domainsCompared.join(", ")}
-                          </p>
-                          <div className="gap-filters">
-                            <h5>গ্যাপ ফিল্টার:</h5>
-                            {Object.entries(note.gapAnalysisFilters || {}).map(
-                              ([filterType, filter]) => (
-                                <div key={filterType} className="filter-card">
-                                  <strong>
-                                    {filterType === "missingKeywords"
-                                      ? "মিসিং কীওয়ার্ড"
-                                      : filterType === "weakKeywords"
-                                      ? "দুর্বল কীওয়ার্ড"
-                                      : "শক্তিশালী কীওয়ার্ড"}
-                                  </strong>
-                                  <p>{filter.description}</p>
-                                  {filter.kdFilter && (
-                                    <p>KD ফিল্টার: {filter.kdFilter}</p>
-                                  )}
-                                  {filter.examples && (
-                                    <div className="filter-examples">
-                                      {filter.examples
-                                        .slice(0, 3)
-                                        .map((example, idx) => (
-                                          <span
-                                            key={idx}
-                                            className="example-tag"
-                                          >
-                                            {example}
-                                          </span>
-                                        ))}
-                                    </div>
-                                  )}
-                                </div>
-                              )
-                            )}
-                          </div>
+                  {note.type === "competitor-analysis" &&
+                    note.analysisStrategies && (
+                      <div className="strategy-section">
+                        <h4>বিশ্লেষণ কৌশল:</h4>
+                        <div className="strategy-cards">
+                          {Object.entries(note.analysisStrategies).map(
+                            ([key, data]) => (
+                              <div key={key} className="strategy-card">
+                                <strong>
+                                  {key === "forNewSites"
+                                    ? "নতুন সাইট"
+                                    : "পুরাতন সাইট"}
+                                </strong>
+                                <p>Filter: {data.filter}</p>
+                                <span className="importance-tag">
+                                  {data.purpose}
+                                </span>
+                              </div>
+                            )
+                          )}
                         </div>
                       </div>
                     )}
 
-                  {/* Common Content */}
+                  {note.type === "competitor-gap-analysis" &&
+                    note.gapAnalysisFilters && (
+                      <div className="gap-analysis-section">
+                        <h4>Keyword Gap Filters:</h4>
+                        <div className="gap-filters">
+                          {Object.entries(note.gapAnalysisFilters).map(
+                            ([key, data]) => (
+                              <div key={key} className="filter-card">
+                                <strong>
+                                  {key.toUpperCase().replace("KEYWORDS", "")}
+                                </strong>
+                                <p>{data.description}</p>
+                                {data.examples && (
+                                  <div className="filter-examples">
+                                    {data.examples.slice(0, 3).map((ex, i) => (
+                                      <span key={i} className="example-tag">
+                                        {ex}
+                                      </span>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
+                            )
+                          )}
+                        </div>
+                      </div>
+                    )}
+
+                  {/* --- NEW TYPES (ID 11-20) ADDED BELOW --- */}
+
+                  {/* ID 11: AI Keyword Research */}
+                  {note.type === "ai-keyword-research" &&
+                    note.aiRankingStrategy && (
+                      <div className="ai-section">
+                        <h4>AI Ranking Strategy:</h4>
+                        <div className="info-box">
+                          <p>
+                            <strong>ফোকাস:</strong>{" "}
+                            {note.aiRankingStrategy.mainFocus}
+                          </p>
+                          <ul>
+                            {note.aiRankingStrategy.importanceHierarchy.map(
+                              (item, i) => (
+                                <li key={i}>• {item}</li>
+                              )
+                            )}
+                          </ul>
+                        </div>
+                        {note.businessStrategy && (
+                          <div
+                            className="strategy-card"
+                            style={{ marginTop: "10px" }}
+                          >
+                            <strong>নতুন ব্যবসার জন্য:</strong>
+                            <p>
+                              {
+                                note.businessStrategy.forNewBusinesses
+                                  .recommendation
+                              }
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                  {/* ID 12: Keyword Mapping */}
+                  {note.type === "keyword-mapping" &&
+                    note.implementationSteps && (
+                      <div className="mapping-section">
+                        <h4>ম্যাপিং ধাপসমূহ:</h4>
+                        <div className="methods-list">
+                          <div className="method-item">
+                            <span className="method-number">1</span>
+                            <div>
+                              <strong>Content Audit:</strong>{" "}
+                              {note.implementationSteps.step1.description}
+                            </div>
+                          </div>
+                          <div className="method-item">
+                            <span className="method-number">2</span>
+                            <div>
+                              <strong>Assignment:</strong>{" "}
+                              {note.implementationSteps.step2.description}
+                            </div>
+                          </div>
+                        </div>
+                        {note.pageStructure && (
+                          <div
+                            className="info-box"
+                            style={{ marginTop: "10px" }}
+                          >
+                            <strong>পেইজ স্ট্রাকচার:</strong>{" "}
+                            {note.pageStructure.principle}
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                  {/* ID 13: Cluster Prioritization */}
+                  {note.type === "cluster-prioritization" &&
+                    note.homepageStrategy && (
+                      <div className="strategy-section">
+                        <h4>Homepage Strategy:</h4>
+                        <div className="strategy-cards">
+                          <div className="strategy-card">
+                            <strong>Path 1: Product Focus</strong>
+                            <p>
+                              {note.homepageStrategy.twoPaths.path1.strategy}
+                            </p>
+                          </div>
+                          <div className="strategy-card">
+                            <strong>Path 2: Brand Focus</strong>
+                            <p>
+                              {note.homepageStrategy.twoPaths.path2.strategy}
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          className="info-box"
+                          style={{ marginTop: "10px", background: "#e0f2fe" }}
+                        >
+                          <strong>সিদ্ধান্ত:</strong>{" "}
+                          {note.homepageStrategy.finalDecision}
+                        </div>
+                      </div>
+                    )}
+
+                  {/* ID 14: Mapping Implementation */}
+                  {note.type === "keyword-mapping-implementation" &&
+                    note.keywordTypes && (
+                      <div className="implementation-section">
+                        <h4>Primary vs Secondary:</h4>
+                        <div className="info-box">
+                          <p>
+                            <strong>Secondary Criteria:</strong>
+                          </p>
+                          <ul>
+                            {note.keywordTypes.primaryVsSecondary.secondaryCriteria.map(
+                              (c, i) => (
+                                <li key={i}>✓ {c}</li>
+                              )
+                            )}
+                          </ul>
+                        </div>
+                      </div>
+                    )}
+
+                  {/* ID 15: Practical Mapping Process */}
+                  {note.type === "practical-mapping-process" &&
+                    note.deepMapping && (
+                      <div className="process-section">
+                        <h4>Mapping Tasks:</h4>
+                        <div className="criteria-grid">
+                          {Object.entries(note.deepMapping.threeMainTasks).map(
+                            ([key, task]) => (
+                              <div key={key} className="criterion-card">
+                                <p>{task.description}</p>
+                              </div>
+                            )
+                          )}
+                        </div>
+                        {note.finalMappingSheet && (
+                          <div
+                            className="info-box"
+                            style={{ marginTop: "10px" }}
+                          >
+                            <strong>Final Sheet Columns:</strong>{" "}
+                            {note.finalMappingSheet.components.join(", ")}
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                  {/* ID 16: Topical Authority */}
+                  {note.type === "topical-authority" &&
+                    note.pillarClusterModel && (
+                      <div className="authority-section">
+                        <h4>Pillar-Cluster Model:</h4>
+                        <div className="strategy-cards">
+                          <div className="strategy-card">
+                            <strong>Pillar Page</strong>
+                            <p>
+                              {
+                                note.pillarClusterModel.components.pillarPage
+                                  .definition
+                              }
+                            </p>
+                          </div>
+                          <div className="strategy-card">
+                            <strong>Cluster Content</strong>
+                            <p>
+                              {
+                                note.pillarClusterModel.components
+                                  .clusterContent.definition
+                              }
+                            </p>
+                          </div>
+                        </div>
+                        <div className="info-box" style={{ marginTop: "10px" }}>
+                          <strong>Authority Definition:</strong>{" "}
+                          {note.topicalAuthorityDefinition.definition}
+                        </div>
+                      </div>
+                    )}
+
+                  {/* ID 17: AI Powered Research */}
+                  {note.type === "ai-powered-research" && note.aiWorkflow && (
+                    <div className="ai-tools-section">
+                      <h4>AI Workflow:</h4>
+                      <div className="methods-list">
+                        {note.aiWorkflow.aiActions.map((action, i) => (
+                          <div key={i} className="method-item">
+                            <span className="method-number">AI</span>
+                            {action}
+                          </div>
+                        ))}
+                      </div>
+                      {note.highPotentialIdeas && (
+                        <div
+                          className="info-box"
+                          style={{
+                            marginTop: "10px",
+                            borderLeft: "4px solid #10b981",
+                          }}
+                        >
+                          <strong>High Potential:</strong>{" "}
+                          {note.highPotentialIdeas.criteria.join(" + ")}
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {/* ID 18 & 19: Competitor/Position Tracking */}
+                  {(note.type === "competitor-tracking" ||
+                    note.type === "position-tracking-fundamentals") && (
+                    <div className="tracking-section">
+                      {note.comparisonFeatures && (
+                        <div className="info-box">
+                          <h4>Comparison Features:</h4>
+                          <ul>
+                            {note.comparisonFeatures.insights.map(
+                              (insight, i) => (
+                                <li key={i}>{insight}</li>
+                              )
+                            )}
+                          </ul>
+                        </div>
+                      )}
+                      {note.positionTrackingDefinition && (
+                        <div className="info-box">
+                          <h4>Uses:</h4>
+                          <ul>
+                            {note.positionTrackingDefinition.uses.map(
+                              (use, i) => (
+                                <li key={i}>{use}</li>
+                              )
+                            )}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {/* ID 20: Course Recap */}
+                  {note.type === "course-recap" &&
+                    note.courseAccomplishments && (
+                      <div className="recap-section">
+                        <h4>আপনার অর্জন:</h4>
+                        <div className="methods-list">
+                          {note.courseAccomplishments.accomplishments.map(
+                            (acc, i) => (
+                              <div key={i} className="method-item">
+                                <span className="method-number">✓</span>
+                                <div>
+                                  <strong>{acc.step}</strong>
+                                  <p
+                                    style={{
+                                      margin: 0,
+                                      fontSize: "1.9rem",
+                                      color: "#666",
+                                    }}
+                                  >
+                                    {acc.description}
+                                  </p>
+                                </div>
+                              </div>
+                            )
+                          )}
+                        </div>
+                        <div
+                          className="case-study-section"
+                          style={{ marginTop: "20px", textAlign: "center" }}
+                        >
+                          <h4>পরবর্তী ধাপ: {note.nextSteps.nextPhase}</h4>
+                          <p>{note.nextSteps.description}</p>
+                        </div>
+                      </div>
+                    )}
+
+                  {/* Common Content (Always Visible) */}
                   <div className="content-section">
                     <h4>বিস্তারিত ব্যাখ্যা:</h4>
                     <div className="content-text">
@@ -452,12 +666,12 @@ export default function SEONotesApp() {
         }
 
         .header-content h1 {
-          font-size: 2.5rem;
+          font-size: 3.5rem;
           margin-bottom: 10px;
         }
 
         .header-content p {
-          font-size: 1.2rem;
+          font-size: 1.4rem;
           opacity: 0.9;
         }
 
@@ -526,7 +740,7 @@ export default function SEONotesApp() {
         }
 
         .stat-card h3 {
-          font-size: 2rem;
+          font-size: 2.3rem;
           color: #667eea;
           margin-bottom: 5px;
         }
@@ -544,7 +758,7 @@ export default function SEONotesApp() {
           color: white;
           padding: 2px 10px;
           border-radius: 20px;
-          font-size: 0.9rem;
+          font-size: 1.2rem;
         }
 
         .notes-grid {
@@ -638,10 +852,11 @@ export default function SEONotesApp() {
         .expanded-content h4 {
           color: #333;
           margin-bottom: 15px;
-          font-size: 1.1rem;
+          font-size: 1.3rem;
         }
 
-        /* Additional Styles for New Sections */
+        /* Generic Classes for reuse */
+        .info-box,
         .case-study-info,
         .tool-info,
         .builder-info,
@@ -678,7 +893,7 @@ export default function SEONotesApp() {
           color: #0369a1;
           padding: 2px 8px;
           border-radius: 12px;
-          font-size: 0.8rem;
+          font-size: 1.8rem;
           margin-right: 5px;
           display: inline-block;
           margin-top: 5px;
@@ -751,6 +966,7 @@ export default function SEONotesApp() {
           align-items: center;
           justify-content: center;
           font-weight: bold;
+          flex-shrink: 0;
         }
 
         .content-section {
