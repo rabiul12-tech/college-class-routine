@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from "react";
 import { rootWordsData } from "../../data/adverb";
+import Link from "next/link";
 
 // Grouped by type for easier filtering
 const rootWordsByType = {
@@ -123,6 +124,27 @@ export default function RootWordsPage() {
   return (
     <>
       <div className="container">
+        <nav>
+          <Link
+            href="/qa/"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              padding: "8px 16px",
+              backgroundColor: "#f8f9fa",
+              border: "1px solid #dee2e6",
+              borderRadius: "6px",
+              cursor: "pointer",
+              fontSize: "14px",
+              fontWeight: "500",
+              color: "#495057",
+              transition: "all 0.2s ease",
+            }}
+          >
+            ← Back Home
+          </Link>
+        </nav>
         <header className="header">
           <h1>Greek & Latin Root Words Dictionary</h1>
           <p className="subtitle">
@@ -446,7 +468,7 @@ const rootWordsData = [
             var(--primary) 0%,
             var(--secondary) 100%
           );
-          color: white;
+
           border-radius: var(--radius);
           box-shadow: 0 10px 25px rgba(79, 70, 229, 0.2);
         }
@@ -1025,7 +1047,7 @@ const rootWordsData = [
           .page-number {
             min-width: 36px;
             height: 36px;
-            font-size: 0.8rem;
+            font-size: 1.8rem;
           }
 
           .page-ellipsis {
@@ -1100,15 +1122,15 @@ const rootWordsData = [
           .words-table th,
           .words-table td {
             padding: 0.75rem 0.5rem;
-            font-size: 0.85rem;
+            font-size: 1.85rem;
           }
 
           .word-part {
-            font-size: 1rem;
+            font-size: 1.5rem;
           }
 
           .type-badge {
-            font-size: 0.7rem;
+            font-size: 1.7rem;
             padding: 0.25rem 0.5rem;
           }
 
@@ -1120,18 +1142,18 @@ const rootWordsData = [
           .page-number {
             min-width: 32px;
             height: 32px;
-            font-size: 0.75rem;
+            font-size: 1.75rem;
           }
 
           .page-ellipsis {
             min-width: 32px;
             height: 32px;
-            font-size: 0.75rem;
+            font-size: 1.75rem;
           }
 
           .code-block {
             padding: 1rem;
-            font-size: 0.8rem;
+            font-size: 1.8rem;
           }
 
           .footer {
@@ -1151,13 +1173,13 @@ const rootWordsData = [
           .words-table th,
           .words-table td {
             padding: 0.5rem 0.375rem;
-            font-size: 0.8rem;
+            font-size: 1.8rem;
           }
 
           .page-number {
             min-width: 28px;
             height: 28px;
-            font-size: 0.7rem;
+            font-size: 1.7rem;
           }
         }
 
