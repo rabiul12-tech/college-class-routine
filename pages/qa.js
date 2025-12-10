@@ -118,6 +118,11 @@ export default function QAViewer({ pairs: initialPairs }) {
       label: "prefix-vocab",
       color: "#3b82f6",
     },
+    {
+      href: "/full-suffix-preffix/",
+      label: "full-suffix-preffix",
+      color: "#3b82f6",
+    },
   ];
 
   const seoPages = [

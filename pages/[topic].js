@@ -7,6 +7,7 @@ import WordFormationMistakesPage from "../components/english/word-formation-mist
 import AdverbsLessonPage from "../components/english/adverbs-lesson/page.jsx";
 import PrefixHome from "../components/english/prefix-data/page.jsx";
 import VocabularyPage from "../components/english/prefix-vocab/page.jsx";
+import RootWordsPage from "../components/english/full-suffix-preffix/page.jsx";
 
 // 2. Create a mapping of "URL slug" -> "Component"
 const LESSONS = {
@@ -15,6 +16,8 @@ const LESSONS = {
   "adverbs-lesson": AdverbsLessonPage,
   "prefix-data": PrefixHome,
   "prefix-vocab": VocabularyPage,
+
+  "full-suffix-preffix": RootWordsPage,
 };
 
 export default function DynamicLessonPage() {
