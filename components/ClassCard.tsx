@@ -187,7 +187,7 @@ export default function ClassCard({ time, subject, grade }: ClassCardProps) {
           </div>
         ) : (
           <div
-            className={`flex space-x-1 ${
+            className={`flex flex-wrap space-x-1 ${
               isLocked ? "pointer-events-none opacity-70" : ""
             }`}
             aria-disabled={isLocked}
