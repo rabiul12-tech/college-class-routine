@@ -161,7 +161,7 @@ export default function ClassCard({ time, subject, grade }: ClassCardProps) {
 
   return (
     <div className={`${cardBg} p-4 rounded-lg shadow-md mb-4`}>
-      <div className="flex justify-between items-center mb-3">
+      <div className="flex flex-wrap justify-between items-center mb-3">
         <span
           className={`font-bold text-lg ${
             free ? "text-gray-400 line-through" : ""
@@ -176,7 +176,7 @@ export default function ClassCard({ time, subject, grade }: ClassCardProps) {
         <span className="text-sm text-gray-600">{grade} শ্রেণী</span>
       </div>
 
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between  flex-wrap items-center">
         <span className={`text-sm font-medium ${statusColorClass}`}>
           {statusTextDisplay}
         </span>

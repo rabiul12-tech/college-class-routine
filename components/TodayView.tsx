@@ -1,7 +1,13 @@
 "use client";
 
 import React from "react";
-import { scheduleData, dayMap, departments, grades, timeSlots } from "@/lib/data";
+import {
+  scheduleData,
+  dayMap,
+  departments,
+  grades,
+  timeSlots,
+} from "@/lib/data";
 import ClassCard from "./ClassCard";
 
 export default function TodayView() {
@@ -9,8 +15,7 @@ export default function TodayView() {
   const todayName = dayMap[todayIndex];
   const todayData: any = scheduleData[todayName] || {};
 
-  const noClass =
-    !todayData || Object.keys(todayData).length === 0;
+  const noClass = !todayData || Object.keys(todayData).length === 0;
 
   return (
     <section className="mt-6">
@@ -19,8 +24,8 @@ export default function TodayView() {
       </h2>
 
       <p className="mb-6 text-gray-600">
-        এটি আজকের নির্ধারিত ক্লাসের একটি রিয়েল-টাইম ভিউ। এখান থেকে
-        শিক্ষকদের উপস্থিতি সরাসরি আপডেট করা যাবে।
+        এটি আজকের নির্ধারিত ক্লাসের একটি রিয়েল-টাইম ভিউ। এখান থেকে শিক্ষকদের
+        উপস্থিতি সরাসরি আপডেট করা যাবে।
       </p>
 
       {noClass ? (
@@ -28,7 +33,7 @@ export default function TodayView() {
           আজ কোনো নির্ধারিত ক্লাস নেই।
         </p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid  grid-cols-3 gap-2">
           {departments.map((dept) => {
             const deptSchedules = todayData[dept];
             if (!deptSchedules) return null;
