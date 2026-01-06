@@ -22,6 +22,7 @@ export default function TabsNav({ active, onChange }: TabsNavProps) {
           </h1>
 
           <nav className="hidden md:flex items-center space-x-4">
+            {/* Internal Tabs */}
             <button
               className={`${base} ${active === "today" ? activeClass : ""}`}
               onClick={() => onChange("today")}
@@ -41,10 +42,22 @@ export default function TabsNav({ active, onChange }: TabsNavProps) {
               রিপোর্ট
             </button>
 
-            {/* QA Link (desktop) */}
+            {/* External Links */}
+
+            {/* ✅ Dashboard Link Added */}
+            <Link href="/dashboard" legacyBehavior>
+              <a
+                className={`${base} inline-flex items-center hover:bg-gray-50 text-purple-600`}
+                aria-label="Dashboard"
+              >
+                ড্যাশবোর্ড
+              </a>
+            </Link>
+
+            {/* QA Link */}
             <Link href="/qa" legacyBehavior>
               <a
-                className={`${base} ml-4 inline-flex items-center rounded-sm hover:bg-gray-50`}
+                className={`${base} inline-flex items-center hover:bg-gray-50`}
                 aria-label="QA"
               >
                 প্রশ্নোত্তর
@@ -54,9 +67,9 @@ export default function TabsNav({ active, onChange }: TabsNavProps) {
         </div>
 
         {/* Mobile Row */}
-        <nav className="md:hidden flex justify-around border-t">
+        <nav className="md:hidden flex justify-around border-t overflow-x-auto">
           <button
-            className={`${base} flex-1 text-center ${
+            className={`${base} flex-1 text-center text-sm ${
               active === "today" ? activeClass : ""
             }`}
             onClick={() => onChange("today")}
@@ -64,7 +77,7 @@ export default function TabsNav({ active, onChange }: TabsNavProps) {
             আজ
           </button>
           <button
-            className={`${base} flex-1 text-center ${
+            className={`${base} flex-1 text-center text-sm ${
               active === "full" ? activeClass : ""
             }`}
             onClick={() => onChange("full")}
@@ -72,7 +85,7 @@ export default function TabsNav({ active, onChange }: TabsNavProps) {
             সম্পূর্ণ
           </button>
           <button
-            className={`${base} flex-1 text-center ${
+            className={`${base} flex-1 text-center text-sm ${
               active === "reports" ? activeClass : ""
             }`}
             onClick={() => onChange("reports")}
@@ -80,9 +93,16 @@ export default function TabsNav({ active, onChange }: TabsNavProps) {
             রিপোর্ট
           </button>
 
-          {/* QA Link (mobile) */}
+          {/* ✅ Dashboard Link (Mobile) */}
+          <Link href="/dashboard" legacyBehavior>
+            <a className={`${base} flex-1 text-center text-sm text-purple-600`}>
+              Dash
+            </a>
+          </Link>
+
+          {/* QA Link (Mobile) */}
           <Link href="/qa" legacyBehavior>
-            <a className={`${base} flex-1 text-center`} aria-label="QA">
+            <a className={`${base} flex-1 text-center text-sm`} aria-label="QA">
               QA
             </a>
           </Link>

@@ -45,7 +45,8 @@ export default function DashboardLayout({
             onChange={(e) => setNewProject(e.target.value)}
             onKeyDown={(e) => {
               if (e.key === "Enter" && newProject.trim()) {
-                addProject(newProject);
+                // ✅ ফিক্স: ২য় আর্গুমেন্ট হিসেবে ফাঁকা স্ট্রিং "" পাঠানো হয়েছে
+                addProject(newProject, "");
                 setNewProject("");
               }
             }}
