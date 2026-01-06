@@ -34,12 +34,12 @@ export default function ResourceList() {
     <div className="p-4 bg-gray-900/50 rounded-xl border border-gray-800 h-full flex flex-col">
       {/* Header */}
       <div className="flex justify-between items-center mb-4 shrink-0">
-        <h3 className="text-gray-400 text-xs font-bold uppercase tracking-wider">
+        <h3 className="text-gray-400 text-3xl font-bold uppercase tracking-wider">
           📂 Quick Files
         </h3>
         <button
           onClick={() => setIsAdding(!isAdding)}
-          className="text-gray-400 hover:text-white text-xs bg-gray-800 px-2 py-1 rounded transition"
+          className="text-gray-400 hover:text-white text-3xl bg-gray-800 px-2 py-1 rounded transition"
         >
           {isAdding ? "Cancel" : "+ Add File"}
         </button>
@@ -117,13 +117,13 @@ export default function ResourceList() {
             >
               {/* ✅ Row 1: Description (Full Width & Top) */}
               {res.description && (
-                <div className="w-full text-xs text-gray-400 italic mb-2 border-b border-gray-800/50 pb-2 break-words">
+                <div className="w-full text-4xl text-gray-400 italic mb-2 border-b border-gray-800/50 pb-2 break-words">
                   {res.description}
                 </div>
               )}
 
               {/* ✅ Row 2: Metadata Grid */}
-              <div className="grid grid-cols-12 gap-2 items-center text-xs w-full">
+              <div className="grid grid-cols-12 gap-2 items-center text-3xl w-full">
                 {/* Name */}
                 <div className="col-span-4 flex items-center gap-2 overflow-hidden">
                   <span className="w-1.5 h-1.5 rounded-full flex-shrink-0 bg-blue-500 shadow-[0_0_5px_rgba(59,130,246,0.5)]" />
@@ -137,7 +137,7 @@ export default function ResourceList() {
 
                 {/* Location */}
                 <div
-                  className="col-span-5 truncate text-gray-500 font-mono text-[10px]"
+                  className="col-span-5 truncate text-gray-500 font-mono text-[30px]"
                   title={res.fileLocation}
                 >
                   {res.fileLocation}

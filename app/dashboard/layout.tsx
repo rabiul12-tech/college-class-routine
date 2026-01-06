@@ -56,7 +56,7 @@ export default function DashboardLayout({
 
       {/* Main Content */}
       <main className="flex-1 overflow-y-auto h-screen bg-[#0b1020]">
-        <div className="max-w-7xl mx-auto p-8">{children}</div>
+        <div className="max-w[1600px] mx-auto p-8">{children}</div>
       </main>
     </div>
   );
