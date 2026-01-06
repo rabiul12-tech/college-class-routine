@@ -21,7 +21,7 @@ export type Task = {
 export type Project = {
   id: string;
   name: string;
-  description: string; // ✅ প্রজেক্ট ডেসক্রিপশন
+  description: string;
   active: boolean;
   fileLocation: string;
   createdAt: string;
@@ -30,7 +30,7 @@ export type Project = {
 export type Resource = {
   id: string;
   name: string;
-  description: string; // ✅ রিসোর্স ডেসক্রিপশন (নতুন যোগ করা হয়েছে)
+  description: string;
   fileLocation: string;
   createdAt: string;
 };
@@ -53,9 +53,10 @@ interface AppState {
     date?: string
   ) => void;
   deleteProject: (id: string) => void;
+  // ✅ নতুন: প্রজেক্ট আপডেট করার জন্য
+  updateProject: (id: string, updates: Partial<Project>) => void;
 
   // --- Resource Actions ---
-  // ✅ addResource এ 'description' প্যারামিটার যুক্ত করা হয়েছে
   addResource: (
     name: string,
     description: string,
@@ -63,6 +64,8 @@ interface AppState {
     date?: string
   ) => void;
   deleteResource: (id: string) => void;
+  // ✅ নতুন: রিসোর্স আপডেট করার জন্য (ভবিষ্যতের ব্যবহারের জন্য)
+  updateResource: (id: string, updates: Partial<Resource>) => void;
 }
 
 // ==========================================
@@ -152,10 +155,17 @@ export const useAppStore = create<AppState>()(
           projects: state.projects.filter((p) => p.id !== id),
         })),
 
+      // ✅ updateProject ইমপ্লিমেন্টেশন
+      updateProject: (id, updates) =>
+        set((state) => ({
+          projects: state.projects.map((p) =>
+            p.id === id ? { ...p, ...updates } : p
+          ),
+        })),
+
       // ---------------------------
       // Resource Logic
       // ---------------------------
-      // ✅ আপডেটেড addResource (Description সহ)
       addResource: (name, description, location, date) =>
         set((state) => ({
           resources: [
@@ -163,7 +173,7 @@ export const useAppStore = create<AppState>()(
             {
               id: generateId(),
               name,
-              description: description || "", // ✅ সেভ হচ্ছে
+              description: description || "",
               fileLocation: location,
               createdAt: date
                 ? new Date(date).toISOString()
@@ -176,7 +186,15 @@ export const useAppStore = create<AppState>()(
         set((state) => ({
           resources: state.resources.filter((r) => r.id !== id),
         })),
+
+      // ✅ updateResource ইমপ্লিমেন্টেশন
+      updateResource: (id, updates) =>
+        set((state) => ({
+          resources: state.resources.map((r) =>
+            r.id === id ? { ...r, ...updates } : r
+          ),
+        })),
     }),
-    { name: "class-routine-storage" }
+    { name: "class-routine-storage" } // LocalStorage Key
   )
 );
