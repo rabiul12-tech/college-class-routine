@@ -209,7 +209,7 @@ export default function ProjectList() {
                 /* ======================= */
                 <>
                   {/* Row 1: Metadata Grid (Name, Location, Date) */}
-                  <div className="grid grid-cols-12 gap-2 items-center text-xs w-full">
+                  <div className="grid grid-cols-12 gap-2 items-center text-4xl w-full">
                     {/* Name */}
                     <div className="col-span-4 flex items-center gap-2 overflow-hidden">
                       <span
@@ -221,7 +221,7 @@ export default function ProjectList() {
                         )}
                       />
                       <span
-                        className="truncate font-medium text-gray-200 group-hover:text-white"
+                        className="truncate text-5xl font-medium text-gray-200 group-hover:text-white"
                         title={project.name}
                       >
                         {project.name}
@@ -230,7 +230,7 @@ export default function ProjectList() {
 
                     {/* Location */}
                     <div
-                      className="col-span-5 truncate text-gray-500 font-mono text-[10px]"
+                      className="col-span-5 truncate text-gray-500 font-mono text-[20px]"
                       title={project.fileLocation}
                     >
                       {project.fileLocation}
@@ -238,7 +238,7 @@ export default function ProjectList() {
 
                     {/* Date + Actions (Edit & Delete) */}
                     <div className="col-span-3 flex justify-end items-center gap-1">
-                      <span className="text-gray-600 text-[10px] truncate mr-1">
+                      <span className="text-gray-600 text-[16px] truncate mr-1">
                         {formatDate(project.createdAt)}
                       </span>
 
@@ -271,7 +271,7 @@ export default function ProjectList() {
 
                   {/* Row 2: Description (Moved to Bottom) */}
                   {project.description && (
-                    <div className="w-full text-xs text-gray-400 italic mt-2 border-t border-gray-800/50 pt-2 break-words">
+                    <div className="w-full text-2xl text-gray-400 italic mt-2 border-t border-gray-800/50 pt-2 break-words">
                       {project.description}
                     </div>
                   )}

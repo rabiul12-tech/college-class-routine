@@ -166,7 +166,7 @@ export default function ResourceList() {
                 <div className="col-span-4 flex items-center gap-2 overflow-hidden">
                   <span className="w-4.5 h-4.5 rounded-full flex-shrink-0 bg-blue-500 shadow-[0_0_5px_rgba(59,130,246,0.5)]" />
                   <span
-                    className="truncate font-medium text-gray-300 group-hover:text-white"
+                    className="truncate font-medium text-6xl text-gray-300 group-hover:text-white pb-2"
                     title={res.name}
                   >
                     {res.name}
@@ -217,7 +217,7 @@ export default function ResourceList() {
               </div>{" "}
               {/* Row 1: Description */}
               {res.description && (
-                <div className="w-full text-4xl text-gray-100 italic mb-2 border-t border-gray-100/50 pb-2 break-words">
+                <div className="w-full text-2xl text-gray-100 italic mb-2 border-t border-gray-400/50 pt-10 break-words">
                   {res.description}
                 </div>
               )}
