@@ -3,7 +3,7 @@ import { persist } from "zustand/middleware";
 import { generateId, calculateNextDate } from "./utils";
 
 // ==========================================
-// 1. Type Definitions (সব টাইপ এখানে)
+// 1. Type Definitions
 // ==========================================
 
 export type Task = {
@@ -15,21 +15,22 @@ export type Task = {
   due?: string;
   done: boolean;
   priority: number;
-  projectId?: string; // ✅ এই লাইনটি যোগ করুন
+  projectId?: string;
 };
 
 export type Project = {
   id: string;
   name: string;
+  description: string; // ✅ প্রজেক্ট ডেসক্রিপশন
   active: boolean;
   fileLocation: string;
   createdAt: string;
 };
 
-// ✅ নতুন Resource টাইপ
 export type Resource = {
   id: string;
   name: string;
+  description: string; // ✅ রিসোর্স ডেসক্রিপশন (নতুন যোগ করা হয়েছে)
   fileLocation: string;
   createdAt: string;
 };
@@ -37,7 +38,7 @@ export type Resource = {
 interface AppState {
   tasks: Task[];
   projects: Project[];
-  resources: Resource[]; // ✅ নতুন স্টেট
+  resources: Resource[];
 
   // --- Task Actions ---
   addTask: (task: Omit<Task, "id" | "done">) => void;
@@ -45,11 +46,22 @@ interface AppState {
   deleteTask: (id: string) => void;
 
   // --- Project Actions ---
-  addProject: (name: string, location?: string, date?: string) => void;
+  addProject: (
+    name: string,
+    description: string,
+    location?: string,
+    date?: string
+  ) => void;
   deleteProject: (id: string) => void;
 
   // --- Resource Actions ---
-  addResource: (name: string, location: string, date?: string) => void;
+  // ✅ addResource এ 'description' প্যারামিটার যুক্ত করা হয়েছে
+  addResource: (
+    name: string,
+    description: string,
+    location: string,
+    date?: string
+  ) => void;
   deleteResource: (id: string) => void;
 }
 
@@ -118,13 +130,14 @@ export const useAppStore = create<AppState>()(
       // ---------------------------
       // Project Logic
       // ---------------------------
-      addProject: (name, location = "/documents/projects", date) =>
+      addProject: (name, description, location = "/documents/projects", date) =>
         set((state) => ({
           projects: [
             ...state.projects,
             {
               id: generateId(),
               name,
+              description: description || "",
               active: true,
               fileLocation: location,
               createdAt: date
@@ -140,15 +153,17 @@ export const useAppStore = create<AppState>()(
         })),
 
       // ---------------------------
-      // Resource Logic (New)
+      // Resource Logic
       // ---------------------------
-      addResource: (name, location, date) =>
+      // ✅ আপডেটেড addResource (Description সহ)
+      addResource: (name, description, location, date) =>
         set((state) => ({
           resources: [
             ...state.resources,
             {
               id: generateId(),
               name,
+              description: description || "", // ✅ সেভ হচ্ছে
               fileLocation: location,
               createdAt: date
                 ? new Date(date).toISOString()
@@ -162,6 +177,6 @@ export const useAppStore = create<AppState>()(
           resources: state.resources.filter((r) => r.id !== id),
         })),
     }),
-    { name: "class-routine-storage" } // LocalStorage Key
+    { name: "class-routine-storage" }
   )
 );
