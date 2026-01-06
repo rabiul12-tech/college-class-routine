@@ -53,7 +53,6 @@ interface AppState {
     date?: string
   ) => void;
   deleteProject: (id: string) => void;
-  // ✅ নতুন: প্রজেক্ট আপডেট করার জন্য
   updateProject: (id: string, updates: Partial<Project>) => void;
 
   // --- Resource Actions ---
@@ -64,8 +63,15 @@ interface AppState {
     date?: string
   ) => void;
   deleteResource: (id: string) => void;
-  // ✅ নতুন: রিসোর্স আপডেট করার জন্য (ভবিষ্যতের ব্যবহারের জন্য)
-  updateResource: (id: string, updates: Partial<Resource>) => void;
+
+  // ✅ Updated: Matches the component's call signature (individual args)
+  updateResource: (
+    id: string,
+    name: string,
+    description: string,
+    location: string,
+    date?: string
+  ) => void;
 }
 
 // ==========================================
@@ -155,7 +161,6 @@ export const useAppStore = create<AppState>()(
           projects: state.projects.filter((p) => p.id !== id),
         })),
 
-      // ✅ updateProject ইমপ্লিমেন্টেশন
       updateProject: (id, updates) =>
         set((state) => ({
           projects: state.projects.map((p) =>
@@ -187,11 +192,20 @@ export const useAppStore = create<AppState>()(
           resources: state.resources.filter((r) => r.id !== id),
         })),
 
-      // ✅ updateResource ইমপ্লিমেন্টেশন
-      updateResource: (id, updates) =>
+      // ✅ Updated Implementation
+      updateResource: (id, name, description, location, date) =>
         set((state) => ({
           resources: state.resources.map((r) =>
-            r.id === id ? { ...r, ...updates } : r
+            r.id === id
+              ? {
+                  ...r,
+                  name,
+                  description,
+                  fileLocation: location,
+                  // Only update date if a new date string is provided
+                  createdAt: date ? new Date(date).toISOString() : r.createdAt,
+                }
+              : r
           ),
         })),
     }),
