@@ -158,15 +158,15 @@ export default function ResourceList() {
           resources.map((res) => (
             <div
               key={res.id}
-              className="group flex flex-col p-3 hover:bg-white/5 rounded-lg cursor-pointer transition border border-transparent hover:border-gray-700/50 bg-gray-900/30"
+              className="group flex flex-col p-3 hover:bg-white/5 min-h-[260px] rounded-lg cursor-pointer transition border border-transparent hover:border-gray-700/50 bg-gray-900/30"
             >
               {/* Row 2: Metadata Grid */}
               <div className="grid grid-cols-12 gap-2 items-center text-3xl w-full">
                 {/* Name */}
-                <div className="col-span-4 flex items-center gap-2 overflow-hidden">
+                <div className="col-span-4 flex items-center gap-2 ">
                   <span className="w-4.5 h-4.5 rounded-full flex-shrink-0 bg-blue-500 shadow-[0_0_5px_rgba(59,130,246,0.5)]" />
                   <span
-                    className="truncate font-medium text-6xl text-gray-300 group-hover:text-white pb-2"
+                    className=" font-medium text-4xl text-gray-300 group-hover:text-white pb-2 break-all"
                     title={res.name}
                   >
                     {res.name}
@@ -175,7 +175,7 @@ export default function ResourceList() {
 
                 {/* Location */}
                 <div
-                  className="col-span-5 truncate text-gray-500 font-mono text-[30px]"
+                  className="col-span-5 break-all text-gray-500 font-mono text-[30px]"
                   title={res.fileLocation}
                 >
                   {res.fileLocation}

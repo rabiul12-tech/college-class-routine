@@ -135,7 +135,7 @@ export default function ProjectList() {
       )}
 
       {/* Project List */}
-      <div className="space-y-2 overflow-y-auto flex-1 pr-1 custom-scrollbar min-h-0 max-h-[400px]">
+      <div className="space-y-2 overflow-y-auto flex-1 pr-1 custom-scrollbar min-h-0 max-h-[600px]">
         {projects.length === 0 ? (
           <div className="flex flex-col items-center justify-center h-20 text-gray-600">
             <span className="text-2xl mb-1">📂</span>
@@ -145,13 +145,13 @@ export default function ProjectList() {
           projects.map((project) => (
             <div
               key={project.id}
-              className="group flex flex-col p-3 hover:bg-white/5 rounded-lg transition border border-transparent hover:border-gray-700/50 bg-gray-900/30"
+              className="group flex flex-col  min-h-[260px]   p-3 hover:bg-white/5 rounded-lg transition border border-transparent hover:border-gray-700/50 bg-gray-900/30"
             >
               {/* ======================= */}
               {/* EDIT MODE             */}
               {/* ======================= */}
               {editingId === project.id ? (
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2  ">
                   <div className="flex gap-2">
                     <input
                       type="text"
@@ -209,9 +209,9 @@ export default function ProjectList() {
                 /* ======================= */
                 <>
                   {/* Row 1: Metadata Grid (Name, Location, Date) */}
-                  <div className="grid grid-cols-12 gap-2 items-center text-4xl w-full">
+                  <div className="grid grid-cols-12 gap-2 items-center text-4xl w-full max-h-[600px]">
                     {/* Name */}
-                    <div className="col-span-4 flex items-center gap-2 overflow-hidden">
+                    <div className="col-span-4 flex items-center gap-2 overflow-hidden ">
                       <span
                         className={cn(
                           "w-1.5 h-1.5 rounded-full flex-shrink-0",
@@ -220,19 +220,13 @@ export default function ProjectList() {
                             : "bg-gray-600"
                         )}
                       />
-                      <span
-                        className="truncate text-5xl font-medium text-gray-200 group-hover:text-white"
-                        title={project.name}
-                      >
+                      <span className="text-4xl font-medium text-gray-200 group-hover:text-white whitespace-normal break-all">
                         {project.name}
                       </span>
                     </div>
 
                     {/* Location */}
-                    <div
-                      className="col-span-5 truncate text-gray-500 font-mono text-[20px]"
-                      title={project.fileLocation}
-                    >
+                    <div className="col-span-5 text-gray-500 font-mono text-[20px] whitespace-normal break-all">
                       {project.fileLocation}
                     </div>
 
