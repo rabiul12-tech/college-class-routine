@@ -11,10 +11,10 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "baseUrl": ".", // <-- add
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
-    }, // <-- add
+      "@/*": ["./src/*"]
+    },
     "plugins": [
       {
         "name": "next"
@@ -28,7 +28,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/english/prefix-vocab/page.jsx"
+    "src/components/english/prefix-vocab/page.jsx"
   ],
   "exclude": ["node_modules"]
 }
