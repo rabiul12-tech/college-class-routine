@@ -44,16 +44,6 @@ export default function TabsNav({ active, onChange }: TabsNavProps) {
 
             {/* External Links */}
 
-            {/* ✅ Dashboard Link Added */}
-            <Link href="/dashboard" legacyBehavior>
-              <a
-                className={`${base} inline-flex items-center hover:bg-gray-50 text-purple-600`}
-                aria-label="Dashboard"
-              >
-                ড্যাশবোর্ড
-              </a>
-            </Link>
-
             {/* QA Link */}
             <Link href="/qa" legacyBehavior>
               <a
@@ -92,13 +82,6 @@ export default function TabsNav({ active, onChange }: TabsNavProps) {
           >
             রিপোর্ট
           </button>
-
-          {/* ✅ Dashboard Link (Mobile) */}
-          <Link href="/dashboard" legacyBehavior>
-            <a className={`${base} flex-1 text-center text-sm text-purple-600`}>
-              Dash
-            </a>
-          </Link>
 
           {/* QA Link (Mobile) */}
           <Link href="/qa" legacyBehavior>
