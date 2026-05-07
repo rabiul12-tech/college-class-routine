@@ -9,7 +9,7 @@ const OUT_JS = path.join(process.cwd(), "public", "data.js");
 
 if (!fs.existsSync(INPUT)) {
   console.error(
-    "english.txt not found in project root. Put english.txt there and run: node make_datajs.js"
+    "english.txt not found in project root. Put english.txt there and run: node make_datajs.js",
   );
   process.exit(1);
 }
@@ -45,7 +45,7 @@ fs.writeFileSync(OUT_JSON, JSON.stringify(pairs, null, 2), "utf8");
 fs.writeFileSync(
   OUT_JS,
   "window.QA_DATA = " + JSON.stringify(pairs, null, 2) + ";\n",
-  "utf8"
+  "utf8",
 );
 
 console.log(`Wrote ${OUT_JSON} and ${OUT_JS} — ${pairs.length} pairs`);
