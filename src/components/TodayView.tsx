@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import {
   scheduleData,
   dayMap,
@@ -12,15 +12,18 @@ import ClassCard from "./ClassCard";
 
 export default function TodayView() {
   const todayIndex = new Date().getDay(); // 0-6
-  const todayName = dayMap[todayIndex];
-  const todayData: any = scheduleData[todayName] || {};
+  const defaultDay = dayMap[todayIndex];
+
+  const [selectedDay, setSelectedDay] = useState(defaultDay);
+
+  const todayData: any = scheduleData[selectedDay] || {};
 
   const noClass = !todayData || Object.keys(todayData).length === 0;
 
   return (
     <section className="mt-6">
       <h2 className="text-3xl font-bold mb-4 text-gray-800">
-        আজকের রুটিন ({todayName})
+        রুটিন ({selectedDay})
       </h2>
 
       <p className="mb-6 text-gray-600">
@@ -28,14 +31,32 @@ export default function TodayView() {
         উপস্থিতি সরাসরি আপডেট করা যাবে।
       </p>
 
+      {/* 7 Days Tabs */}
+      <div className="flex flex-wrap gap-2 mb-6">
+        {dayMap.map((day) => (
+          <button
+            key={day}
+            onClick={() => setSelectedDay(day)}
+            className={`px-4 py-2 rounded border transition ${
+              selectedDay === day
+                ? "bg-blue-600 text-white"
+                : "bg-white text-gray-700 border-gray-300"
+            }`}
+          >
+            {day}
+          </button>
+        ))}
+      </div>
+
       {noClass ? (
         <p className="text-center text-2xl text-gray-500 mt-10">
           আজ কোনো নির্ধারিত ক্লাস নেই।
         </p>
       ) : (
-        <div className="grid  grid-cols-3 gap-2">
+        <div className="grid grid-cols-3 gap-2">
           {departments.map((dept) => {
             const deptSchedules = todayData[dept];
+
             if (!deptSchedules) return null;
 
             return (
@@ -46,6 +67,7 @@ export default function TodayView() {
 
                 {grades.map((grade) => {
                   const slots = deptSchedules[grade];
+
                   if (!slots) return null;
 
                   return (
